@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITCMD progressivo pós-LC 214/2025: base de cálculo, alíquotas e janela de planejamento para holdings familiares | João Victor Ataide</title>
+  <meta name="description" content="Análise técnica do ITCMD progressivo à luz da EC 132/2023 e LC 227/2026: base de cálculo a valor de mercado para cotas de holding, tabela de alíquotas por estado, posição do RJ e estratégias lícitas de redução." />
+  <meta name="keywords" content="ITCMD progressivo LC 214 2025, ITCMD reforma tributária holding, base de cálculo ITCMD cotas holding, planejamento sucessório 2026, LC 227 2026 ITCMD" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ITCMD progressivo pós-LC 214/2025: base de cálculo, alíquotas e janela de planejamento para holdings familiares" />
+  <meta property="og:description" content="Análise doutrinária e jurisprudencial do novo regime do ITCMD para estruturas de holding familiar após a EC 132/2023 e LC 227/2026." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://joaovictorataide.com.br/blog/itcmd-progressivo-lc-214-holding-familiar.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ══════════════════════════════════════════
+       TOKENS — extraídos da identidade JVA
+       Fundo: azul-chumbo escuro  #0f1923
+       Cards: #1a2535
+       Borda sutil: #263348
+       Texto principal: #e8edf4
+       Texto secundário: #8fa3bc
+       Acento teal: #3dbfa8  (botão WA, destaque)
+       Acento teal claro: #5dd8c2
+       ══════════════════════════════════════════ */
+    :root {
+      --bg:          #0f1923;
+      --bg-card:     #1a2535;
+      --bg-raised:   #1f2d42;
+      --border:      #263348;
+      --border-lt:   #2e3f58;
+
+      --text:        #e8edf4;
+      --text-mid:    #a8bdd4;
+      --text-muted:  #637a94;
+
+      --teal:        #3dbfa8;
+      --teal-lt:     #5dd8c2;
+      --teal-dim:    rgba(61,191,168,0.12);
+      --teal-border: rgba(61,191,168,0.35);
+
+      --ff-display: 'Playfair Display', Georgia, serif;
+      --ff-body:    'Source Serif 4', Georgia, serif;
+      --ff-mono:    'JetBrains Mono', 'Courier New', monospace;
+
+      --max-w: 1160px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--ff-body);
+      font-size: clamp(16px, 1.8vw, 18px);
+      line-height: 1.78;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: rgba(15,25,35,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header .logo {
+      font-family: var(--ff-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .site-header .logo span { color: var(--teal); }
+    .site-header nav a {
+      color: var(--text-mid);
+      text-decoration: none;
+      font-family: var(--ff-body);
+      font-size: 0.8rem;
+      margin-left: 1.8rem;
+      transition: color 0.2s;
+    }
+    .site-header nav a:hover { color: var(--teal); }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      height: clamp(300px, 42vw, 520px);
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      filter: brightness(0.25) saturate(0.6);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(15,25,35,0.98) 0%,
+        rgba(15,25,35,0.55) 55%,
+        rgba(15,25,35,0.2) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 2.5rem clamp(1.5rem, 5vw, 4rem);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      width: 100%;
+    }
+    .badge-camada {
+      display: inline-block;
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      color: var(--teal);
+      font-family: var(--ff-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 3px;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+      max-width: 820px;
+    }
+    .hero h1 em {
+      color: var(--teal);
+      font-style: italic;
+    }
+    .hero-meta {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-family: var(--ff-mono);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Layout ── */
+    .layout {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3rem clamp(1.2rem, 4vw, 2.5rem);
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .article-body { min-width: 0; }
+
+    /* ── Abstract ── */
+    .abstract {
+      border-left: 3px solid var(--teal);
+      padding: 1.2rem 1.5rem;
+      background: var(--bg-card);
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 2.5rem;
+    }
+    .abstract-label {
+      font-family: var(--ff-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.4rem;
+    }
+    .abstract p {
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      line-height: 1.68;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.4rem 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .toc-title {
+      font-family: var(--ff-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc-counter;
+      padding: 0;
+    }
+    .toc li {
+      counter-increment: toc-counter;
+      display: flex;
+      gap: 0.6rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
+    .toc li::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      font-family: var(--ff-mono);
+      font-size: 0.68rem;
+      color: var(--teal);
+      flex-shrink: 0;
+      margin-top: 0.08rem;
+    }
+    .toc a {
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc a:hover { color: var(--teal); }
+
+    /* ── Typography ── */
+    .article-body h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+      font-weight: 600;
+      color: var(--text);
+      margin: 2.8rem 0 1rem;
+      line-height: 1.25;
+      padding-top: 0.5rem;
+    }
+    .article-body h2::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 2px;
+      background: var(--teal);
+      margin-bottom: 0.75rem;
+      border-radius: 2px;
+    }
+    .article-body h3 {
+      font-family: var(--ff-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--text-mid);
+      margin: 1.8rem 0 0.6rem;
+    }
+    .article-body p { margin-bottom: 1.2rem; color: var(--text-mid); }
+    .article-body p:last-child { margin-bottom: 0; }
+
+    .article-body a {
+      color: var(--teal);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: var(--teal-border);
+      transition: color 0.15s;
+    }
+    .article-body a:hover { color: var(--teal-lt); }
+
+    strong { font-weight: 600; color: var(--text); }
+
+    /* ── Pull quote ── */
+    .pullquote {
+      border-left: 3px solid var(--teal);
+      padding: 1rem 1.4rem;
+      margin: 2rem 0;
+      background: var(--bg-raised);
+      border-radius: 0 6px 6px 0;
+    }
+    .pullquote p {
+      font-family: var(--ff-display);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      margin: 0;
+    }
+
+    /* ── Alert box ── */
+    .alert {
+      border: 1px solid var(--teal-border);
+      background: var(--teal-dim);
+      border-radius: 6px;
+      padding: 1rem 1.3rem;
+      margin: 1.8rem 0;
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+    }
+    .alert-icon { flex-shrink: 0; font-size: 1rem; margin-top: 0.05rem; }
+    .alert p { margin: 0; font-size: 0.88rem; color: var(--text-mid); }
+
+    /* ── Tables ── */
+    .table-wrap { overflow-x: auto; margin: 1.8rem 0; border-radius: 6px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.83rem; font-family: var(--ff-body); }
+    caption { text-align: left; font-family: var(--ff-mono); font-size: 0.65rem; color: var(--text-muted); padding: 0.6rem 1rem 0; letter-spacing: 0.07em; }
+    thead { background: var(--bg-raised); }
+    thead th {
+      padding: 0.7rem 1rem;
+      text-align: left;
+      font-family: var(--ff-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+    tbody tr:hover { background: var(--bg-raised); }
+    tbody td { padding: 0.65rem 1rem; vertical-align: top; color: var(--text-mid); line-height: 1.45; }
+    tbody td:first-child { font-weight: 600; color: var(--text); }
+
+    .tag-rj {
+      display: inline-block;
+      background: rgba(61,191,168,0.15);
+      color: var(--teal);
+      border: 1px solid var(--teal-border);
+      font-family: var(--ff-mono);
+      font-size: 0.58rem;
+      padding: 0.08rem 0.4rem;
+      border-radius: 3px;
+      margin-left: 0.3rem;
+      vertical-align: middle;
+      letter-spacing: 0.06em;
+    }
+    .tag-pendente {
+      display: inline-block;
+      background: rgba(255,160,80,0.12);
+      color: #f0a060;
+      border: 1px solid rgba(255,160,80,0.3);
+      font-family: var(--ff-mono);
+      font-size: 0.58rem;
+      padding: 0.08rem 0.4rem;
+      border-radius: 3px;
+      margin-left: 0.3rem;
+      vertical-align: middle;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Legal citation ── */
+    .legal-ref {
+      font-family: var(--ff-mono);
+      font-size: 0.73rem;
+      color: var(--teal);
+      background: var(--teal-dim);
+      padding: 0.12rem 0.4rem;
+      border-radius: 3px;
+      border: 1px solid var(--teal-border);
+      white-space: nowrap;
+    }
+
+    /* ── Strategy list ── */
+    .strategy-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+      counter-reset: strategy;
+    }
+    .strategy-list li {
+      counter-increment: strategy;
+      display: grid;
+      grid-template-columns: 2.5rem 1fr;
+      gap: 1rem;
+      margin-bottom: 1.6rem;
+      align-items: start;
+    }
+    .strategy-list li::before {
+      content: counter(strategy);
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      color: var(--teal);
+      font-family: var(--ff-mono);
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .strategy-list li strong { display: block; margin-bottom: 0.2rem; color: var(--text); }
+
+    /* ── References ── */
+    .references {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .references h2 {
+      font-family: var(--ff-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .references h2::before { display: none; }
+    .references ol {
+      padding-left: 1.4rem;
+      font-size: 0.79rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .references li { margin-bottom: 0.4rem; }
+
+    /* ── Related links ── */
+    .related-links {
+      margin-top: 2.5rem;
+      padding: 1.4rem 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+    .related-links h3 {
+      font-family: var(--ff-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+      font-style: normal;
+    }
+    .related-links ul { list-style: none; padding: 0; }
+    .related-links li {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      margin-bottom: 0.6rem;
+      font-size: 0.85rem;
+    }
+    .related-links li::before {
+      content: '→';
+      color: var(--teal);
+      flex-shrink: 0;
+      font-family: var(--ff-mono);
+    }
+    .related-links a { color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
+    .related-links a:hover { color: var(--teal); }
+
+    /* ── Sidebar ── */
+    .sidebar { position: sticky; top: 80px; }
+
+    .sidebar-widget {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.4rem;
+      margin-bottom: 1.4rem;
+    }
+    .widget-label {
+      font-family: var(--ff-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.6rem;
+    }
+    .widget-title {
+      font-family: var(--ff-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+      margin-bottom: 0.6rem;
+    }
+    .widget-body {
+      font-size: 0.81rem;
+      color: var(--text-mid);
+      line-height: 1.62;
+      margin-bottom: 1rem;
+    }
+
+    .btn-cta {
+      display: block;
+      text-align: center;
+      background: var(--teal);
+      color: #0a1520;
+      padding: 0.75rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-family: var(--ff-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-cta:hover {
+      background: var(--teal-lt);
+      transform: translateY(-1px);
+    }
+    .btn-cta.secondary {
+      background: var(--bg-raised);
+      color: var(--text-mid);
+      border: 1px solid var(--border-lt);
+    }
+    .btn-cta.secondary:hover { background: var(--border); color: var(--text); }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-size: 0.76rem;
+      font-family: var(--ff-mono);
+      letter-spacing: 0.04em;
+      margin-top: 4rem;
+    }
+    .site-footer a { color: var(--teal); text-decoration: none; }
+    .site-footer a:hover { color: var(--teal-lt); }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sidebar { position: static; }
+    }
+    @media (max-width: 560px) {
+      .site-header nav { display: none; }
+      .hero h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ Header ══ -->
+<header class="site-header">
+  <a href="https://joaovictorataide.com.br" class="logo">JVA<span>.</span></a>
+  <nav>
+    <a href="https://joaovictorataide.com.br/#areas">Áreas</a>
+    <a href="https://joaovictorataide.com.br/blog/">Blog</a>
+    <a href="https://wa.me/5521996550865">Contato</a>
+  </nav>
+</header>
+
+<!-- ══ Hero ══ -->
+<section class="hero" aria-label="Imagem de capa do artigo">
+  <img
+    src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1400&q=80&auto=format&fit=crop"
+    alt="Documentos de planejamento patrimonial e holding familiar"
+    loading="eager"
+  />
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <span class="badge-camada">Camada 2 · Técnico &amp; Doutrinário</span>
+    <h1>ITCMD progressivo pós-<em>LC&nbsp;214/2025</em>: base de cálculo, alíquotas e janela de planejamento para holdings familiares</h1>
+    <p class="hero-meta">João Victor Ataide · Tributarista e Patrimonialista · Maio de 2026 · Leitura: ~12 min</p>
+  </div>
+</section>
+
+<!-- ══ Layout ══ -->
+<div class="layout">
+
+  <!-- ══ Main ══ -->
+  <article class="article-body">
+
+    <!-- Abstract -->
+    <div class="abstract">
+      <p class="abstract-label">Resumo Executivo</p>
+      <p>
+        A Emenda Constitucional 132/2023 tornou obrigatória a progressividade do ITCMD em todos os estados. A LC 227/2026 uniformizou as normas gerais, fixou a base de cálculo a <strong>valor de mercado</strong>, instituiu a consolidação de doações sucessivas e regulamentou a tributação de trusts. Este artigo analisa o impacto dessas mudanças sobre holdings patrimoniais familiares, examina o cenário fluminense e mapeia as estratégias lícitas ainda disponíveis na janela de 2026.
+      </p>
+    </div>
+
+    <!-- TOC -->
+    <nav class="toc" aria-label="Índice do artigo">
+      <p class="toc-title">Índice</p>
+      <ol>
+        <li><a href="#sec-1">O novo ITCMD: o que a LC 214/2025 fixou e o que ainda depende de lei estadual</a></li>
+        <li><a href="#sec-2">Base de cálculo das cotas: valor de mercado × valor patrimonial — o que prevalece</a></li>
+        <li><a href="#sec-3">Alíquotas progressivas: o que os estados já aprovaram e o que está pendente no RJ</a></li>
+        <li><a href="#sec-4">Estratégias lícitas de redução: doação gradual, usufruto e cláusulas protetivas</a></li>
+        <li><a href="#sec-5">Janela temporal: por que 2026 ainda é o ano ideal para estruturar</a></li>
+        <li><a href="#sec-refs">Referências normativas e jurisprudenciais</a></li>
+      </ol>
+    </nav>
+
+    <!-- ── Sec 1 ── -->
+    <section id="sec-1">
+      <h2>O novo ITCMD: o que a LC 214/2025 fixou e o que ainda depende de lei estadual</h2>
+
+      <p>
+        A arquitetura normativa do ITCMD pós-reforma se assenta em três camadas hierárquicas. No topo, a <span class="legal-ref">EC 132/2023</span> promulgada em 20 de dezembro de 2023 alterou o <span class="legal-ref">art. 155, §1º, VI, CF/88</span> e tornou <strong>obrigatória</strong> a progressividade do imposto em razão do valor do quinhão, do legado ou da doação — eliminando a faculdade que os estados historicamente detinham de adotar alíquota fixa (cf. STF, Tema&nbsp;226, RE&nbsp;562.045, que já reconhecia a constitucionalidade da progressividade antes mesmo de ser compulsória).
+      </p>
+
+      <p>
+        Na segunda camada, a <span class="legal-ref">LC 214/2025</span> regulamentou o IBS, a CBS e o Imposto Seletivo, mas não avançou sobre o ITCMD além do que estava na EC 132. A confusão terminológica é comum nos mercados: a LC 214 é a lei-mãe da reforma do consumo, não a lei geral do imposto sucessório. Quem veio preencher esse espaço foi a <span class="legal-ref">LC 227/2026</span>, sancionada em 13 de janeiro de 2026 e publicada no DOU em 14 de janeiro de 2026, cujo Livro II criou um regime inteiramente novo para o ITCMD.
+      </p>
+
+      <div class="alert">
+        <span class="alert-icon">⚠</span>
+        <p>
+          <strong>Distinção essencial:</strong> A LC 227/2026 <em>vigora</em> desde janeiro de 2026, mas <em>não é autoaplicável</em> em matéria tributária. Cada estado deve editar lei ordinária própria para instituir as faixas progressivas, regulamentar a base de cálculo para participações societárias e disciplinar a consolidação de doações. Sem lei estadual, as alíquotas atuais continuam sendo exigidas — inclusive no Rio de Janeiro.
+        </p>
+      </div>
+
+      <p>
+        A terceira camada é, portanto, a <strong>legislação estadual</strong>. O imposto permanece de competência dos estados (<span class="legal-ref">art. 155, I, CF/88</span>); à União cabe apenas editar normas gerais por lei complementar. O teto de alíquota segue sendo 8%, nos termos da <span class="legal-ref">Resolução Senado nº 9/1992</span>, que a LC 227 não alterou.
+      </p>
+
+      <p>
+        Para holdings patrimoniais, esse escalonamento importa porque o momento exato da incidência das novas regras depende da publicação e da anterioridade da lei de cada estado — e nenhum ente federativo pode, pela LC 227 isoladamente, majorar alíquotas ou alterar a base de cálculo vigente para fins de cobrança.
+      </p>
+
+      <div class="pullquote">
+        <p>"A lei complementar está vigente desde janeiro de 2026, porém vigência não se confunde com efetividade prática, especialmente em matéria tributária."</p>
+      </div>
+    </section>
+
+    <!-- ── Sec 2 ── -->
+    <section id="sec-2">
+      <h2>Base de cálculo das cotas de holding: valor de mercado × valor patrimonial — o que prevalece</h2>
+
+      <p>
+        Esse é o ponto de maior risco contencioso para estruturas de holding que foram constituídas há mais de cinco anos. Historicamente, a integralização de imóveis era feita pelo <strong>valor histórico de aquisição</strong>, gerando um patrimônio líquido contábil substancialmente inferior ao valor econômico real dos ativos — em especial imóveis que se valorizaram expressivamente ao longo das décadas.
+      </p>
+
+      <h3>O que a LC 227/2026 fixou</h3>
+      <p>
+        O <span class="legal-ref">art. 152, LC 227/2026</span> estabeleceu expressamente que a base de cálculo do ITCMD é o <strong>valor de mercado do bem ou direito transmitido</strong> na data do fato gerador. Para participações societárias em empresas fechadas, o <span class="legal-ref">art. 154, II</span> exige avaliação por "metodologia tecnicamente fundamentada que reflita o valor de mercado" — o que, na prática, demanda laudo de avaliação econômica, não mero balanço patrimonial.
+      </p>
+
+      <h3>A dicotomia doação × herança</h3>
+      <p>
+        A LC 227 manteve — e codificou em âmbito nacional — uma distinção que parte da doutrina estadual já praticava: nas <strong>doações de cotas</strong>, vários estados aceitavam o valor contábil como base; nas <strong>transmissões causa mortis</strong>, já predominava o valor de mercado via avaliação judicial. Com a nova lei, a regra unificada do valor de mercado se aplica a ambas as hipóteses, ainda que a regulamentação do método de avaliação caiba à lei estadual.
+      </p>
+
+      <div class="alert">
+        <span class="alert-icon">⚠</span>
+        <p>
+          Para holdings imobiliárias constituídas com imóveis adquiridos nas décadas de 1980 ou 1990, a diferença entre valor contábil e valor de mercado pode ser de 10x a 30x. Uma base de cálculo de R$ 500 mil no balanço pode corresponder a R$ 5 milhões a valor de mercado — multiplicando o ITCMD na mesma proporção.
+        </p>
+      </div>
+
+      <h3>Divergência jurisprudencial ainda relevante</h3>
+      <p>
+        Antes da LC 227, a jurisprudência era fragmentada. O TJSP, com base na <span class="legal-ref">Lei nº 10.705/2000</span>, adotava o valor patrimonial do balanço como base, vedando a substituição pelo valor de mercado. TJPR e TJSC já consolidavam o valor de mercado apurado a partir da avaliação do patrimônio líquido real. Com a uniformização federal, a tendência é de convergência no sentido da nova lei — mas a Resposta à Consulta SP nº 32.738/2025 já indica que o fisco paulista começava a questionar a base contábil mesmo antes da LC 227.
+      </p>
+
+      <p>
+        Outro elemento que a LC 227 trouxe ao cálculo das participações é o <strong>fundo de comércio</strong> (goodwill): intangíveis como marca, carteira de clientes e posição competitiva devem compor a avaliação sempre que relevantes para a apuração do valor de mercado. Esse ponto pode ser especialmente gravoso para holdings que também controlam empresas operacionais.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <caption style="text-align:left; font-family:var(--ff-mono); font-size:0.68rem; color:var(--ink-light); margin-bottom:0.5rem; letter-spacing:0.06em;">
+            COMPARATIVO: BASE DE CÁLCULO ANTES E APÓS A LC 227/2026
+          </caption>
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th>Regime Anterior</th>
+              <th>Regime LC 227/2026</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Doação de cotas</td>
+              <td>Valor contábil (SP) ou valor de mercado (PR, SC, outros)</td>
+              <td>Valor de mercado — uniformizado (art. 152)</td>
+            </tr>
+            <tr>
+              <td>Herança de cotas</td>
+              <td>Valor de mercado via avaliação judicial (maioria dos estados)</td>
+              <td>Valor de mercado com metodologia técnica (art. 154, II)</td>
+            </tr>
+            <tr>
+              <td>Imóveis na holding</td>
+              <td>Valor venal (IPTU) ou valor de mercado — variava por estado</td>
+              <td>Valor de mercado atual (art. 152)</td>
+            </tr>
+            <tr>
+              <td>Goodwill / intangíveis</td>
+              <td>Geralmente ignorados</td>
+              <td>Devem integrar a avaliação se relevantes</td>
+            </tr>
+            <tr>
+              <td>Doações sucessivas</td>
+              <td>Cada doação tratada isoladamente</td>
+              <td>Consolidação entre mesmo doador e donatário (art. 155)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── Sec 3 ── -->
+    <section id="sec-3">
+      <h2>Alíquotas progressivas: o que os estados já aprovaram e o que está pendente no RJ</h2>
+
+      <p>
+        A LC 227 não criou as faixas de alíquota — ela apenas tornou obrigatório o modelo progressivo e fixou o teto federal de 8% (<span class="legal-ref">Res. Senado nº 9/1992</span>). Cada estado deve aprovar lei própria com as faixas específicas. O mapa tributário em maio de 2026 é o seguinte:
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <caption style="text-align:left; font-family:var(--ff-mono); font-size:0.68rem; color:var(--ink-light); margin-bottom:0.5rem; letter-spacing:0.06em;">
+            SITUAÇÃO DO ITCMD POR ESTADO SELECIONADO — MAIO 2026
+          </caption>
+          <thead>
+            <tr>
+              <th>Estado</th>
+              <th>Modelo atual</th>
+              <th>Faixas / Alíquotas</th>
+              <th>Adequação LC 227</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rio de Janeiro <span class="tag-rj">RJ</span></td>
+              <td>Progressivo (desde 2015 — Lei 7.174)</td>
+              <td>4% até ~R$ 500 mil · 6% até ~R$ 2 mi · 8% acima</td>
+              <td>Já progressivo — lei estadual pendente para adaptar base de cálculo à LC 227</td>
+            </tr>
+            <tr>
+              <td>Santa Catarina</td>
+              <td>Progressivo (pré-EC 132)</td>
+              <td>1% a 8%</td>
+              <td>Já adequado — estrutura progressiva anterior</td>
+            </tr>
+            <tr>
+              <td>Bahia</td>
+              <td>Progressivo</td>
+              <td>até 8%</td>
+              <td>Já adequado</td>
+            </tr>
+            <tr>
+              <td>São Paulo <span class="tag-pendente">pendente</span></td>
+              <td>Fixo 4% (Lei 10.705/2000)</td>
+              <td>PL 7/2024 propõe 2% a 8% — aguarda ALESP</td>
+              <td>Inconstitucional desde EC 132 · alíquota 2026 ainda 4% fixo</td>
+            </tr>
+            <tr>
+              <td>Minas Gerais <span class="tag-pendente">pendente</span></td>
+              <td>Fixo 5%</td>
+              <td>Sem PL em tramitação</td>
+              <td>Situação de maior insegurança jurídica</td>
+            </tr>
+            <tr>
+              <td>Paraná <span class="tag-pendente">pendente</span></td>
+              <td>Fixo 4%</td>
+              <td>PL em tramitação</td>
+              <td>Adequação esperada para 2027</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Posição específica do Rio de Janeiro</h3>
+      <p>
+        O Rio de Janeiro é um dos poucos estados que <strong>já opera com alíquotas progressivas</strong> desde a <span class="legal-ref">Lei Estadual nº 7.174/2015</span>, regulamentada pela Resolução SEFAZ 182/2017. As faixas — 4%, 6% e 8% em razão do valor dos bens transmitidos, calculadas em múltiplos da UFIR-RJ (R$ 4,96 em 2026) — já atendem ao mandamento constitucional da progressividade.
+      </p>
+      <p>
+        O ponto pendente para o RJ, no entanto, é a <strong>adaptação da base de cálculo</strong>: a lei estadual atual admite metodologias de avaliação que podem divergir do que o art. 154, II da LC 227 exige. O estado precisará regulamentar os laudos técnicos aceitáveis, os critérios de arbitramento e a consolidação de doações sucessivas — o que demanda nova lei ordinária estadual. Enquanto essa lei não for publicada e não transcorrer o prazo de anterioridade, o regime atual da Lei 7.174 permanece vigente para os contribuintes fluminenses.
+      </p>
+
+      <div class="alert">
+        <span class="alert-icon">⚖</span>
+        <p>
+          <strong>Regras de anterioridade:</strong> Todo aumento de alíquota ou ampliação de base de cálculo está sujeito à anterioridade anual (<span class="legal-ref">art. 150, III, b, CF/88</span>) e nonagesimal (<span class="legal-ref">art. 150, III, c</span>). Se o RJ publicar lei de adequação em 2026, as novas regras sobre base de cálculo só produzirão efeitos em 2027, respeitando adicionalmente o prazo de 90 dias.
+        </p>
+      </div>
+
+      <h3>A regra de agregação de doações sucessivas</h3>
+      <p>
+        O <span class="legal-ref">art. 155, LC 227/2026</span> introduziu um mecanismo antielisivo relevante: doações entre o mesmo doador e o mesmo donatário realizadas dentro do período definido por cada estado serão <strong>somadas</strong> para fins de aplicação da tabela progressiva — deduzindo o imposto já recolhido em operações anteriores. Isso inviabiliza o fracionamento artificial de doações para permanecer nas faixas mais baixas. O período de consolidação e os critérios de somatório dependerão, novamente, de lei estadual.
+      </p>
+    </section>
+
+    <!-- ── Sec 4 ── -->
+    <section id="sec-4">
+      <h2>Estratégias lícitas de redução: doação gradual, usufruto e cláusulas protetivas</h2>
+
+      <p>
+        A mudança de paradigma normativo não elimina o planejamento sucessório por meio de holding. Ela exige que as estruturas existentes sejam revisadas e que as novas sejam desenhadas com maior precisão técnica. A seguir, as ferramentas que permanecem eficazes no regime pós-LC 227.
+      </p>
+
+      <ol class="strategy-list">
+        <li>
+          <div>
+            <strong>Doação gradual com acompanhamento da curva de consolidação estadual</strong>
+            <p>
+              A regra de agregação de doações sucessivas depende do <em>prazo de consolidação</em> que cada estado definirá em lei. Enquanto esse prazo não for regulamentado no RJ e nos estados pendentes, doações realizadas em momentos distintos ainda podem ser analisadas individualmente. Estruturar cronogramas de doação antes da publicação das leis estaduais — respeitando substância econômica — é medida lícita e recomendada.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Reserva de usufruto vitalício</strong>
+            <p>
+              A doação da <em>nua-propriedade</em> das cotas com reserva de usufruto vitalício em favor do doador é estratégia consagrada e mantida no regime da LC 227. O usufruto garante ao patriarca o controle econômico (fluxo de dividendos) e administrativo (direito de voto, dependendo do contrato social) sem que a propriedade plena seja transferida. A base de cálculo do ITCMD incide apenas sobre o valor da nua-propriedade — calculado pela tabela de expectativa de vida do IBGE —, não sobre o valor total das cotas. Em estruturas bem desenhadas, a economia pode chegar a 40–60% do imposto que incidiria sobre a transmissão integral.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Cláusulas de incomunicabilidade, impenhorabilidade e inalienabilidade</strong>
+            <p>
+              Não reduzem a alíquota, mas são instrumentos de proteção patrimonial indispensáveis. Discussão atual na doutrina: a <span class="legal-ref">LC 227/2026</span> não veda a utilização dessas cláusulas protetivas nas escrituras de doação, e a jurisprudência do STJ mantém sua validade (<span class="legal-ref">REsp 1.708.764</span> e outros). Em estados que tentam utilizar as cláusulas como fator de depreciação da base de cálculo, há fundamento para contestação judicial.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Atualização do valor contábil antes da estruturação</strong>
+            <p>
+              Para holdings cujo patrimônio foi integralizado a valor histórico, a atualização do balanço a valor de mercado — com o recolhimento do IRPJ e CSLL sobre o ganho apurado pela pessoa jurídica — pode ser economicamente vantajosa em relação ao ITCMD que seria cobrado sobre a diferença em evento sucessório futuro. O cálculo comparativo depende das alíquotas corporativas e do ITCMD estadual aplicável, devendo ser feito caso a caso.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Revisão do domicílio tributário</strong>
+            <p>
+              A LC 227 manteve a possibilidade de <em>domicílio fiscal de eleição</em> para o doador, desde que haja elementos mínimos de substância, rejeitando tentativas de vincular o ITCMD exclusivamente ao domicílio residencial. Essa janela, historicamente utilizada para eleger São Paulo (alíquota 4% fixa), perde sentido à medida que SP se adequa. A análise deve agora considerar outros estados com tributação mais favorável na faixa do patrimônio do cliente específico.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ── Sec 5 ── -->
+    <section id="sec-5">
+      <h2>Janela temporal: por que 2026 ainda é o ano ideal para estruturar</h2>
+
+      <p>
+        A lógica da janela de oportunidade em 2026 deriva diretamente das regras de anterioridade. A LC 227 entrou em vigor em janeiro de 2026, mas as disposições sobre ITCMD não são autoaplicáveis — dependem de lei estadual. Isso significa que, para a maioria dos estados que ainda não editou lei de adequação, as alíquotas e bases de cálculo vigentes são as das normas anteriores.
+      </p>
+
+      <p>
+        No <strong>Rio de Janeiro</strong>, o ITD causa mortis e doação já segue a <span class="legal-ref">Lei 7.174/2015</span> com progressividade instalada. A vantagem da janela no RJ não está nas alíquotas — que já podem chegar a 8% —, mas na <strong>base de cálculo</strong>: enquanto não houver lei estadual exigindo avaliação a valor de mercado nos moldes do art. 154, II da LC 227, a metodologia atual pode ser mais favorável para determinadas estruturas. O prazo dessa janela é incerto — depende de quando a ALERJ agir.
+      </p>
+
+      <p>
+        Para famílias com patrimônio relevante em <strong>estados com alíquota fixa ainda vigente</strong> (SP, MG, PR), a janela é mais óbvia: estruturar a holding e realizar as primeiras doações sob o regime fixo representa economia concreta e mensurável. Quando esses estados publicarem suas leis, a anterioridade garante ao menos 90 dias — e, se a publicação ocorrer em 2026, as novas alíquotas só valerão em 2027.
+      </p>
+
+      <div class="pullquote">
+        <p>"O período entre a publicação da LC 227/2026 e a efetiva entrada em vigor das novas legislações estaduais constitui janela de oportunidade para revisão e estruturação de planejamentos patrimoniais e sucessórios."</p>
+      </div>
+
+      <p>
+        Existe também um risco regulatório adicional que operadores do direito precisam monitorar: <strong>proposta de aumento do teto federal de alíquota</strong>. O Senado Federal discute resolução que elevaria o teto de 8% para até 16% ou 20%. Caso aprovada, estados com patrimônios muito concentrados poderão migrar para estruturas de tributação radicalmente mais onerosas. Atuar antes da aprovação de qualquer resolução nesse sentido é medida de prudência adicional.
+      </p>
+
+      <p>
+        Em síntese, a holding familiar continua sendo o instrumento mais eficaz de planejamento sucessório disponível no ordenamento brasileiro. A LC 227 não a elimina — ela eleva o padrão técnico exigido. Estruturas bem assessoradas, com avaliações patrimoniais sólidas, laudos técnicos adequados, cláusulas protetivas corretamente formuladas e cronogramas de doação calibrados para a janela estadual específica continuam sendo o caminho mais seguro para preservar o patrimônio familiar com o menor custo tributário possível.
+      </p>
+
+      <div class="alert">
+        <span class="alert-icon">📋</span>
+        <p>
+          <strong>Checklist para holdings existentes:</strong> (1) Revisar o valor contábil das cotas versus o valor de mercado atual dos ativos subjacentes; (2) verificar se a lei estadual de adequação à LC 227 já foi publicada; (3) avaliar se há doações em curso que podem ser afetadas pela regra de agregação; (4) conferir se as cláusulas protetivas e a reserva de usufruto estão adequadamente redigidas nos contratos sociais e escrituras; (5) obter laudo de avaliação econômica atualizado antes de qualquer nova operação.
+        </p>
+      </div>
+    </section>
+
+    <!-- Internal links -->
+    <div class="related-links">
+      <h3>Leitura complementar neste blog</h3>
+      <ul>
+        <li><a href="https://joaovictorataide.com.br/blog/holding-familiar-reforma-tributaria.html">Holding familiar e reforma tributária: vale a pena constituir em 2026?</a> — Camada 1 · acessível</li>
+        <li><a href="https://joaovictorataide.com.br/blog/blindagem-patrimonial-pessoa-fisica.html">Blindagem patrimonial para pessoa física: o que protege e o que não protege</a> — Camada 2 · técnico</li>
+        <li><a href="https://wa.me/5521996550865">Solicitar diagnóstico de planejamento sucessório</a> — WhatsApp direto</li>
+      </ul>
+    </div>
+
+    <!-- References -->
+    <section class="references" id="sec-refs">
+      <h2>Referências Normativas e Jurisprudenciais</h2>
+      <ol>
+        <li>Emenda Constitucional nº 132, de 20 de dezembro de 2023 — Reforma Tributária; art. 155, §1º, VI, CF/88.</li>
+        <li>Lei Complementar nº 214, de 16 de janeiro de 2025 — IBS, CBS e Imposto Seletivo.</li>
+        <li>Lei Complementar nº 227, de 13 de janeiro de 2026 — normas gerais ITCMD; arts. 152, 154, II, 155, 156, 158 e 159.</li>
+        <li>Lei Estadual RJ nº 7.174, de 28 de dezembro de 2015 — ITD fluminense; Resolução SEFAZ 182/2017.</li>
+        <li>Resolução Senado Federal nº 9, de 1992 — teto de 8% para alíquota do ITCMD.</li>
+        <li>STF, RE 562.045 (Tema 226) — constitucionalidade da progressividade do ITCMD antes da EC 132.</li>
+        <li>STF, RE 851.108 (Tema 825) — vedação à cobrança de ITCMD sobre bens no exterior sem lei complementar.</li>
+        <li>STJ, REsp 1.708.764 — validade das cláusulas de incomunicabilidade, impenhorabilidade e inalienabilidade em doações com reserva de usufruto.</li>
+        <li>SEFAZ SP, Resposta à Consulta nº 32.738/2025 — questionamentos à base de cálculo pelo valor contábil em doações de cotas.</li>
+        <li>PL nº 7/2024 (ALESP-SP) — proposta de alíquotas progressivas de 2% a 8% para o ITCMD paulista.</li>
+      </ol>
+    </section>
+
+  </article>
+
+  <!-- ══ Sidebar ══ -->
+  <aside class="sidebar" aria-label="Sidebar">
+
+    <div class="sidebar-widget">
+      <p class="widget-label">Diagnóstico Gratuito</p>
+      <p class="widget-title">Sua holding está preparada para o ITCMD progressivo?</p>
+      <p class="widget-body">
+        Avaliamos a estrutura atual, estimamos o impacto fiscal das novas regras e identificamos a janela de ação disponível no seu estado.
+      </p>
+      <a class="btn-cta" href="https://wa.me/5521996550865" target="_blank" rel="noopener">
+        Falar com o advogado →
+      </a>
+    </div>
+
+    <div class="sidebar-widget">
+      <p class="widget-label">Manifesto do escritório</p>
+      <p class="widget-body" style="font-family: var(--ff-display); font-style: italic; font-size: 0.85rem; line-height: 1.7; color: var(--text-mid);">
+        "Trabalhamos para quem construiu algo que vale proteger. Para quem sabe que imposto em excesso é deixar dinheiro na mesa do governo. Para quem entende que inventário sem planejamento é herança virada em processo."
+      </p>
+    </div>
+
+    <div class="sidebar-widget">
+      <p class="widget-label">Sobre o autor</p>
+      <p class="widget-body">
+        <strong>João Victor Ataide</strong> é advogado tributário, aduaneiro e patrimonialista. Atua com planejamento sucessório, holdings familiares, operações de comércio exterior e blindagem patrimonial.
+      </p>
+      <a class="btn-cta secondary" href="https://joaovictorataide.com.br">
+        Ver perfil completo
+      </a>
+    </div>
+
+    <div class="sidebar-widget">
+      <p class="widget-label">Artigos relacionados</p>
+      <div class="widget-body">
+        <p style="margin-bottom:0.6rem;">
+          <a href="https://joaovictorataide.com.br/blog/holding-familiar-reforma-tributaria.html" style="color:var(--accent-lt); text-decoration:none; font-size:0.84rem;">→ Holding familiar: vale a pena constituir em 2026?</a>
+        </p>
+        <p>
+          <a href="https://joaovictorataide.com.br/blog/blindagem-patrimonial-pessoa-fisica.html" style="color:var(--accent-lt); text-decoration:none; font-size:0.84rem;">→ Blindagem patrimonial: o que protege de verdade</a>
+        </p>
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+<!-- ══ Footer ══ -->
+<footer class="site-footer">
+  <p>© 2026 João Victor Ataide — Advocacia Tributária, Aduaneira e Patrimonial</p>
+  <p style="margin-top:0.4rem;">
+    Rio de Janeiro · <a href="https://wa.me/5521996550865">(21) 99655-0865</a> · <a href="https://joaovictorataide.com.br">joaovictorataide.com.br</a>
+  </p>
+  <p style="margin-top:0.8rem; font-size:0.68rem; color:#4a3e35;">
+    Este artigo tem caráter informativo e não constitui opinião legal para caso concreto. Consulte um advogado para análise individualizada da sua situação patrimonial.
+  </p>
+</footer>
+
+</body>
+</html>
