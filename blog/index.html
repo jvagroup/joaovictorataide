@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | João Victor Ataide — Advogado Tributário Rio de Janeiro</title>
+<meta name="description" content="Artigos técnicos sobre tributário, holding familiar, comércio exterior, direito marítimo, agronegócio e reforma tributária. João Victor Ataide Advocacia.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://joaovictorataide.com.br/blog/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog — João Victor Ataide Advocacia Tributária">
+<meta property="og:description" content="Conteúdo técnico sobre tributário, holding, comércio exterior, direito marítimo e reforma tributária.">
+<meta property="og:url" content="https://joaovictorataide.com.br/blog/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:#0F1923;--teal:#4EA8A0;--teal2:#3D9188;
+  --light:#F7F6F2;--muted:#7A8794;--white:#fff;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--light);color:var(--dark);line-height:1.7;font-size:16px}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(15,25,35,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(78,168,160,.15)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--white);text-decoration:none}
+.logo span{color:var(--teal)}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center}
+.nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;transition:color .2s}
+.nav-links a:hover{color:var(--teal)}
+.nav-cta{background:var(--teal)!important;color:var(--white)!important;padding:.4rem 1.1rem;border-radius:6px;font-weight:500!important}
+@media(max-width:600px){.nav-links{display:none}}
+
+/* HERO */
+.blog-hero{background:linear-gradient(145deg,#0F1923 0%,#162230 60%,#0D2028 100%);padding:8rem 2rem 4rem;position:relative;overflow:hidden}
+.blog-hero::before{content:'';position:absolute;top:-10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(78,168,160,.08) 0%,transparent 65%);pointer-events:none}
+.blog-hero-inner{max-width:1200px;margin:0 auto;position:relative}
+.blog-hero-label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);font-weight:500;margin-bottom:.75rem}
+.blog-hero h1{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:var(--white);line-height:1.15;margin-bottom:1rem}
+.blog-hero h1 em{font-style:italic;color:var(--teal)}
+.blog-hero p{font-size:.97rem;color:rgba(255,255,255,.5);max-width:560px;line-height:1.85}
+
+/* FILTROS */
+.filtros{background:var(--white);border-bottom:1px solid #E8E4DC;padding:.8rem 2rem;position:sticky;top:64px;z-index:50}
+.filtros-inner{max-width:1200px;margin:0 auto;display:flex;gap:.5rem;flex-wrap:wrap}
+.filtro{font-size:.78rem;padding:.3rem .9rem;border-radius:20px;border:1px solid #E8E4DC;background:none;cursor:pointer;color:var(--muted);transition:all .2s;font-family:var(--sans)}
+.filtro:hover,.filtro.ativo{background:var(--teal);border-color:var(--teal);color:var(--white)}
+
+/* GRID */
+.blog-layout{max-width:1200px;margin:0 auto;padding:3rem 2rem}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media(max-width:960px){.blog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.blog-grid{grid-template-columns:1fr}}
+
+/* CARDS */
+.post{background:var(--white);border:1px solid #E8E4DC;border-radius:12px;overflow:hidden;transition:all .25s;text-decoration:none;color:inherit;display:block}
+.post:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.post-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+.post-body{padding:1.4rem}
+.post-cat{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:500;margin-bottom:.45rem}
+.post-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--dark);line-height:1.35;margin-bottom:.5rem}
+.post-ex{font-size:.83rem;color:var(--muted);line-height:1.6;margin-bottom:.9rem}
+.post-meta{display:flex;justify-content:space-between;padding-top:.9rem;border-top:1px solid #F0EDE5;font-size:.73rem;color:var(--muted)}
+.post-read{color:var(--teal);font-weight:500}
+
+/* DESTAQUE — primeiro card maior */
+.post-destaque{grid-column:1 / -1;display:grid;grid-template-columns:1.2fr 1fr;gap:0}
+.post-destaque .post-img{height:100%;min-height:200px;font-size:4rem}
+.post-destaque .post-body{padding:2rem}
+.post-destaque .post-title{font-size:1.4rem}
+@media(max-width:600px){.post-destaque{grid-template-columns:1fr}.post-destaque .post-img{min-height:140px}}
+
+/* CTA BOTTOM */
+.blog-cta{background:var(--dark);margin:3rem 0 0;border-radius:14px;padding:2.5rem;text-align:center}
+.blog-cta h3{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--white);margin-bottom:.5rem}
+.blog-cta h3 em{color:var(--teal);font-style:italic}
+.blog-cta p{font-size:.9rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem}
+.btn-p{background:var(--teal);color:var(--white);padding:.85rem 1.9rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:.9rem;transition:all .2s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-p:hover{background:var(--teal2)}
+
+/* FOOTER */
+footer{background:#0A1520;padding:2rem;border-top:1px solid rgba(255,255,255,.05);margin-top:0}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-family:var(--serif);font-size:1rem;color:rgba(255,255,255,.5)}
+.footer-brand span{color:var(--teal)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:.78rem;color:rgba(255,255,255,.3);text-decoration:none}
+.footer-links a:hover{color:var(--teal)}
+.footer-copy{font-size:.75rem;color:rgba(255,255,255,.25)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://joaovictorataide.com.br" class="logo">JVA<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="https://joaovictorataide.com.br/#servicos">Serviços</a></li>
+      <li><a href="https://joaovictorataide.com.br/#setores">Setores</a></li>
+      <li><a href="https://joaovictorataide.com.br/#teses">Teses Ativas</a></li>
+      <li><a href="https://joaovictorataide.com.br/#faq">FAQ</a></li>
+      <li><a href="https://joaovictorataide.com.br/#contato" class="nav-cta">Agendar consulta</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="blog-hero-inner">
+    <div class="blog-hero-label">Insights e artigos</div>
+    <h1>Conteúdo técnico para quem<br>decide com <em>informação de qualidade.</em></h1>
+    <p>Tributário, holding familiar, comércio exterior, direito marítimo, agronegócio e reforma tributária — análise precisa, sem simplificação excessiva.</p>
+  </div>
+</div>
+
+<!-- FILTROS -->
+<div class="filtros">
+  <div class="filtros-inner">
+    <button class="filtro ativo" onclick="filtrar(this,'todos')">Todos</button>
+    <button class="filtro" onclick="filtrar(this,'reforma')">Reforma Tributária</button>
+    <button class="filtro" onclick="filtrar(this,'holding')">Holding</button>
+    <button class="filtro" onclick="filtrar(this,'maritimo')">Marítimo</button>
+    <button class="filtro" onclick="filtrar(this,'imoveis')">Imóveis</button>
+    <button class="filtro" onclick="filtrar(this,'medicos')">Médicos</button>
+    <button class="filtro" onclick="filtrar(this,'agro')">Agronegócio</button>
+  </div>
+</div>
+
+<!-- GRID -->
+<div class="blog-layout">
+  <div class="blog-grid" id="grid">
+
+    <!-- DESTAQUE -->
+    <a href="/blog/holding-reforma-tributaria-2026.html" class="post post-destaque" data-cat="holding">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F2A3A,#1A4A5A)">🏢</div>
+      <div class="post-body">
+        <div class="post-cat">Holding Familiar · Reforma Tributária</div>
+        <div class="post-title">A holding familiar não acabou com a reforma tributária — mas mudou radicalmente. Entenda o que fazer agora.</div>
+        <div class="post-ex">A LC 227/2026 trouxe ITCMD progressivo obrigatório e nova base de cálculo para cotas de holding. Entenda o que mudou e o que ainda é possível fazer para proteger seu patrimônio.</div>
+        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">8 min →</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/decreto-12955-resolucao-cgibs-6-2026-guia.html" class="post" data-cat="reforma">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A2A35)">📋</div>
+      <div class="post-body">
+        <div class="post-cat">Reforma Tributária · IBS e CBS</div>
+        <div class="post-title">Decreto 12.955 e Resolução CGIBS nº 6/2026: o que mudou para sua empresa — guia rápido</div>
+        <div class="post-ex">Publicados em 30/04/2026, os regulamentos do IBS e CBS criam obrigações concretas com prazo real: agosto de 2026.</div>
+        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">7 min →</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/decreto-12955-analise-tecnica-ibs-cbs.html" class="post" data-cat="reforma">
+      <div class="post-img" style="background:linear-gradient(135deg,#0A1A35,#1A0F35)">⚖️</div>
+      <div class="post-body">
+        <div class="post-cat">Reforma Tributária · Análise Técnica</div>
+        <div class="post-title">Decreto 12.955/2026 e Resolução CGIBS nº 6: análise técnica da estrutura normativa e penalidades</div>
+        <div class="post-ex">Para contadores, CFOs e advogados. Arquitetura normativa em três camadas, hipóteses de incidência, créditos e o que ainda depende de atos conjuntos.</div>
+        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">12 min →</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/split-payment-ibs-cbs-fluxo-caixa-2027.html" class="post" data-cat="reforma">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A300F)">💰</div>
+      <div class="post-body">
+        <div class="post-cat">Reforma Tributária · Split Payment</div>
+        <div class="post-title">Split payment em 2027: o dinheiro que vai sair do seu caixa antes mesmo de você perceber</div>
+        <div class="post-ex">Empresa com R$ 500k/mês de faturamento perderá R$ 137 mil de capital de giro. Entenda o impacto e o que fazer antes de 2027.</div>
+        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">8 min →</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/lei-15394-2026-descomissionamento-reciclagem-embarcacoes.html" class="post" data-cat="maritimo">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0D2A3A)">🚢</div>
+      <div class="post-body">
+        <div class="post-cat">Direito Marítimo · Tributário · Reciclagem</div>
+        <div class="post-title">Lei 15.394/2026 e o descomissionamento de embarcações: oportunidades tributárias que o setor ainda não viu</div>
+        <div class="post-ex">R$ 90 bilhões em plataformas a desativar. A nova lei cria benefícios de PIS/Cofins que poucos armadores conhecem.</div>
+        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">9 min →</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/convencoes-hong-kong-basileia-descomissionamento-naval.html" class="post" data-cat="maritimo">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0A2040)">⚓</div>
+      <div class="post-body">
+        <div class="post-cat">Direito Marítimo · Internacional</div>
+        <div class="post-title">Convenção de Hong Kong e Basileia: o que essas duas normas mudam para o descomissionamento naval no Brasil</div>
+        <div class="post-ex">Duas convenções com lógicas distintas que se aplicam simultaneamente. Ignorar qualquer uma é expor a operação a risco jurídico real.</div>
+        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">10 min →</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/lei-estadual-rj-10028-2023-reciclagem-embarcacoes.html" class="post" data-cat="maritimo">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A2A0F)">🏗️</div>
+      <div class="post-body">
+        <div class="post-cat">Lei Estadual RJ · Reciclagem Naval</div>
+        <div class="post-title">Lei Estadual RJ 10.028/2023: o que foi aprovado, o que foi vetado e o que muda para estaleiros e armadores</div>
+        <div class="post-ex">A primeira lei estadual brasileira sobre reciclagem naval. O ICMS especial foi vetado — mas o que sobrou tem valor real e pouco explorado.</div>
+        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">8 min →</span></div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="blog-cta">
+    <h3>Trabalhamos para quem construiu<br><em>algo que vale proteger.</em></h3>
+    <p>Diagnóstico gratuito de 30 minutos — presencial na Barra da Tijuca ou por videochamada.</p>
+    <a href="https://wa.me/5521996550865" target="_blank" class="btn-p">💬 Falar no WhatsApp</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">João Victor <span>Ataide</span> · Advocacia e Consultoria Tributária</div>
+    <div class="footer-links">
+      <a href="https://joaovictorataide.com.br/#servicos">Serviços</a>
+      <a href="https://joaovictorataide.com.br/#setores">Setores</a>
+      <a href="https://joaovictorataide.com.br/#faq">FAQ</a>
+      <a href="https://joaovictorataide.com.br/#contato">Contato</a>
+    </div>
+    <div class="footer-copy">© 2026 João Victor Ataide · OAB/RJ</div>
+  </div>
+</footer>
+
+<script>
+function filtrar(btn, cat) {
+  document.querySelectorAll('.filtro').forEach(b => b.classList.remove('ativo'));
+  btn.classList.add('ativo');
+  document.querySelectorAll('.post').forEach(p => {
+    if (cat === 'todos' || p.dataset.cat === cat) {
+      p.style.display = 'block';
+      if (p.classList.contains('post-destaque')) p.style.display = 'grid';
+    } else {
+      p.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>
