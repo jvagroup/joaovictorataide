@@ -316,6 +316,96 @@ footer{background:#0A1520;padding:2.5rem 0;border-top:1px solid rgba(255,255,255
   .servicos-grid,.blog-grid,.processo-steps,.destaques{grid-template-columns:1fr}
   .stat-row{grid-template-columns:1fr 1fr}
 }
+
+/* ══ CORREÇÃO MOBILE INDEX ══ */
+@media(max-width:768px){
+
+  /* Grid de pacotes/dívidas — 2 col vira 1 col */
+  [style*="grid-template-columns:repeat(2,1fr)"],
+  [style*="grid-template-columns:1fr 1fr"]{
+    display:block!important;
+  }
+  [style*="grid-template-columns:repeat(2,1fr)"] > div,
+  [style*="grid-template-columns:1fr 1fr"] > div{
+    margin-bottom:1rem!important;
+    width:100%!important;
+  }
+
+  /* Grid de 3 colunas vira 1 */
+  [style*="grid-template-columns:repeat(3,1fr)"],
+  [style*="grid-template-columns:1fr 1fr 1fr"]{
+    display:block!important;
+  }
+  [style*="grid-template-columns:repeat(3,1fr)"] > div{
+    margin-bottom:1rem!important;
+    width:100%!important;
+  }
+
+  /* Servicos grid */
+  .servicos-grid{grid-template-columns:1fr!important}
+
+  /* Setores grid */
+  .setores-grid{grid-template-columns:1fr!important}
+
+  /* Teses grid */
+  .teses-grid{grid-template-columns:1fr!important}
+
+  /* FAQ grid */
+  .faq-grid{grid-template-columns:1fr!important}
+
+  /* Blog grid */
+  .blog-grid{grid-template-columns:1fr!important}
+
+  /* Deep inner (holding) */
+  .deep-inner{grid-template-columns:1fr!important}
+
+  /* Sobre inner */
+  .sobre-inner{grid-template-columns:1fr!important}
+
+  /* GMB inner */
+  .gmb-inner{grid-template-columns:1fr!important}
+
+  /* Processo steps */
+  .processo-steps{grid-template-columns:1fr 1fr!important}
+
+  /* Container padding */
+  .container{padding:0 1rem!important}
+
+  /* Hero */
+  .hero-inner{grid-template-columns:1fr!important}
+  .hero-card{display:none!important}
+
+  /* Tabelas inline com style grid */
+  div[style*="display:grid"]{
+    display:block!important;
+  }
+  div[style*="display:grid"] > div{
+    margin-bottom:.8rem!important;
+    width:100%!important;
+  }
+
+  /* Footer */
+  .footer-inner{
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    gap:.8rem!important;
+  }
+
+  /* Destaques 2x2 */
+  .destaques{grid-template-columns:1fr 1fr!important}
+
+  /* Stat row */
+  .stat-row{grid-template-columns:1fr 1fr!important}
+
+  /* Nav */
+  .nav-links{display:none!important}
+}
+
+@media(max-width:480px){
+  .processo-steps{grid-template-columns:1fr!important}
+  .destaques{grid-template-columns:1fr!important}
+}
+
 </style>
 </head>
 <body>
@@ -381,7 +471,7 @@ footer{background:#0A1520;padding:2.5rem 0;border-top:1px solid rgba(255,255,255
         Pague <em>menos imposto.</em><br>
         Planeje seu legado.
       </h1>
-      <p class="hero-sub">Para quem construiu algo que vale proteger. Um guardião com visão multifacetada do seu negócio, do seu patrimônio e do seu legado — com rigor técnico, discrição, precisão e visão estratégica de longo prazo para empresários e famílias.</p>
+      <p class="hero-sub">Para quem construiu algo que vale proteger. Um guardião dedicado ao seu negócio, ao seu patrimônio e ao seu legado — com rigor técnico, discrição, precisão e visão estratégica de longo prazo para empresários e famílias.</p>
       <div class="hero-btns">
         <a href="https://wa.me/5521996550865" class="btn-p" target="_blank">💬 Falar no WhatsApp</a>
         <a href="#servicos" class="btn-o">Ver serviços</a>
