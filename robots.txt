@@ -1,3 +1,77 @@
-User-agent: *
-Allow: /
-Sitemap: https://www.joaovictorataide.com.br/sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- PÁGINA PRINCIPAL -->
+  <url>
+    <loc>https://joaovictorataide.com.br/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ÍNDICE DO BLOG -->
+  <url>
+    <loc>https://joaovictorataide.com.br/blog/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ARTIGOS DO BLOG -->
+  <url>
+    <loc>https://joaovictorataide.com.br/blog/holding-reforma-tributaria-2026.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://joaovictorataide.com.br/blog/itcmd-progressivo-lc214-holding-familiar.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://joaovictorataide.com.br/blog/decreto-12955-resolucao-cgibs-6-2026-guia.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://joaovictorataide.com.br/blog/decreto-12955-analise-tecnica-ibs-cbs.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://joaovictorataide.com.br/blog/split-payment-ibs-cbs-fluxo-caixa-2027.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://joaovictorataide.com.br/blog/lei-15394-2026-descomissionamento-reciclagem-embarcacoes.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://joaovictorataide.com.br/blog/convencoes-hong-kong-basileia-descomissionamento-naval.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://joaovictorataide.com.br/blog/lei-estadual-rj-10028-2023-reciclagem-embarcacoes.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
