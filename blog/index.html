@@ -23,8 +23,6 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--light);color:var(--dark);line-height:1.7;font-size:16px}
-
-/* NAV */
 nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(15,25,35,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(78,168,160,.15)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--white);text-decoration:none}
@@ -34,8 +32,6 @@ nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(15,25,35,.96);ba
 .nav-links a:hover{color:var(--teal)}
 .nav-cta{background:var(--teal)!important;color:var(--white)!important;padding:.4rem 1.1rem;border-radius:6px;font-weight:500!important}
 @media(max-width:600px){.nav-links{display:none}}
-
-/* HERO */
 .blog-hero{background:linear-gradient(145deg,#0F1923 0%,#162230 60%,#0D2028 100%);padding:8rem 2rem 4rem;position:relative;overflow:hidden}
 .blog-hero::before{content:'';position:absolute;top:-10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(78,168,160,.08) 0%,transparent 65%);pointer-events:none}
 .blog-hero-inner{max-width:1200px;margin:0 auto;position:relative}
@@ -43,46 +39,239 @@ nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(15,25,35,.96);ba
 .blog-hero h1{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:var(--white);line-height:1.15;margin-bottom:1rem}
 .blog-hero h1 em{font-style:italic;color:var(--teal)}
 .blog-hero p{font-size:.97rem;color:rgba(255,255,255,.5);max-width:560px;line-height:1.85}
-
-/* FILTROS */
 .filtros{background:var(--white);border-bottom:1px solid #E8E4DC;padding:.8rem 2rem;position:sticky;top:64px;z-index:50}
 .filtros-inner{max-width:1200px;margin:0 auto;display:flex;gap:.5rem;flex-wrap:wrap}
 .filtro{font-size:.78rem;padding:.3rem .9rem;border-radius:20px;border:1px solid #E8E4DC;background:none;cursor:pointer;color:var(--muted);transition:all .2s;font-family:var(--sans)}
 .filtro:hover,.filtro.ativo{background:var(--teal);border-color:var(--teal);color:var(--white)}
-
-/* GRID */
+/* ── LAYOUT ───────────────────────────────────────── */
 .blog-layout{max-width:1200px;margin:0 auto;padding:3rem 2rem}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
 @media(max-width:960px){.blog-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.blog-grid{grid-template-columns:1fr}}
 
-/* CARDS */
-.post{background:var(--white);border:1px solid #E8E4DC;border-radius:12px;overflow:hidden;transition:all .25s;text-decoration:none;color:inherit;display:block}
-.post:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
-.post-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:2.5rem}
-.post-body{padding:1.4rem}
-.post-cat{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:500;margin-bottom:.45rem}
-.post-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--dark);line-height:1.35;margin-bottom:.5rem}
-.post-ex{font-size:.83rem;color:var(--muted);line-height:1.6;margin-bottom:.9rem}
-.post-meta{display:flex;justify-content:space-between;padding-top:.9rem;border-top:1px solid #F0EDE5;font-size:.73rem;color:var(--muted)}
-.post-read{color:var(--teal);font-weight:500}
+/* ── CARD BASE ────────────────────────────────────── */
+.post{
+  background:var(--white);
+  border:1px solid #E4E8EE;
+  border-radius:14px;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+  box-shadow:0 1px 4px rgba(0,0,0,.05);
+}
+.post:hover{
+  transform:translateY(-5px);
+  box-shadow:0 16px 48px rgba(0,0,0,.1);
+  border-color:rgba(78,168,160,.25);
+}
 
-/* DESTAQUE — primeiro card maior */
-.post-destaque{grid-column:1 / -1;display:grid;grid-template-columns:1.2fr 1fr;gap:0}
-.post-destaque .post-img{height:100%;min-height:200px;font-size:4rem}
-.post-destaque .post-body{padding:2rem}
-.post-destaque .post-title{font-size:1.4rem}
-@media(max-width:600px){.post-destaque{grid-template-columns:1fr}.post-destaque .post-img{min-height:140px}}
+/* faixa de acento superior por nicho — injetada via CSS attr */
+.post::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--teal),var(--teal2));
+  opacity:0;
+  transition:opacity .22s;
+}
+.post:hover::before{opacity:1}
 
-/* CTA BOTTOM */
-.blog-cta{background:var(--dark);margin:3rem 0 0;border-radius:14px;padding:2.5rem;text-align:center}
-.blog-cta h3{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--white);margin-bottom:.5rem}
+/* ── IMAGEM / ÍCONE ───────────────────────────────── */
+.post-img{
+  height:130px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2.6rem;
+  position:relative;
+  overflow:hidden;
+  flex-shrink:0;
+}
+.post-img::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.18));
+}
+
+/* ── CORPO ────────────────────────────────────────── */
+.post-body{
+  padding:1.35rem 1.4rem 1.25rem;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  gap:.4rem;
+}
+
+/* categoria */
+.post-cat{
+  display:inline-flex;
+  align-items:center;
+  gap:.3rem;
+  font-size:.65rem;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--teal);
+  font-weight:600;
+  line-height:1;
+}
+.post-cat::before{
+  content:'';
+  width:5px;height:5px;
+  border-radius:50%;
+  background:var(--teal);
+  flex-shrink:0;
+  opacity:.7;
+}
+
+/* título */
+.post-title{
+  font-family:var(--serif);
+  font-size:1.05rem;
+  font-weight:400;
+  color:var(--dark);
+  line-height:1.38;
+  transition:color .2s;
+}
+.post:hover .post-title{color:var(--teal2)}
+
+/* excerto */
+.post-ex{
+  font-size:.82rem;
+  color:var(--muted);
+  line-height:1.65;
+  flex:1;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+/* rodapé do card */
+.post-meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:.85rem;
+  margin-top:.1rem;
+  border-top:1px solid #F0EDE5;
+  font-size:.72rem;
+  color:#A0AABF;
+}
+.post-read{
+  display:inline-flex;
+  align-items:center;
+  gap:.3rem;
+  color:var(--teal);
+  font-weight:600;
+  font-size:.72rem;
+  background:rgba(78,168,160,.07);
+  padding:.2rem .6rem;
+  border-radius:20px;
+  transition:background .2s;
+}
+.post:hover .post-read{background:rgba(78,168,160,.15)}
+
+/* ── DESTAQUE (primeiro card — grid-column full) ──── */
+.post-destaque{
+  grid-column:1 / -1;
+  flex-direction:row;
+  border-radius:16px;
+  min-height:220px;
+  background:linear-gradient(135deg,#0B1D2E 0%,#0F2535 100%);
+  border-color:rgba(78,168,160,.2);
+  overflow:hidden;
+}
+.post-destaque::before{
+  background:linear-gradient(90deg,var(--teal),#2A9A92);
+  opacity:1;
+  height:3px;
+}
+.post-destaque .post-img{
+  width:280px;
+  min-width:280px;
+  height:auto;
+  font-size:4.5rem;
+  flex-shrink:0;
+  background:rgba(0,0,0,.2)!important;
+}
+.post-destaque .post-img::after{
+  background:linear-gradient(to right,transparent 60%,rgba(11,29,46,.6));
+}
+.post-destaque .post-body{
+  padding:2rem 2.2rem;
+  justify-content:center;
+  gap:.6rem;
+}
+.post-destaque .post-cat{color:var(--teal);font-size:.7rem}
+.post-destaque .post-cat::before{background:var(--teal)}
+.post-destaque .post-title{
+  font-size:1.45rem;
+  font-weight:300;
+  color:#fff;
+  line-height:1.25;
+  -webkit-line-clamp:unset;
+  overflow:visible;
+}
+.post-destaque:hover .post-title{color:rgba(255,255,255,.85)}
+.post-destaque .post-ex{
+  color:rgba(255,255,255,.45);
+  -webkit-line-clamp:2;
+  font-size:.86rem;
+}
+.post-destaque .post-meta{
+  border-top-color:rgba(255,255,255,.1);
+  color:rgba(255,255,255,.3);
+}
+.post-destaque .post-read{
+  background:rgba(78,168,160,.2);
+  color:var(--teal);
+}
+.post-destaque:hover .post-read{background:rgba(78,168,160,.35)}
+@media(max-width:700px){
+  .post-destaque{flex-direction:column}
+  .post-destaque .post-img{width:100%;min-width:0;height:160px}
+  .post-destaque .post-body{padding:1.5rem}
+  .post-destaque .post-title{font-size:1.25rem}
+}
+
+/* ── CTA ──────────────────────────────────────────── */
+.blog-cta{
+  background:linear-gradient(135deg,#0B1D2E,#0F2535);
+  margin:3rem 0 0;
+  border-radius:16px;
+  padding:2.8rem;
+  text-align:center;
+  border:1px solid rgba(78,168,160,.15);
+  position:relative;
+  overflow:hidden;
+}
+.blog-cta::before{
+  content:'';
+  position:absolute;top:-40%;right:-10%;
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(78,168,160,.08),transparent 65%);
+  pointer-events:none;
+}
+.blog-cta h3{font-family:var(--serif);font-size:1.6rem;font-weight:300;color:#fff;margin-bottom:.5rem;line-height:1.3}
 .blog-cta h3 em{color:var(--teal);font-style:italic}
-.blog-cta p{font-size:.9rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem}
-.btn-p{background:var(--teal);color:var(--white);padding:.85rem 1.9rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:.9rem;transition:all .2s;display:inline-flex;align-items:center;gap:.5rem}
-.btn-p:hover{background:var(--teal2)}
-
-/* FOOTER */
+.blog-cta p{font-size:.9rem;color:rgba(255,255,255,.45);margin-bottom:1.6rem;line-height:1.75}
+.btn-p{
+  background:var(--teal);
+  color:var(--white);
+  padding:.9rem 2.2rem;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:500;font-size:.9rem;
+  transition:all .22s;
+  display:inline-flex;align-items:center;gap:.5rem;
+}
+.btn-p:hover{background:var(--teal2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,168,160,.3)}
 footer{background:#0A1520;padding:2rem;border-top:1px solid rgba(255,255,255,.05);margin-top:0}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-brand{font-family:var(--serif);font-size:1rem;color:rgba(255,255,255,.5)}
@@ -95,7 +284,6 @@ footer{background:#0A1520;padding:2rem;border-top:1px solid rgba(255,255,255,.05
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="https://joaovictorataide.com.br" class="logo">JVA<span>.</span></a>
@@ -109,7 +297,6 @@ footer{background:#0A1520;padding:2rem;border-top:1px solid rgba(255,255,255,.05
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="blog-hero">
   <div class="blog-hero-inner">
     <div class="blog-hero-label">Insights e artigos</div>
@@ -118,7 +305,6 @@ footer{background:#0A1520;padding:2rem;border-top:1px solid rgba(255,255,255,.05
   </div>
 </div>
 
-<!-- FILTROS -->
 <div class="filtros">
   <div class="filtros-inner">
     <button class="filtro ativo" onclick="filtrar(this,'todos')">Todos</button>
@@ -128,41 +314,318 @@ footer{background:#0A1520;padding:2rem;border-top:1px solid rgba(255,255,255,.05
     <button class="filtro" onclick="filtrar(this,'imoveis')">Imóveis</button>
     <button class="filtro" onclick="filtrar(this,'medicos')">Médicos</button>
     <button class="filtro" onclick="filtrar(this,'agro')">Agronegócio</button>
+    <button class="filtro" onclick="filtrar(this,'internacional')">Internacional</button>
+    <button class="filtro" onclick="filtrar(this,'teses')">Teses Tributárias</button>
   </div>
 </div>
 
-<!-- GRID -->
 <div class="blog-layout">
   <div class="blog-grid" id="grid">
 
-    <!-- DESTAQUE -->
+    <!-- DESTAQUE — Art. 1 -->
     <a href="/blog/holding-reforma-tributaria-2026.html" class="post post-destaque" data-cat="holding">
       <div class="post-img" style="background:linear-gradient(135deg,#0F2A3A,#1A4A5A)">🏢</div>
       <div class="post-body">
         <div class="post-cat">Holding Familiar · Reforma Tributária</div>
         <div class="post-title">A holding familiar não acabou com a reforma tributária — mas mudou radicalmente. Entenda o que fazer agora.</div>
-        <div class="post-ex">A LC 227/2026 trouxe ITCMD progressivo obrigatório e nova base de cálculo para cotas de holding. Entenda o que mudou e o que ainda é possível fazer para proteger seu patrimônio.</div>
-        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">8 min →</span></div>
+        <div class="post-ex">ITCMD progressivo obrigatório e nova base de cálculo para cotas de holding. O que mudou e o que ainda é possível fazer para proteger seu patrimônio.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">8 min →</span></div>
       </div>
     </a>
 
+    <!-- Art. 2 -->
+    <a href="/blog/itcmd-progressivo-lc-214-2025.html" class="post" data-cat="holding">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A2A35)">📊</div>
+      <div class="post-body">
+        <div class="post-cat">Holding · ITCMD</div>
+        <div class="post-title">ITCMD progressivo pós-LC 214/2025: base de cálculo, alíquotas e janela de planejamento para holdings</div>
+        <div class="post-ex">O que a LC 214/2025 fixou e o que ainda depende de lei estadual. Por que 2026 ainda é o ano ideal para estruturar.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">10 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 3 -->
+    <a href="/blog/medico-pj-pf-2026.html" class="post" data-cat="medicos">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1E0A30)">🩺</div>
+      <div class="post-body">
+        <div class="post-cat">Médicos · Tributário</div>
+        <div class="post-title">Médico PF ou PJ em 2026: a conta que todo médico precisa fazer antes que a reforma tributária mude tudo</div>
+        <div class="post-ex">A tabela que nenhum contador mostrou. PF vs Simples III vs Lucro Presumido — e o que muda com o Fator R.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">7 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 4 -->
+    <a href="/blog/equiparacao-hospitalar-lucro-presumido.html" class="post" data-cat="medicos">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1E0A30)">🏥</div>
+      <div class="post-body">
+        <div class="post-cat">Médicos · Análise Técnica</div>
+        <div class="post-title">Equiparação hospitalar no Lucro Presumido: requisitos da LC 214/2025, CNAE correto e Tema 217 STJ</div>
+        <div class="post-ex">O benefício que reduz o IRPJ de 32% para 8% — e que a maioria das clínicas perde por erro técnico.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">9 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 5 -->
+    <a href="/blog/holding-rural-transferir-fazenda-herdeiros.html" class="post" data-cat="agro">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0F2A10)">🌾</div>
+      <div class="post-body">
+        <div class="post-cat">Agronegócio · Holding Rural</div>
+        <div class="post-title">Holding rural em 2026: como transferir a fazenda para os filhos sem inventário e sem ITCMD alto</div>
+        <div class="post-ex">Como funciona a holding rural, quanto custa o inventário de uma fazenda e o que a reforma tributária muda para o agronegócio sucessório.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">7 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 6 -->
+    <a href="/blog/ibs-cbs-agronegocio-lc-214.html" class="post" data-cat="agro">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0F2A10)">🚜</div>
+      <div class="post-body">
+        <div class="post-cat">Agronegócio · Análise Técnica</div>
+        <div class="post-title">IBS e CBS no agronegócio: crédito presumido, alíquota zero nas exportações e impacto da LC 214/2025</div>
+        <div class="post-ex">O que a LC 214/2025 garante ao agronegócio: desoneração das exportações, crédito presumido e regimes especiais.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">11 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 7 -->
+    <a href="/blog/drawback-como-funciona-importacao.html" class="post" data-cat="reforma">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A2A35)">📦</div>
+      <div class="post-body">
+        <div class="post-cat">Comércio Exterior · Benefícios Fiscais</div>
+        <div class="post-title">Drawback: o benefício fiscal que pode zerar os impostos da sua importação — e que 80% das empresas não usam</div>
+        <div class="post-ex">Três modalidades, quem pode usar e quanto custa não usar o drawback. Com simulação real de economia.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">7 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 8 -->
+    <a href="/blog/reforma-tributaria-comercio-exterior-2026.html" class="post" data-cat="reforma">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A2A35)">🌐</div>
+      <div class="post-body">
+        <div class="post-cat">Comércio Exterior · Análise Técnica</div>
+        <div class="post-title">Reforma tributária no comércio exterior: princípio do destino, crédito de IBS/CBS na importação e LC 214/2025</div>
+        <div class="post-ex">Importação de bens, exportação imune e o drawback no novo sistema. O que muda nas obrigações acessórias a partir de Jan/2026.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">12 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 9 -->
+    <a href="/blog/irrf-afretamento-exterior-armador.html" class="post" data-cat="maritimo">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0D2A3A)">🚢</div>
+      <div class="post-body">
+        <div class="post-cat">Direito Marítimo · Tributário</div>
+        <div class="post-title">Armador paga até 25% de imposto para remeter dinheiro ao exterior — mas pode não precisar</div>
+        <div class="post-ex">Como funciona o IRRF sobre afretamento, quais países permitem redução e como funciona o pedido de restituição.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">7 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 10 -->
+    <a href="/blog/irrf-afretamento-tratado-dupla-tributacao.html" class="post" data-cat="maritimo">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0D2A3A)">⚓</div>
+      <div class="post-body">
+        <div class="post-cat">Marítimo · Análise Técnica</div>
+        <div class="post-title">IRRF sobre remessas de afretamento ao exterior: análise dos tratados de dupla tributação e jurisprudência do CARF</div>
+        <div class="post-ex">Alíquota de 15% vs 25%, análise dos tratados com Noruega, Alemanha, Japão e China. Decisões do CARF 2022–2024.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">11 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 11 -->
+    <a href="/blog/inventario-extrajudicial-cartorio-rj.html" class="post" data-cat="imoveis">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A2A0F)">📜</div>
+      <div class="post-body">
+        <div class="post-cat">Imóveis · Sucessão</div>
+        <div class="post-title">Inventário no cartório em 2026: quanto custa, quanto demora e quando é possível fazer sem juiz</div>
+        <div class="post-ex">Requisitos legais, tabela de custas no RJ e prazo real: de 30 dias a 6 meses. Quando o inventário extrajudicial não é possível.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">6 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 12 -->
+    <a href="/blog/tema-118-stf-exclusao-iss-pis-cofins.html" class="post" data-cat="teses">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A1A35)">⚖️</div>
+      <div class="post-body">
+        <div class="post-cat">Teses Tributárias · STF</div>
+        <div class="post-title">Tema 118 STF: exclusão do ISS da base do PIS/Cofins — estado atual, modulação e por que ajuizar agora</div>
+        <div class="post-ex">Placar 5×5 torna urgente o ajuizamento preventivo. Como calcular o crédito da sua empresa e o caminho correto.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">10 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 13 -->
+    <a href="/blog/transacao-tributaria-pgfn-desconto-2026.html" class="post" data-cat="teses">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A1A35)">💼</div>
+      <div class="post-body">
+        <div class="post-cat">Dívida Tributária · PGFN</div>
+        <div class="post-title">Sua empresa tem dívida com a Receita Federal? Existe um caminho legal para pagar até 90% menos</div>
+        <div class="post-ex">Transação tributária PGFN: descontos de 90% para Simples Nacional, 75% para MPE. Como funciona e quem pode acessar.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">7 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 14 -->
+    <a href="/blog/tema-843-stf-credito-icms-pis-cofins.html" class="post" data-cat="teses">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A1A35)">🏭</div>
+      <div class="post-body">
+        <div class="post-cat">Teses Tributárias · STF</div>
+        <div class="post-title">Tema 843 STF: créditos presumidos de ICMS fora da base do PIS/Cofins — análise pós-LC 214/2025</div>
+        <div class="post-ex">O que está em julgamento, empresas com incentivos estaduais no RJ e como estruturar a ação preventiva antes da decisão.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">11 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 15 -->
+    <a href="/blog/itbi-cobrado-maior-devolucao-prefeitura.html" class="post" data-cat="imoveis">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#2A1A0F)">🏠</div>
+      <div class="post-body">
+        <div class="post-cat">Imóveis · Tributário Municipal</div>
+        <div class="post-title">A prefeitura cobrou ITBI pelo valor que ela "acha" que o imóvel vale — e você pode pedir o dinheiro de volta</div>
+        <div class="post-ex">Tema 1.113 STJ: ITBI deve ser calculado sobre o valor da transação, não sobre o valor venal. Como pedir a restituição.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">7 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 16 -->
+    <a href="/blog/itr-contestacao-produtor-rural-2026.html" class="post" data-cat="agro">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0F2A10)">🌾</div>
+      <div class="post-body">
+        <div class="post-cat">Agronegócio · ITR</div>
+        <div class="post-title">ITR em 2026: o que o produtor rural precisa saber sobre base de cálculo, isenções e contestação</div>
+        <div class="post-ex">VTN, isenção de APP e reserva legal, como contestar autos de infração e regularizar o imóvel rural com georreferenciamento.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">11 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 17 -->
+    <a href="/blog/patrimonio-exterior-brasil-2026.html" class="post" data-cat="internacional">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0D2A3A)">🌍</div>
+      <div class="post-body">
+        <div class="post-cat">Patrimônio Internacional · Compliance</div>
+        <div class="post-title">Brasileiro com dinheiro no exterior em 2026: como proteger, declarar e planejar legalmente</div>
+        <div class="post-ex">LLC, Trust ou Fundação, o que mudou com a Lei 14.754/2023, ITCMD sobre bens no exterior e o risco do CRS.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">8 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 18 -->
+    <a href="/blog/lei-14754-offshore-tributacao-cfc.html" class="post" data-cat="internacional">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0D2A3A)">🏦</div>
+      <div class="post-body">
+        <div class="post-cat">Internacional · Análise Técnica · CFC</div>
+        <div class="post-title">Lei 14.754/2023 e as offshores controladas: tributação de lucros, CFC e planejamento lícito</div>
+        <div class="post-ex">Critérios de enquadramento, regime de transparência fiscal, alíquota de 15%, exceções e estruturas ainda eficientes.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">13 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 19 -->
+    <a href="/blog/reb-registro-especial-brasileiro-beneficios.html" class="post" data-cat="maritimo">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0D2A3A)">⚓</div>
+      <div class="post-body">
+        <div class="post-cat">Direito Marítimo · Benefícios Fiscais</div>
+        <div class="post-title">REB: o registro que pode reduzir drasticamente os impostos da sua embarcação — e que muitos armadores ainda não aproveitam</div>
+        <div class="post-ex">Isenção de IPI e II na aquisição, impacto com o IBS/CBS e simulação de economia para operadores de cabotagem.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">9 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 20 -->
+    <a href="/blog/tema-1312-stj-pis-cofins-irpj-lucro-presumido.html" class="post" data-cat="teses">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A1A35)">⚖️</div>
+      <div class="post-body">
+        <div class="post-cat">Teses Tributárias · STJ</div>
+        <div class="post-title">Tema 1.312 STJ: por que PIS/Cofins não pode compor a base do IRPJ/CSLL — e quando vai ser decidido</div>
+        <div class="post-ex">Análise técnica, quem é beneficiado, cálculo do crédito e como ajuizar antes da decisão para não perder os 5 anos retroativos.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">12 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 21 -->
+    <a href="/blog/clinica-medica-split-payment-reforma-tributaria-2026.html" class="post" data-cat="medicos">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1E0A30)">🏥</div>
+      <div class="post-body">
+        <div class="post-cat">Médicos · Reforma Tributária</div>
+        <div class="post-title">Clínica médica e a reforma tributária: o que muda com split payment e como se proteger</div>
+        <div class="post-ex">Em 2027, o imposto será retido automaticamente antes de chegar na sua conta. Impacto no fluxo de caixa e três ações concretas agora.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">8 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 22 -->
+    <a href="/blog/split-payment-medico-saude-impacto-fluxo.html" class="post" data-cat="medicos">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1E0A30)">⚕️</div>
+      <div class="post-body">
+        <div class="post-cat">Médicos · Análise Técnica</div>
+        <div class="post-title">Split payment para serviços de saúde: impacto no fluxo de caixa e estratégias de mitigação</div>
+        <div class="post-ex">Cronograma por porte, metodologia de cálculo do impacto no capital de giro, glosagens e aproveitamento de créditos de IBS/CBS.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">13 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 23 -->
+    <a href="/blog/holding-familiar-melhor-que-testamento.html" class="post" data-cat="holding">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#162230)">🏛️</div>
+      <div class="post-body">
+        <div class="post-cat">Holding · Planejamento Sucessório</div>
+        <div class="post-title">Por que a holding familiar é melhor que testamento para proteger seus filhos</div>
+        <div class="post-ex">O testamento só age depois que você morre. A holding protege o patrimônio agora: de credores, do divórcio dos filhos e do inventário.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">8 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 24 -->
+    <a href="/blog/pacto-antenupcial-holding-familiar-planejamento-sucessorio.html" class="post" data-cat="holding">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#162230)">⚖️</div>
+      <div class="post-body">
+        <div class="post-cat">Holding · Análise Técnica</div>
+        <div class="post-title">Pacto antenupcial e holding familiar: sinergia entre os institutos no planejamento sucessório</div>
+        <div class="post-ex">Regimes de bens, cláusulas de incomunicabilidade das cotas, impenhorabilidade e jurisprudência do STJ sobre validade.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">12 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 25 -->
+    <a href="/blog/produtor-rural-icms-insumos-exportacoes-reforma-tributaria.html" class="post" data-cat="agro">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0F2A10)">🌱</div>
+      <div class="post-body">
+        <div class="post-cat">Agronegócio · Reforma Tributária</div>
+        <div class="post-title">Produtor rural e a reforma tributária: o que muda no ICMS dos insumos e nas exportações</div>
+        <div class="post-ex">Fim do ICMS, alíquota zero IBS/CBS nos insumos listados, imunidade das exportações e cronograma de transição até 2033.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">8 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Art. 26 -->
+    <a href="/blog/cprb-rural-contribuicao-folha-teses-stf-agronegocio.html" class="post" data-cat="agro">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0F2A10)">⚖️</div>
+      <div class="post-body">
+        <div class="post-cat">Agronegócio · Análise Técnica · STF</div>
+        <div class="post-title">CPRB rural e contribuição sobre folha: análise das teses em curso no STF para o setor</div>
+        <div class="post-ex">Sub-rogação do adquirente, ADC 84, SENAR sobre exportações e impacto da reforma tributária sobre a CPRB. Estratégia por perfil de contribuinte.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">14 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Arts. publicados antes (deck naval/reciclagem) -->
     <a href="/blog/decreto-12955-resolucao-cgibs-6-2026-guia.html" class="post" data-cat="reforma">
       <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A2A35)">📋</div>
       <div class="post-body">
         <div class="post-cat">Reforma Tributária · IBS e CBS</div>
         <div class="post-title">Decreto 12.955 e Resolução CGIBS nº 6/2026: o que mudou para sua empresa — guia rápido</div>
         <div class="post-ex">Publicados em 30/04/2026, os regulamentos do IBS e CBS criam obrigações concretas com prazo real: agosto de 2026.</div>
-        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">7 min →</span></div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">7 min →</span></div>
       </div>
     </a>
 
     <a href="/blog/decreto-12955-analise-tecnica-ibs-cbs.html" class="post" data-cat="reforma">
-      <div class="post-img" style="background:linear-gradient(135deg,#0A1A35,#1A0F35)">⚖️</div>
+      <div class="post-img" style="background:linear-gradient(135deg,#0A1A35,#1A0F35)">📐</div>
       <div class="post-body">
         <div class="post-cat">Reforma Tributária · Análise Técnica</div>
         <div class="post-title">Decreto 12.955/2026 e Resolução CGIBS nº 6: análise técnica da estrutura normativa e penalidades</div>
-        <div class="post-ex">Para contadores, CFOs e advogados. Arquitetura normativa em três camadas, hipóteses de incidência, créditos e o que ainda depende de atos conjuntos.</div>
-        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">12 min →</span></div>
+        <div class="post-ex">Arquitetura normativa em três camadas, hipóteses de incidência, créditos e o que ainda depende de atos conjuntos.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">12 min →</span></div>
       </div>
     </a>
 
@@ -171,28 +634,28 @@ footer{background:#0A1520;padding:2rem;border-top:1px solid rgba(255,255,255,.05
       <div class="post-body">
         <div class="post-cat">Reforma Tributária · Split Payment</div>
         <div class="post-title">Split payment em 2027: o dinheiro que vai sair do seu caixa antes mesmo de você perceber</div>
-        <div class="post-ex">Empresa com R$ 500k/mês de faturamento perderá R$ 137 mil de capital de giro. Entenda o impacto e o que fazer antes de 2027.</div>
-        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">8 min →</span></div>
+        <div class="post-ex">Empresa com R$ 500k/mês perde R$ 137 mil de capital de giro. Entenda o impacto e o que fazer antes de 2027.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">8 min →</span></div>
       </div>
     </a>
 
     <a href="/blog/lei-15394-2026-descomissionamento-reciclagem-embarcacoes.html" class="post" data-cat="maritimo">
       <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0D2A3A)">🚢</div>
       <div class="post-body">
-        <div class="post-cat">Direito Marítimo · Tributário · Reciclagem</div>
+        <div class="post-cat">Direito Marítimo · Reciclagem</div>
         <div class="post-title">Lei 15.394/2026 e o descomissionamento de embarcações: oportunidades tributárias que o setor ainda não viu</div>
         <div class="post-ex">R$ 90 bilhões em plataformas a desativar. A nova lei cria benefícios de PIS/Cofins que poucos armadores conhecem.</div>
-        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">9 min →</span></div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">9 min →</span></div>
       </div>
     </a>
 
     <a href="/blog/convencoes-hong-kong-basileia-descomissionamento-naval.html" class="post" data-cat="maritimo">
       <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0A2040)">⚓</div>
       <div class="post-body">
-        <div class="post-cat">Direito Marítimo · Internacional</div>
+        <div class="post-cat">Marítimo · Internacional</div>
         <div class="post-title">Convenção de Hong Kong e Basileia: o que essas duas normas mudam para o descomissionamento naval no Brasil</div>
         <div class="post-ex">Duas convenções com lógicas distintas que se aplicam simultaneamente. Ignorar qualquer uma é expor a operação a risco jurídico real.</div>
-        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">10 min →</span></div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">10 min →</span></div>
       </div>
     </a>
 
@@ -201,14 +664,45 @@ footer{background:#0A1520;padding:2rem;border-top:1px solid rgba(255,255,255,.05
       <div class="post-body">
         <div class="post-cat">Lei Estadual RJ · Reciclagem Naval</div>
         <div class="post-title">Lei Estadual RJ 10.028/2023: o que foi aprovado, o que foi vetado e o que muda para estaleiros e armadores</div>
-        <div class="post-ex">A primeira lei estadual brasileira sobre reciclagem naval. O ICMS especial foi vetado — mas o que sobrou tem valor real e pouco explorado.</div>
-        <div class="post-meta"><span class="post-date">Maio 2026</span><span class="post-read">8 min →</span></div>
+        <div class="post-ex">A primeira lei estadual brasileira sobre reciclagem naval. O ICMS especial foi vetado — mas o que sobrou tem valor real.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">8 min →</span></div>
+      </div>
+    </a>
+
+    <!-- RioComex — sancionado 21/05/2026 -->
+    <a href="/blog/riocomex-regime-tributario-importacao-rj-2026.html" class="post" data-cat="reforma">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A2A35)">🚢</div>
+      <div class="post-body">
+        <div class="post-cat">Comércio Exterior · ICMS · RJ</div>
+        <div class="post-title">RioComex: o Rio de Janeiro finalmente entrou na disputa pelas importações</div>
+        <div class="post-ex">Sancionado em 21/05/2026, o novo regime oferece ICMS diferido no desembaraço e carga efetiva de 4%. Quem pode aderir e o que ainda falta regulamentar.</div>
+        <div class="post-meta"><span>Maio 2026 · Novo</span><span class="post-read">9 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Declaração pré-preenchida IRPF 2026 -->
+    <a href="/blog/declaracao-pre-preenchida-irpf-2026-problemas.html" class="post" data-cat="teses">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#1A1520)">📋</div>
+      <div class="post-body">
+        <div class="post-cat">Imposto de Renda · IRPF 2026</div>
+        <div class="post-title">A declaração pré-preenchida está errada — e a culpa, mesmo assim, é sua</div>
+        <div class="post-ex">Fim da DIRF, erros do eSocial e dados importados incorretamente: por que tantas declarações caíram na malha fina em 2026 e o que fazer antes do prazo de 30/mai.</div>
+        <div class="post-meta"><span>Maio 2026 · Urgente</span><span class="post-read">8 min →</span></div>
+      </div>
+    </a>
+
+    <!-- Offshore é crime? -->
+    <a href="/blog/offshore-e-crime-planejamento-tributario-internacional.html" class="post" data-cat="internacional">
+      <div class="post-img" style="background:linear-gradient(135deg,#0F1923,#0D2A3A)">🌍</div>
+      <div class="post-body">
+        <div class="post-cat">Internacional · Offshore · Planejamento</div>
+        <div class="post-title">Offshore é crime? A resposta técnica que todo empresário precisa ler antes de decidir</div>
+        <div class="post-ex">Offshore não é crime — mas pode virar um se mal estruturada. Evasão x elisão, o que a Lei 14.754/2023 mudou, por que o sigilo acabou com o CRS e quando a estrutura ainda faz sentido.</div>
+        <div class="post-meta"><span>Maio 2026</span><span class="post-read">10 min →</span></div>
       </div>
     </a>
 
   </div>
-
-  <!-- CTA -->
   <div class="blog-cta">
     <h3>Trabalhamos para quem construiu<br><em>algo que vale proteger.</em></h3>
     <p>Diagnóstico gratuito de 30 minutos — presencial na Barra da Tijuca ou por videochamada.</p>
@@ -216,7 +710,6 @@ footer{background:#0A1520;padding:2rem;border-top:1px solid rgba(255,255,255,.05
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">João Victor <span>Ataide</span> · Advocacia e Consultoria Tributária</div>
@@ -236,7 +729,7 @@ function filtrar(btn, cat) {
   btn.classList.add('ativo');
   document.querySelectorAll('.post').forEach(p => {
     if (cat === 'todos' || p.dataset.cat === cat) {
-      p.style.display = 'block';
+      p.style.display = '';
       if (p.classList.contains('post-destaque')) p.style.display = 'grid';
     } else {
       p.style.display = 'none';
