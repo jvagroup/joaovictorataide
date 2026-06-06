@@ -1,128 +1,57 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-<!--  ══ PÁGINAS PRINCIPAIS ══  -->
-<url>
-<loc>https://joaovictorataide.com.br/</loc>
-<lastmod>2026-05-07</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://joaovictorataide.com.br/blog/</loc>
-<lastmod>2026-05-07</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<!--  ══ ARTIGOS DO BLOG ══  -->
-<url>
-<loc>https://joaovictorataide.com.br/blog/ibs-cbs-agronegocio-lc-214.html</loc>
-<lastmod>2026-05-07</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.85</priority>
-<news:news>
-<news:publication>
-<news:name>João Victor Ataide Advocacia Tributária</news:name>
-<news:language>pt</news:language>
-</news:publication>
-<news:publication_date>2026-05-07</news:publication_date>
-<news:title>IBS e CBS no agronegócio: crédito presumido, alíquota zero nas exportações e impacto da LC 214/2025</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://joaovictorataide.com.br/blog/holding-reforma-tributaria-2026.html</loc>
-<lastmod>2026-05-02</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.85</priority>
-<news:news>
-<news:publication>
-<news:name>João Victor Ataide Advocacia Tributária</news:name>
-<news:language>pt</news:language>
-</news:publication>
-<news:publication_date>2026-05-02</news:publication_date>
-<news:title>A holding familiar não acabou com a reforma tributária — mas mudou radicalmente</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://joaovictorataide.com.br/blog/decreto-12955-resolucao-cgibs-6-2026-guia.html</loc>
-<lastmod>2026-05-03</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-<news:news>
-<news:publication>
-<news:name>João Victor Ataide Advocacia Tributária</news:name>
-<news:language>pt</news:language>
-</news:publication>
-<news:publication_date>2026-05-03</news:publication_date>
-<news:title>Decreto 12.955 e Resolução CGIBS nº 6/2026: o que mudou para sua empresa — guia rápido</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://joaovictorataide.com.br/blog/decreto-12955-analise-tecnica-ibs-cbs.html</loc>
-<lastmod>2026-05-04</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-<news:news>
-<news:publication>
-<news:name>João Victor Ataide Advocacia Tributária</news:name>
-<news:language>pt</news:language>
-</news:publication>
-<news:publication_date>2026-05-04</news:publication_date>
-<news:title>Decreto 12.955/2026 e Resolução CGIBS nº 6: análise técnica da estrutura normativa e penalidades</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://joaovictorataide.com.br/blog/split-payment-ibs-cbs-fluxo-caixa-2027.html</loc>
-<lastmod>2026-05-05</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-<news:news>
-<news:publication>
-<news:name>João Victor Ataide Advocacia Tributária</news:name>
-<news:language>pt</news:language>
-</news:publication>
-<news:publication_date>2026-05-05</news:publication_date>
-<news:title>Split payment em 2027: o dinheiro que vai sair do seu caixa antes mesmo de você perceber</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://joaovictorataide.com.br/blog/lei-15394-2026-descomissionamento-reciclagem-embarcacoes.html</loc>
-<lastmod>2026-05-01</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.75</priority>
-<news:news>
-<news:publication>
-<news:name>João Victor Ataide Advocacia Tributária</news:name>
-<news:language>pt</news:language>
-</news:publication>
-<news:publication_date>2026-05-01</news:publication_date>
-<news:title>Lei 15.394/2026 e o descomissionamento de embarcações: oportunidades tributárias que o setor ainda não viu</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://joaovictorataide.com.br/blog/convencoes-hong-kong-basileia-descomissionamento-naval.html</loc>
-<lastmod>2026-05-02</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.75</priority>
-<news:news>
-<news:publication>
-<news:name>João Victor Ataide Advocacia Tributária</news:name>
-<news:language>pt</news:language>
-</news:publication>
-<news:publication_date>2026-05-02</news:publication_date>
-<news:title>Convenção de Hong Kong e Basileia: o que essas duas normas mudam para o descomissionamento naval no Brasil</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://joaovictorataide.com.br/blog/lei-estadual-rj-10028-2023-reciclagem-embarcacoes.html</loc>
-<lastmod>2026-05-03</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.75</priority>
-<news:news>
-<news:publication>
-<news:name>João Victor Ataide Advocacia Tributária</news:name>
-<news:language>pt</news:language>
-</news:publication>
-<news:publication_date>2026-05-03</news:publication_date>
-<news:title>Lei Estadual RJ 10.028/2023: o que foi aprovado, o que foi vetado e o que muda para estaleiros e armadores</news:title>
-</news:news>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME -->
+  <url><loc>https://joaovictorataide.com.br/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+  <!-- BLOG — artigos (48 arquivos confirmados no repositório) -->
+  <url><loc>https://joaovictorataide.com.br/blog/admissao-temporaria-drawback-integrado-auditoria-aduaneira.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/auto-infraco-fiscal-o-que-fazer-30-horas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/bunker-tributacao-cide-icms-reforma-tributaria.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/classificacao-fiscal-ncm-autocuasacao-carf.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/convencoes-hong-kong-basileia-descomissionamento-naval.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/cprb-rural-contribuicao-folha-tema-off-agronegocio.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/Create-tributacao-reforma-itcmd-progressivo-lc-214-2025.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/declaracao-pre-preenchida-irpf-2026-problemas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/decreto-12955-analise-tecnica-ibs-cbs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/decreto-12955-resolucao-cgibs-6-2026-guia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/defesa-administrativa-auto-infraco-carf-stj.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/dissolucao-holding-familiar-tributario-anotario-sucessario.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/en-tarifario-2026-reducao-imposto-importacao.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/holding-familiar-melhor-que-testamento.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/holding-familiarefroma-tributaria-2026.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/holding-medica-clinica-patrimonio-apresentadora.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/holding-reforma-tributaria-2026.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/hong-kong-basileia-descomissionamento-naval.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/ibs-cbs-agronegocio-lc-214.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/ibs-cbs-nao-cumulatividade-creditamento-lc-214.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/ibs-cbs-produtor-rural-credito-presumido-lc-214.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/imovel-herdado-sem-escritura-regularizacao-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/irf-afretamento-tratado-dupla-tributacao.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/iss-estabelecimento-estavel-servicos-engenharia-iss.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/itbi-cobrado-maior-devolucao-prefeitura.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/itcmd-progressivo-lc214-holding-familiar.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/iv-contencao-produtor-rural-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/lei-14754-offshore-tributacao-cfc.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/lei-15394-2026-descomissionamento-reciclagem-embarcacoes.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/lei-estadual-rj-10028-2023-reciclagem-embarcacoes.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/medico-pf-ou-pj.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/onde-sediar-empresa-europa-estonia-irlanda-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/pacto-antenupcial-holding-familiar-planejamento-sucessario.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/patrimonio-exterior-brasil-2026.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/produtor-rural-icms-insumos-exportacoes-reforma-tributaria.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/protocolo-familiar-holding-heranca-brigas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/reb-registro-especial-brasileiro-beneficios.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/reforma-tributaria-empresas-2026-o-que-mudou.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/riscomes-regime-tributario-importacao-p-j-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/riscomes-regime-tributario-pj-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/saida-definitiva-brasil-residencia-fiscal-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/sistema-v-teto-20-salarios-tema-1390-stj.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/split-payment-ibs-cbs-fluxo-valor-2027.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/split-payment-medico-saude-impacto-fluxo.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/tema-1312-stj-pis-cofins-irpj-lucro-presumido.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/tributacao-dividendos-exterior-lei-14172-15-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/tributacao-internacional-empresas-guia-2026.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joaovictorataide.com.br/blog/usucapiao-extraj-oficial-2026-cartorio.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
 </urlset>
