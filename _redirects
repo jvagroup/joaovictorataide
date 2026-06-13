@@ -1,28 +1,51 @@
-# _redirects — joaovictorataide.com.br
-# Corrige URLs indexadas pelo Google que mudaram de nome (301 permanente)
-# Suba este arquivo na RAIZ do repositório jvagroup/joaovictorataide
-# Gerado em: 2026-06-05
-
-# ── Grupo C: https + .html que davam 404 ──────────────────────────────────────
-/blog/clinica-medica-split-payment-reforma-tributaria-2026.html  /blog/holding-medica-clinica-patrimonio-apresentadora.html  301
-/blog/equiparacao-hospitalar-lucro-presumido.html                 /blog/holding-medica-clinica-patrimonio-apresentadora.html  301
-/blog/offshore-e-crime-planejamento-tributario-internacional.html /blog/lei-14754-offshore-tributacao-cfc.html                301
-/blog/drawback-como-funciona-importacao.html                      /blog/admissao-temporaria-drawback-integrado-auditoria-aduaneira.html  301
-/blog/transacao-tributaria-pgfn-desconto-2026.html                /blog/reforma-tributaria-empresas-2026-o-que-mudou.html     301
-/blog/tema-843-stf-credito-icms-pis-cofins.html                   /blog/decreto-12955-analise-tecnica-ibs-cbs.html            301
-/blog/inventario-extrajudicial-cartorio-rj.html                   /blog/itcmd-progressivo-lc214-holding-familiar.html        301
-/blog/reforma-tributaria-comercio-exterior-2026.html              /blog/reforma-tributaria-empresas-2026-o-que-mudou.html     301
-/blog/lei-estadual-rj-10028-reciclagem-naval.html                 /blog/lei-estadual-rj-10028-2023-reciclagem-embarcacoes.html  301
-/blog/medico-pj-pf-2026.html                                      /blog/medico-pf-ou-pj.html                                 301
-/blog/credito-ibs-cbs-como-funciona.html                          /blog/ibs-cbs-nao-cumulatividade-creditamento-lc-214.html   301
-/blog/irrf-afretamento-exterior-armador.html                      /blog/irf-afretamento-tratado-dupla-tributacao.html         301
-/blog/split-payment-fluxo-caixa-2026.html                         /blog/split-payment-ibs-cbs-fluxo-valor-2027.html           301
-/blog/holding-familiar-reforma-tributaria.html                    /blog/holding-familiarefroma-tributaria-2026.html           301
-/blog/blindagem-patrimonial-pessoa-fisica.html                    /blog/patrimonio-exterior-brasil-2026.html                  301
-/blog/tema-118-stf-exclusao-iss-pis-cofins.html                   /blog/decreto-12955-analise-tecnica-ibs-cbs.html            301
-/blog/holding-rural-transferir-fazenda-herdeiros.html             /blog/protocolo-familiar-holding-heranca-brigas.html        301
-
-# ── Grupo B: https sem .html ───────────────────────────────────────────────────
-/blog/itcmd-progressivo-lc-214-2025              /blog/itcmd-progressivo-lc214-holding-familiar.html        301
-/blog/split-payment-fluxo-caixa-2027             /blog/split-payment-ibs-cbs-fluxo-valor-2027.html          301
-/blog/lei-estadual-rj-10028-reciclagem-naval      /blog/lei-estadual-rj-10028-2023-reciclagem-embarcacoes.html  301
+# _redirects — alvos corrigidos em 2026-06-10 (GitHub Pages ignora; válido em Cloudflare/Netlify Pages)
+/blog/clinica-medica-split-payment-reforma-tributaria-2026.html  /blog/split-payment-medico-saude-impacto-fluxo.html  301
+/blog/clinica-medica-split-payment-reforma-tributaria-2026  /blog/split-payment-medico-saude-impacto-fluxo.html  301
+/blog/equiparacao-hospitalar-lucro-presumido.html  /blog/medico-pf-ou-pj.html  301
+/blog/equiparacao-hospitalar-lucro-presumido  /blog/medico-pf-ou-pj.html  301
+/blog/offshore-e-crime-planejamento-tributario-internacional.html  /blog/lei-14754-offshore-tributacao-cfc.html  301
+/blog/offshore-e-crime-planejamento-tributario-internacional  /blog/lei-14754-offshore-tributacao-cfc.html  301
+/blog/drawback-como-funciona-importacao.html  /blog/admissao-temporaria-drawback-integrado-auditoria-aduaneira.html  301
+/blog/drawback-como-funciona-importacao  /blog/admissao-temporaria-drawback-integrado-auditoria-aduaneira.html  301
+/blog/transacao-tributaria-pgfn-desconto-2026.html  /blog/auto-infracao-fiscal-o-que-fazer-30-horas.html  301
+/blog/transacao-tributaria-pgfn-desconto-2026  /blog/auto-infracao-fiscal-o-que-fazer-30-horas.html  301
+/blog/tema-843-stf-credito-icms-pis-cofins.html  /blog/tema-1312-stj-pis-cofins-irpj-lucro-presumido.html  301
+/blog/tema-843-stf-credito-icms-pis-cofins  /blog/tema-1312-stj-pis-cofins-irpj-lucro-presumido.html  301
+/blog/tema-118-stf-exclusao-iss-pis-cofins.html  /blog/tema-1312-stj-pis-cofins-irpj-lucro-presumido.html  301
+/blog/tema-118-stf-exclusao-iss-pis-cofins  /blog/tema-1312-stj-pis-cofins-irpj-lucro-presumido.html  301
+/blog/inventario-extrajudicial-cartorio-rj.html  /blog/imovel-herdado-sem-escritura-regularizacao-2026.html  301
+/blog/inventario-extrajudicial-cartorio-rj  /blog/imovel-herdado-sem-escritura-regularizacao-2026.html  301
+/blog/reforma-tributaria-comercio-exterior-2026.html  /blog/reforma-tributaria-empresas-2026-o-que-mudou.html  301
+/blog/reforma-tributaria-comercio-exterior-2026  /blog/reforma-tributaria-empresas-2026-o-que-mudou.html  301
+/blog/lei-estadual-rj-10028-reciclagem-naval.html  /blog/lei-estadual-rj-10028-2023-reciclagem-embarcacoes.html  301
+/blog/lei-estadual-rj-10028-reciclagem-naval  /blog/lei-estadual-rj-10028-2023-reciclagem-embarcacoes.html  301
+/blog/medico-pj-pf-2026.html  /blog/medico-pf-ou-pj.html  301
+/blog/medico-pj-pf-2026  /blog/medico-pf-ou-pj.html  301
+/blog/credito-ibs-cbs-como-funciona.html  /blog/ibs-cbs-nao-cumulatividade-creditamento-lc-214.html  301
+/blog/credito-ibs-cbs-como-funciona  /blog/ibs-cbs-nao-cumulatividade-creditamento-lc-214.html  301
+/blog/irrf-afretamento-exterior-armador.html  /blog/irrf-afretamento-tratado-dupla-tributacao.html  301
+/blog/irrf-afretamento-exterior-armador  /blog/irrf-afretamento-tratado-dupla-tributacao.html  301
+/blog/split-payment-fluxo-caixa-2026.html  /blog/split-payment-ibs-cbs-fluxo-caixa-2027.html  301
+/blog/split-payment-fluxo-caixa-2026  /blog/split-payment-ibs-cbs-fluxo-caixa-2027.html  301
+/blog/split-payment-ibs-cbs-fluxo-valor-2027.html  /blog/split-payment-ibs-cbs-fluxo-caixa-2027.html  301
+/blog/split-payment-ibs-cbs-fluxo-valor-2027  /blog/split-payment-ibs-cbs-fluxo-caixa-2027.html  301
+/blog/holding-familiar-reforma-tributaria.html  /blog/holding-reforma-tributaria-2026.html  301
+/blog/holding-familiar-reforma-tributaria  /blog/holding-reforma-tributaria-2026.html  301
+/blog/blindagem-patrimonial-pessoa-fisica.html  /blog/patrimonio-exterior-brasil-2026.html  301
+/blog/blindagem-patrimonial-pessoa-fisica  /blog/patrimonio-exterior-brasil-2026.html  301
+/blog/holding-rural-transferir-fazenda-herdeiros.html  /blog/protocolo-familiar-holding-heranca-brigas.html  301
+/blog/holding-rural-transferir-fazenda-herdeiros  /blog/protocolo-familiar-holding-heranca-brigas.html  301
+/blog/itcmd-progressivo-lc-214-2025.html  /blog/itcmd-progressivo-lc214-holding-familiar.html  301
+/blog/itcmd-progressivo-lc-214-2025  /blog/itcmd-progressivo-lc214-holding-familiar.html  301
+/blog/ibs-cbs-agronegocio-lc-214.html  /blog/ibs-cbs-produtor-rural-credito-presumido-lc-214.html  301
+/blog/ibs-cbs-agronegocio-lc-214  /blog/ibs-cbs-produtor-rural-credito-presumido-lc-214.html  301
+/blog/modulo-fiscal-rural-georreferenciamento-venda-heranca-terra.html  /blog/itr-contestacao-produtor-rural-2026.html  301
+/blog/modulo-fiscal-rural-georreferenciamento-venda-heranca-terra  /blog/itr-contestacao-produtor-rural-2026.html  301
+/blog/holding-medica-imoveis-consultorio-patrimonio.html  /blog/holding-medica-clinica-patrimonio-aposentadoria.html  301
+/blog/holding-medica-imoveis-consultorio-patrimonio  /blog/holding-medica-clinica-patrimonio-aposentadoria.html  301
+/blog/hong-kong-basileia-descomissionamento-naval.html  /blog/convencoes-hong-kong-basileia-descomissionamento-naval.html  301
+/blog/hong-kong-basileia-descomissionamento-naval  /blog/convencoes-hong-kong-basileia-descomissionamento-naval.html  301
+/blog/riocomex-regime-tributario-rj-2026.html  /blog/riocomex-regime-tributario-importacao-rj-2026.html  301
+/blog/riocomex-regime-tributario-rj-2026  /blog/riocomex-regime-tributario-importacao-rj-2026.html  301
+/blog/holding-familiarnareforma-tributaria-2026.html  /blog/holding-reforma-tributaria-2026.html  301
+/blog/holding-familiarnareforma-tributaria-2026  /blog/holding-reforma-tributaria-2026.html  301
