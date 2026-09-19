@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revisão de holding familiar: onde a estrutura costuma falhar | João Victor Ataíde</title>
+<meta name="description" content="Critério de integralização e ganho de capital pelo art. 23 da Lei 9.249/1995, o limite da imunidade de ITBI no Tema 796 do STF, usufruto mal desenhado, ausência de acordo de sócios, cláusulas restritivas em bloco e distribuição desproporcional.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="João Victor Ataíde">
+<link rel="canonical" href="https://joaovictorataide.com.br/blog/revisao-de-holding-familiar-defeitos-estruturais.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="João Victor Ataíde Advocacia">
+<meta property="og:title" content="Revisão de holding familiar: onde a estrutura costuma falhar">
+<meta property="og:description" content="Critério de integralização e ganho de capital pelo art. 23 da Lei 9.249/1995, o limite da imunidade de ITBI no Tema 796 do STF, usufruto mal desenhado, ausência de acordo de sócios, cláusulas restritivas em bloco e distribuição desproporcional.">
+<meta property="og:url" content="https://joaovictorataide.com.br/blog/revisao-de-holding-familiar-defeitos-estruturais.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F1923; --navy-2:#16232F; --cream:#F7F6F2; --gold:#C9A84C;
+  --sat:#C9A84C; /* gold do silo patrimonial — tom ajustado para contraste de texto */
+  --txt:#1A222B; --muted:#5B6873; --line:#E3E0D8;
+  --serif:'Spectral',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);color:var(--txt);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--sat);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:780px;margin:0 auto;padding:0 22px}
+header.top{background:var(--navy);padding:16px 0;position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{color:var(--cream);font-family:var(--serif);font-weight:700;font-size:1.02rem;letter-spacing:.01em}
+.brand span{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;color:var(--gold);font-weight:600;margin-top:2px}
+.top a.wa{font-size:.78rem;color:var(--cream);border:1px solid rgba(247,246,242,.3);padding:7px 13px;border-radius:2px;white-space:nowrap}
+.hero{background:var(--navy);color:var(--cream);padding:46px 0 54px;border-bottom:4px solid var(--sat)}
+.kicker{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sat);font-weight:700;background:var(--cream);display:inline-block;padding:5px 11px;border-radius:2px}
+.hero h1{font-family:var(--serif);font-size:2.05rem;line-height:1.22;margin:18px 0 14px;font-weight:700}
+.hero p{color:#C3CBD3;font-size:1.02rem}
+.meta{margin-top:20px;font-size:.78rem;color:#93A0AC;letter-spacing:.02em}
+main{padding:38px 0 10px}
+.sumario{background:#fff;border:1px solid var(--line);border-left:3px solid var(--sat);padding:20px 22px;margin-bottom:34px}
+.sumario strong{font-family:var(--serif);font-size:1rem;display:block;margin-bottom:10px}
+.sumario ol{margin-left:18px;font-size:.9rem;color:var(--muted)}
+.sumario li{margin:5px 0}
+h2{font-family:var(--serif);font-size:1.5rem;line-height:1.3;margin:40px 0 14px;font-weight:700}
+h3{font-family:var(--serif);font-size:1.15rem;margin:26px 0 10px;font-weight:600}
+p{margin:14px 0}
+ul,ol{margin:14px 0 14px 22px}
+li{margin:7px 0}
+.destaque{background:var(--navy-2);color:var(--cream);padding:22px 24px;margin:28px 0;border-left:4px solid var(--gold)}
+.destaque p{margin:0;font-size:.97rem}
+.nota{background:#fff;border:1px solid var(--line);padding:18px 20px;margin:24px 0;font-size:.93rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.88rem;background:#fff}
+th,td{border:1px solid var(--line);padding:11px 12px;text-align:left;vertical-align:top}
+th{background:var(--navy);color:var(--cream);font-weight:600;font-size:.8rem;letter-spacing:.03em}
+td strong{color:var(--sat)}
+.lei{font-family:var(--serif);font-style:italic;color:var(--muted);border-left:2px solid var(--line);padding-left:16px;margin:20px 0;font-size:.95rem}
+.faq{margin-top:44px;border-top:1px solid var(--line);padding-top:10px}
+.faq h3{font-size:1.05rem;margin-bottom:6px}
+.faq div{border-bottom:1px solid var(--line);padding:18px 0}
+.relacionados{margin:44px 0 0;background:#fff;border:1px solid var(--line);padding:24px}
+.relacionados strong{font-family:var(--serif);font-size:1.1rem;display:block;margin-bottom:12px}
+.relacionados a{display:block;padding:9px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.relacionados a:last-child{border-bottom:none}
+.cta{background:var(--navy);color:var(--cream);padding:34px 26px;margin:46px 0 0;text-align:center}
+.cta h2{color:var(--cream);margin-top:0;font-size:1.4rem}
+.cta p{color:#C3CBD3;font-size:.95rem}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:600;padding:13px 26px;border-radius:2px;margin-top:14px;font-size:.92rem}
+footer{background:var(--navy-2);color:#93A0AC;padding:30px 0;margin-top:52px;font-size:.8rem}
+footer a{color:#C3CBD3}
+.disc{margin-top:14px;font-size:.74rem;line-height:1.6;color:#7C8994}
+@media(max-width:600px){.hero h1{font-size:1.62rem}h2{font-size:1.28rem}.wrap{padding:0 18px}}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "LegalService", "@id": "https://joaovictorataide.com.br/#organizacao", "name": "João Victor Ataíde Advocacia", "url": "https://joaovictorataide.com.br/", "areaServed": "BR", "address": {"@type": "PostalAddress", "streetAddress": "Av. das Américas 4.200, sala 305", "addressLocality": "Rio de Janeiro", "addressRegion": "RJ", "addressCountry": "BR"}}, {"@type": "Person", "@id": "https://joaovictorataide.com.br/#joaovictorataide", "name": "João Victor Ataíde", "jobTitle": "Advogado tributário, aduaneiro e marítimo", "worksFor": {"@id": "https://joaovictorataide.com.br/#organizacao"}, "sameAs": ["https://www.linkedin.com/in/joaovictorataide/"]}, {"@type": "Article", "@id": "https://joaovictorataide.com.br/blog/revisao-de-holding-familiar-defeitos-estruturais.html#article", "headline": "Revisão de holding familiar: onde a estrutura costuma falhar", "description": "Critério de integralização e ganho de capital pelo art. 23 da Lei 9.249/1995, o limite da imunidade de ITBI no Tema 796 do STF, usufruto mal desenhado, ausência de acordo de sócios, cláusulas restritivas em bloco e distribuição desproporcional.", "inLanguage": "pt-BR", "author": {"@id": "https://joaovictorataide.com.br/#joaovictorataide"}, "publisher": {"@id": "https://joaovictorataide.com.br/#organizacao"}, "mainEntityOfPage": "https://joaovictorataide.com.br/blog/revisao-de-holding-familiar-defeitos-estruturais.html"}, {"@type": "BreadcrumbList", "@id": "https://joaovictorataide.com.br/blog/revisao-de-holding-familiar-defeitos-estruturais.html#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://joaovictorataide.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://joaovictorataide.com.br/blog/"}, {"@type": "ListItem", "position": 3, "name": "Patrimonial e Sucessório", "item": "https://joaovictorataide.com.br/patrimonial-sucessorio/"}, {"@type": "ListItem", "position": 4, "name": "Revisão de holding familiar", "item": "https://joaovictorataide.com.br/blog/revisao-de-holding-familiar-defeitos-estruturais.html"}]}, {"@type": "FAQPage", "@id": "https://joaovictorataide.com.br/blog/revisao-de-holding-familiar-defeitos-estruturais.html#faq", "mainEntity": [{"@type": "Question", "name": "Como se avalia o bem na integralização em holding?", "acceptedAnswer": {"@type": "Answer", "text": "Pelo art. 23 da Lei 9.249/1995, a transferência pode ser feita pelo valor constante da declaração de bens da pessoa física ou pelo valor de mercado. Se por valor superior ao declarado, a diferença é tributada como ganho de capital."}}, {"@type": "Question", "name": "A imunidade de ITBI na integralização é integral?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Pelo Tema 796 do STF, julgado no RE 796.376, a imunidade não alcança o valor dos bens que exceder o limite do capital social a ser integralizado."}}, {"@type": "Question", "name": "Doação com reserva de usufruto pode esvaziar o planejamento?", "acceptedAnswer": {"@type": "Answer", "text": "Pode. Quando o usufrutuário concentra todos os direitos políticos e econômicos, a transferência é apenas formal e o efeito sucessório pretendido não se realiza."}}, {"@type": "Question", "name": "Distribuição desproporcional de lucros é permitida?", "acceptedAnswer": {"@type": "Answer", "text": "No direito societário é admitida quando prevista em contrato e regularmente deliberada. No campo tributário, administrações estaduais têm questionado arranjos em que a desproporção opera como transferência inicial entre sócios, o que recomenda documentar a razão econômica da deliberação."}}, {"@type": "Question", "name": "Com que frequência uma holding deve ser revisada?", "acceptedAnswer": {"@type": "Answer", "text": "Sempre que houver evento familiar relevante, alteração patrimonial significativa ou mudança legislativa que atinja ITCMD, ITBI ou o regime de tributação da sociedade."}}]}]}
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="https://joaovictorataide.com.br/">João Victor Ataíde<span>TRIBUTÁRIO · PATRIMONIAL · SUCESSÓRIO</span></a>
+<a class="wa" href="https://wa.me/5521996550865">WhatsApp</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+<span class="kicker">Patrimonial e Sucessório</span>
+<h1>Revisão de holding familiar: o que uma estrutura antiga costuma esconder</h1>
+<p>Holding montada há dez anos foi desenhada para uma família, um patrimônio e uma lei que mudaram. Ela continua de pé — e é exatamente por isso que ninguém a examina.</p>
+<div class="meta">Setembro de 2026 · Leitura de 10 minutos · Lei 9.249/1995, art. 23 · STF Tema 796, RE 796.376 · Código Civil</div>
+</div></section>
+
+<main><div class="wrap">
+
+<div class="sumario"><strong>Roteiro</strong>
+<ol>
+<li>Por que revisar uma holding que já existe</li>
+<li>A integralização e o ganho de capital</li>
+<li>ITBI: o que o Tema 796 decidiu e o que não decidiu</li>
+<li>Usufruto mal desenhado</li>
+<li>A sociedade sem acordo de sócios</li>
+<li>Cláusulas restritivas aplicadas em bloco</li>
+<li>Distribuição desproporcional</li>
+<li>Propósito negocial e substância</li>
+<li>Checklist de revisão</li>
+</ol></div>
+
+<h2>1. Estrutura montada não é estrutura resolvida</h2>
+<p>Holding familiar constituída há cinco ou dez anos costuma ter sido desenhada para um cenário que mudou: outra composição familiar, outra legislação de ITCMD, outro patrimônio, às vezes outro negócio. A estrutura continua de pé e, justamente por isso, ninguém a examina.</p>
+<p>A revisão periódica existe para responder a uma pergunta simples: se essa estrutura fosse montada hoje, com este patrimônio e esta família, ela seria assim? Quando a resposta é não, a diferença costuma estar nos pontos abaixo.</p>
+
+<h2>2. Integralização e ganho de capital</h2>
+<p>A transferência de imóveis e participações para a sociedade pode ser feita pelo valor constante da declaração de bens da pessoa física ou pelo valor de mercado, na forma do art. 23 da Lei 9.249/1995. Se a transferência se dá por valor superior ao declarado, a diferença é tributável como ganho de capital no momento da integralização.</p>
+<div class="destaque"><p><strong>A escolha feita na constituição produz efeitos décadas depois.</strong> Integralizar pelo custo histórico adia o imposto, mas mantém base baixa — o ganho aparece inteiro numa venda futura pela sociedade. Integralizar a mercado antecipa tributação e eleva a base. Não existe opção certa em abstrato: depende de horizonte de venda, do regime tributário da holding e do perfil dos herdeiros. O que não se admite é que a decisão tenha sido tomada sem cálculo.</p></div>
+
+<h2>3. ITBI e o Tema 796</h2>
+<p>A imunidade do ITBI na integralização de bens ao capital social tem limite fixado pelo Supremo no Tema 796, julgado no RE 796.376: a imunidade não alcança o valor dos bens que exceder o limite do capital social a ser integralizado.</p>
+<p>Na prática, estrutura que integralizou imóveis com valor superior ao capital, lançando a diferença em reserva de capital ou ágio, gerou ITBI sobre esse excedente — e muitos municípios passaram a autuar com base nesse precedente. É um dos passivos ocultos mais comuns em holding antiga: o imposto não foi recolhido à época porque se acreditava em imunidade integral.</p>
+<p>A revisão precisa verificar como a integralização foi escriturada, qual o valor atribuído a cada bem e qual o capital efetivamente integralizado.</p>
+
+<h2>4. Usufruto mal desenhado</h2>
+<p>Doação de quotas com reserva de usufruto é o instrumento mais usado para antecipar a sucessão preservando renda e controle. Três defeitos recorrentes:</p>
+<ul>
+<li><strong>Usufruto que esvazia a doação.</strong> Quando o usufrutuário concentra todos os direitos políticos e econômicos, a transferência é apenas formal, e a estrutura não produz o efeito sucessório pretendido</li>
+<li><strong>Ausência de previsão de extinção.</strong> Falta de regra clara sobre a consolidação da propriedade gera discussão exatamente no momento mais sensível</li>
+<li><strong>Desalinhamento com o ITCMD estadual.</strong> A tributação da instituição e da extinção do usufruto varia entre estados, e estrutura desenhada sob a regra de um estado pode ter custo diferente em outro</li>
+</ul>
+
+<h2>5. A sociedade sem acordo de sócios</h2>
+<p>Holding com contrato social padrão e sem acordo de sócios é uma sociedade cujas regras de convivência ainda não foram escritas. Os pontos que mais tarde viram litígio: saída de sócio e critério de avaliação da quota, quórum para alienar ou onerar bem relevante, política de distribuição, entrada de cônjuge ou herdeiro de sócio falecido, e solução de impasse.</p>
+<p>Estrutura tributariamente elegante e socialmente desregrada é o arranjo que mais gera honorário de contencioso anos depois.</p>
+
+<h2>6. Cláusulas restritivas em bloco</h2>
+<p>Inalienabilidade, impenhorabilidade e incomunicabilidade aplicadas automaticamente a tudo é sinal de planejamento sem diagnóstico. A inalienabilidade, em especial, engessa reorganizações futuras e pode impedir a própria venda que financiaria a sucessão. A revisão deve perguntar, cláusula por cláusula, qual risco concreto ela endereça.</p>
+
+<h2>7. Distribuição desproporcional</h2>
+<p>A distribuição de lucros em proporção distinta da participação societária é admitida no direito societário quando prevista em contrato e deliberada regularmente. No campo tributário, porém, administrações fazendárias estaduais têm questionado arranjos em que a desproporção funciona, na prática, como transferência patrimonial inicial entre sócios da mesma família, sustentando incidência de ITCMD sobre a parcela excedente.</p>
+<div class="lei">É discussão aberta, com desfecho não uniforme. A recomendação prudente não é abandonar o instrumento, mas documentar a razão econômica da desproporção — contribuição diferente ao resultado, trabalho efetivo de um sócio, compensação de aportes — de modo que a deliberação tenha justificativa própria e verificável.</div>
+
+<h2>8. Propósito negocial e substância</h2>
+<p>Holding que existe apenas no papel — sem escrituração regular, sem deliberações, sem conta própria, com pagamentos pessoais saindo da sociedade — é a estrutura mais fácil de desconstituir. A revisão deve conferir o básico: atas, livros, contabilidade, separação entre patrimônio pessoal e social, e coerência entre o objeto declarado e a atividade efetiva.</p>
+<p>Vale lembrar as fronteiras já assentadas na organização do site: holding familiar e sucessória é patrimonial; holding de locação como negócio é imobiliária; e holding rural segue no agronegócio, tratada em <a href="https://joaovictorataide.com.br/blog/holding-rural-transferir-fazenda-herdeiros.html">holding rural</a>.</p>
+
+<h2>9. Checklist de revisão</h2>
+<ol>
+<li>Recuperar o ato de constituição e verificar o critério de integralização adotado</li>
+<li>Confrontar valor dos bens integralizados com o capital social, à luz do Tema 796</li>
+<li>Levantar o ITBI recolhido à época e o eventual passivo sobre excedente</li>
+<li>Reler o instrumento de doação com usufruto, inclusive regras de extinção</li>
+<li>Verificar existência e atualidade do acordo de sócios</li>
+<li>Revisar cláusulas restritivas uma a uma, contra riscos concretos</li>
+<li>Documentar a razão econômica de qualquer distribuição desproporcional</li>
+<li>Conferir escrituração, atas e separação patrimonial</li>
+<li>Simular a sucessão hoje, com a composição familiar atual</li>
+</ol>
+<div class="nota">A revisão de estrutura existente depende de exame dos atos societários, da escrituração e da legislação estadual aplicável a cada bem. Este texto trata do regime em abstrato e não substitui análise do caso concreto.</div>
+
+
+<div class="relacionados"><strong>Leituras relacionadas no silo marítimo</strong>
+<a href="https://joaovictorataide.com.br/blog/holding-rural-transferir-fazenda-herdeiros.html">Holding rural: transferir a fazenda para os herdeiros</a>
+<a href="https://joaovictorataide.com.br/blog/governanca-familiar-rural-protocolo-acordo-socios.html">Governança familiar: protocolo e acordo de sócios</a>
+<a href="https://joaovictorataide.com.br/blog/itcd-goias-sucessao-fazenda-aliquotas.html">ITCD em Goiás: base de cálculo e alíquotas</a>
+<a href="https://joaovictorataide.com.br/blog/condominio-rural-heranca-apuracao-individual.html">Condomínio por herança e apuração individual</a>
+</div>
+
+<div class="faq">
+<h2>Perguntas frequentes</h2>
+<div><h3>Como se avalia o bem na integralização em holding?</h3><p>Pelo art. 23 da Lei 9.249/1995, a transferência pode ser feita pelo valor constante da declaração de bens da pessoa física ou pelo valor de mercado. Se por valor superior ao declarado, a diferença é tributada como ganho de capital.</p></div>
+<div><h3>A imunidade de ITBI na integralização é integral?</h3><p>Não. Pelo Tema 796 do STF, julgado no RE 796.376, a imunidade não alcança o valor dos bens que exceder o limite do capital social a ser integralizado.</p></div>
+<div><h3>Doação com reserva de usufruto pode esvaziar o planejamento?</h3><p>Pode. Quando o usufrutuário concentra todos os direitos políticos e econômicos, a transferência é apenas formal e o efeito sucessório pretendido não se realiza.</p></div>
+<div><h3>Distribuição desproporcional de lucros é permitida?</h3><p>No direito societário é admitida quando prevista em contrato e regularmente deliberada. No campo tributário, administrações estaduais têm questionado arranjos em que a desproporção opera como transferência inicial entre sócios, o que recomenda documentar a razão econômica da deliberação.</p></div>
+<div><h3>Com que frequência uma holding deve ser revisada?</h3><p>Sempre que houver evento familiar relevante, alteração patrimonial significativa ou mudança legislativa que atinja ITCMD, ITBI ou o regime de tributação da sociedade.</p></div>
+</div>
+
+<div class="cta">
+<h2>Precisa avaliar o enquadramento da sua operação?</h2>
+<p>Atuação técnica em planejamento patrimonial e sucessório — holding familiar, doação, usufruto, ITCMD e governança. Base no Rio de Janeiro, atuação nacional.</p>
+<a class="btn" href="https://wa.me/5521996550865">Falar sobre o caso</a>
+</div>
+
+</div></main>
+
+<footer><div class="wrap">
+<strong>João Victor Ataíde</strong> · Advogado · OAB/RJ<br>
+Av. das Américas 4.200, sala 305 — Barra da Tijuca, Rio de Janeiro<br>
+<a href="https://joaovictorataide.com.br/blog/">Blog</a> · <a href="https://joaovictorataide.com.br/patrimonial-sucessorio/">Patrimonial e Sucessório</a> · <a href="mailto:joaovictor@joaovictorataide.com.br">E-mail</a>
+<p class="disc">Conteúdo informativo e técnico. Não constitui parecer jurídico nem consultoria tributária individualizada, e não veicula promessa de resultado. Publicidade em conformidade com o Provimento OAB nº 205/2021.</p>
+</div></footer>
+</body>
+</html>
