@@ -3,821 +3,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tributário Marítimo — João Victor Ataíde | Advogado Especialista RJ</title>
-<meta name="description" content="Assessoria tributária especializada para armadores, cabotagem, offshore e FPSO. IRRF afretamento, REB, descomissionamento, IBS/CBS e planejamento para o setor naval. Barra da Tijuca, Rio de Janeiro.">
-<meta name="author" content="João Victor Ataíde">
+<title>Tributário Marítimo e Cabotagem — Advogado no Rio de Janeiro | João Victor Ataíde</title>
+<meta name="description" content="Atuação técnica em tributação marítima, portuária e offshore: afretamento e IRRF, Repetro e regimes especiais na LC 214/2025, cabotagem e BR do Mar, AFRMM, REB e contencioso fiscal do setor. Barra da Tijuca, RJ.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://joaovictorataide.com.br/maritimidade">
+<meta name="author" content="João Victor Ataíde">
+<link rel="canonical" href="https://joaovictorataide.com.br/maritimidade/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tributário Marítimo — João Victor Ataíde Advocacia">
-<meta property="og:description" content="Assessoria tributária para armadores, cabotagem, offshore e FPSO. IRRF afretamento, REB, descomissionamento e planejamento para o setor naval.">
-<meta property="og:url" content="https://joaovictorataide.com.br/maritimidade">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="João Victor Ataíde Advocacia">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LegalService","name":"João Victor Ataíde — Direito Tributário Marítimo","description":"Assessoria jurídica e tributária especializada para o setor marítimo: armadores, cabotagem, apoio marítimo, offshore e FPSO.","url":"https://joaovictorataide.com.br/maritimidade","telephone":"+5521996550865","address":{"@type":"PostalAddress","streetAddress":"Av. das Américas, 4.200, sala 305","addressLocality":"Barra da Tijuca","addressRegion":"RJ","addressCountry":"BR"},"areaServed":"Brasil"}
-</script>
+<meta property="og:title" content="Tributário Marítimo e Cabotagem — João Victor Ataíde">
+<meta property="og:description" content="Afretamento, Repetro, cabotagem, AFRMM, REB e contencioso fiscal do setor marítimo e offshore.">
+<meta property="og:url" content="https://joaovictorataide.com.br/maritimidade/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --dark:#0B1520;--dark2:#0F1D2A;--navy:#0D2A3A;
-  --teal:#4EA8A0;--teal2:#3D9188;
-  --sea:#7BAAE8;--sea2:#5A8EC8;--sea3:#3A6EA8;
-  --gold:#C9A84C;--light:#F4F6F8;--white:#fff;
-  --muted:#7A8C9A;--muted2:#556070;
-  --serif:'Cormorant Garamond',Georgia,serif;
-  --sans:'DM Sans',system-ui,sans-serif;
-  --shadow:0 4px 40px rgba(0,0,0,.1);
-  --shadow-sm:0 2px 16px rgba(0,0,0,.07);
+  --navy:#0F1923; --navy-2:#16232F; --cream:#F7F6F2; --gold:#C9A84C;
+  --sat:#2A4B5C; /* PROVISORIO — cor satelite do silo maritimo aguardando definicao */
+  --txt:#1A222B; --muted:#5B6873; --line:#E3E0D8;
+  --serif:'Spectral',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
 }
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--light);color:var(--dark);line-height:1.7;font-size:16px;overflow-x:hidden}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);color:var(--txt);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--sat);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:780px;margin:0 auto;padding:0 22px}
+header.top{background:var(--navy);padding:16px 0;position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{color:var(--cream);font-family:var(--serif);font-weight:700;font-size:1.02rem;letter-spacing:.01em}
+.brand span{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;color:var(--gold);font-weight:600;margin-top:2px}
+.top a.wa{font-size:.78rem;color:var(--cream);border:1px solid rgba(247,246,242,.3);padding:7px 13px;border-radius:2px;white-space:nowrap}
+.hero{background:var(--navy);color:var(--cream);padding:46px 0 54px;border-bottom:4px solid var(--sat)}
+.kicker{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sat);font-weight:700;background:var(--cream);display:inline-block;padding:5px 11px;border-radius:2px}
+.hero h1{font-family:var(--serif);font-size:2.05rem;line-height:1.22;margin:18px 0 14px;font-weight:700}
+.hero p{color:#C3CBD3;font-size:1.02rem}
+.meta{margin-top:20px;font-size:.78rem;color:#93A0AC;letter-spacing:.02em}
+main{padding:38px 0 10px}
+.sumario{background:#fff;border:1px solid var(--line);border-left:3px solid var(--sat);padding:20px 22px;margin-bottom:34px}
+.sumario strong{font-family:var(--serif);font-size:1rem;display:block;margin-bottom:10px}
+.sumario ol{margin-left:18px;font-size:.9rem;color:var(--muted)}
+.sumario li{margin:5px 0}
+h2{font-family:var(--serif);font-size:1.5rem;line-height:1.3;margin:40px 0 14px;font-weight:700}
+h3{font-family:var(--serif);font-size:1.15rem;margin:26px 0 10px;font-weight:600}
+p{margin:14px 0}
+ul,ol{margin:14px 0 14px 22px}
+li{margin:7px 0}
+.destaque{background:var(--navy-2);color:var(--cream);padding:22px 24px;margin:28px 0;border-left:4px solid var(--gold)}
+.destaque p{margin:0;font-size:.97rem}
+.nota{background:#fff;border:1px solid var(--line);padding:18px 20px;margin:24px 0;font-size:.93rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.88rem;background:#fff}
+th,td{border:1px solid var(--line);padding:11px 12px;text-align:left;vertical-align:top}
+th{background:var(--navy);color:var(--cream);font-weight:600;font-size:.8rem;letter-spacing:.03em}
+td strong{color:var(--sat)}
+.lei{font-family:var(--serif);font-style:italic;color:var(--muted);border-left:2px solid var(--line);padding-left:16px;margin:20px 0;font-size:.95rem}
+.faq{margin-top:44px;border-top:1px solid var(--line);padding-top:10px}
+.faq h3{font-size:1.05rem;margin-bottom:6px}
+.faq div{border-bottom:1px solid var(--line);padding:18px 0}
+.relacionados{margin:44px 0 0;background:#fff;border:1px solid var(--line);padding:24px}
+.relacionados strong{font-family:var(--serif);font-size:1.1rem;display:block;margin-bottom:12px}
+.relacionados a{display:block;padding:9px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.relacionados a:last-child{border-bottom:none}
+.cta{background:var(--navy);color:var(--cream);padding:34px 26px;margin:46px 0 0;text-align:center}
+.cta h2{color:var(--cream);margin-top:0;font-size:1.4rem}
+.cta p{color:#C3CBD3;font-size:.95rem}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:600;padding:13px 26px;border-radius:2px;margin-top:14px;font-size:.92rem}
+footer{background:var(--navy-2);color:#93A0AC;padding:30px 0;margin-top:52px;font-size:.8rem}
+footer a{color:#C3CBD3}
+.disc{margin-top:14px;font-size:.74rem;line-height:1.6;color:#7C8994}
+@media(max-width:600px){.hero h1{font-size:1.62rem}h2{font-size:1.28rem}.wrap{padding:0 18px}}
 
-/* NAV */
-nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(11,21,32,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(123,170,232,.1)}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--white);text-decoration:none;display:flex;align-items:baseline;gap:.5rem}
-.logo-accent{color:var(--sea);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-family:var(--sans);font-weight:400}
-.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
-.nav-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.83rem;transition:color .2s}
-.nav-links a:hover{color:var(--sea)}
-.nav-cta{background:var(--sea3)!important;color:var(--white)!important;padding:.4rem 1.1rem;border-radius:6px;font-weight:500!important}
-.nav-cta:hover{background:var(--sea2)!important}
-@media(max-width:720px){.nav-links{display:none}}
-
-/* HERO */
-.hero{min-height:100vh;background:linear-gradient(160deg,#040D14 0%,#071828 30%,#0B2035 55%,#0A1C30 80%,#060E18 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:0 2rem}
-.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(123,170,232,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(123,170,232,.035) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 30%,transparent 100%)}
-.hero-glow1{position:absolute;top:-15%;right:-8%;width:700px;height:700px;background:radial-gradient(circle,rgba(78,168,160,.07) 0%,transparent 60%);pointer-events:none}
-.hero-glow2{position:absolute;bottom:-20%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(123,170,232,.05) 0%,transparent 60%);pointer-events:none}
-.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;padding:8rem 0 5rem;position:relative;z-index:2;width:100%}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:3rem;padding:7rem 0 4rem}}
-
-.hero-eyebrow{display:flex;align-items:center;gap:.7rem;margin-bottom:1.1rem}
-.hero-eyebrow-line{width:28px;height:1px;background:var(--sea)}
-.hero-eyebrow span{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sea);font-weight:500}
-
-.hero h1{font-family:var(--serif);font-size:clamp(2.3rem,4.5vw,3.5rem);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:1.4rem}
-.hero h1 em{font-style:italic;color:var(--sea);display:block}
-.hero h1 strong{font-weight:600}
-
-.hero-desc{font-size:.97rem;color:rgba(255,255,255,.48);line-height:1.85;margin-bottom:2rem;max-width:500px}
-.hero-desc strong{color:rgba(255,255,255,.72)}
-
-.hero-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
-.badge{font-size:.73rem;padding:.3rem .8rem;border:1px solid rgba(123,170,232,.2);border-radius:20px;color:rgba(255,255,255,.5);background:rgba(123,170,232,.06)}
-
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:var(--sea3);color:var(--white);padding:.9rem 1.9rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:.9rem;transition:all .25s;display:inline-flex;align-items:center;gap:.5rem}
-.btn-primary:hover{background:var(--sea2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(90,142,200,.3)}
-.btn-secondary{border:1px solid rgba(123,170,232,.3);color:rgba(255,255,255,.65);padding:.85rem 1.7rem;border-radius:8px;text-decoration:none;font-size:.88rem;transition:all .25s;display:inline-flex;align-items:center;gap:.5rem}
-.btn-secondary:hover{border-color:var(--sea);color:var(--sea)}
-
-/* Stats box */
-.hero-stats{background:rgba(11,21,32,.7);border:1px solid rgba(123,170,232,.12);border-radius:16px;overflow:hidden;backdrop-filter:blur(12px)}
-.stats-header{padding:1.2rem 1.5rem;border-bottom:1px solid rgba(123,170,232,.1);display:flex;align-items:center;gap:.5rem}
-.stats-header span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35)}
-.stats-dot{width:6px;height:6px;border-radius:50%;background:var(--sea);opacity:.6}
-.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(123,170,232,.08)}
-.stat{padding:1.5rem;background:#0B1520;text-align:center}
-.stat-n{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--sea);line-height:1;margin-bottom:.3rem}
-.stat-l{font-size:.75rem;color:rgba(255,255,255,.35);line-height:1.35;max-width:120px;margin:0 auto}
-.stats-footer{padding:1rem 1.5rem;border-top:1px solid rgba(123,170,232,.1);text-align:center;font-size:.78rem;color:rgba(255,255,255,.3)}
-
-/* SEÇÕES */
-section{padding:6rem 2rem}
-.section-inner{max-width:1100px;margin:0 auto}
-.section-eyebrow{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sea);font-weight:500;margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
-.section-eyebrow::before{content:'';width:20px;height:1px;background:var(--sea)}
-h2.section-title{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:300;color:var(--dark);line-height:1.2;margin-bottom:.8rem}
-h2.section-title em{font-style:italic;color:var(--teal)}
-h2.section-title-white{color:var(--white)}
-h2.section-title-white em{color:var(--sea)}
-.section-desc{font-size:.95rem;color:var(--muted);line-height:1.85;max-width:600px;margin-bottom:3rem}
-
-/* QUEM ATENDEMOS */
-.sec-publicos{background:var(--white);border-top:1px solid #E0E8EF;border-bottom:1px solid #E0E8EF}
-.publicos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.5rem}
-@media(max-width:960px){.publicos-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:500px){.publicos-grid{grid-template-columns:1fr}}
-.pub-card{border:1px solid #DDE5ED;border-radius:12px;padding:1.7rem 1.5rem;transition:all .25s;position:relative;overflow:hidden}
-.pub-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--sea3),var(--teal));transform:scaleX(0);transform-origin:left;transition:transform .3s}
-.pub-card:hover{border-color:rgba(90,142,200,.4);box-shadow:0 8px 32px rgba(0,0,0,.08);transform:translateY(-3px)}
-.pub-card:hover::after{transform:scaleX(1)}
-.pub-icon{font-size:2rem;margin-bottom:.9rem;display:block}
-.pub-title{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--dark);margin-bottom:.5rem}
-.pub-desc{font-size:.83rem;color:var(--muted);line-height:1.6}
-
-/* SERVIÇOS */
-.sec-servicos{background:var(--light)}
-.servicos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-@media(max-width:960px){.servicos-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.servicos-grid{grid-template-columns:1fr}}
-.serv-card{background:var(--white);border:1px solid #DDE5ED;border-radius:14px;padding:2rem;transition:all .25s;display:flex;flex-direction:column;gap:.8rem}
-.serv-card:hover{border-color:rgba(90,142,200,.35);box-shadow:0 12px 40px rgba(0,0,0,.09);transform:translateY(-3px)}
-.serv-num{font-family:var(--serif);font-size:2rem;font-weight:300;color:rgba(90,142,200,.25);line-height:1;margin-bottom:.2rem}
-.serv-icon{font-size:1.6rem}
-.serv-title{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--dark);line-height:1.25}
-.serv-desc{font-size:.84rem;color:var(--muted2);line-height:1.7;flex:1}
-.serv-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto}
-.serv-tag{font-size:.69rem;padding:.2rem .6rem;background:rgba(90,142,200,.08);border:1px solid rgba(90,142,200,.15);border-radius:20px;color:var(--sea3);font-weight:500}
-.serv-destaque{border-color:rgba(90,142,200,.3);background:linear-gradient(145deg,#fff,#F0F5FA)}
-.serv-badge-new{display:inline-flex;align-items:center;gap:.3rem;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sea3);background:rgba(90,142,200,.1);padding:.15rem .55rem;border-radius:10px;font-weight:600;width:fit-content}
-
-/* BLOCO DARK — teses e reformas */
-.sec-dark{background:linear-gradient(160deg,#071828 0%,#0B2035 50%,#071828 100%);position:relative;overflow:hidden}
-.sec-dark::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(123,170,232,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(123,170,232,.03) 1px,transparent 1px);background-size:50px 50px}
-.teses-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;position:relative;z-index:1}
-@media(max-width:900px){.teses-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:500px){.teses-grid{grid-template-columns:1fr}}
-.tese-card{background:rgba(255,255,255,.04);border:1px solid rgba(123,170,232,.12);border-radius:12px;padding:1.6rem;transition:all .25s}
-.tese-card:hover{background:rgba(255,255,255,.07);border-color:rgba(123,170,232,.25)}
-.tese-cat{font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sea);font-weight:500;margin-bottom:.5rem}
-.tese-title{font-family:var(--serif);font-size:1rem;font-weight:400;color:rgba(255,255,255,.85);line-height:1.4;margin-bottom:.5rem}
-.tese-desc{font-size:.81rem;color:rgba(255,255,255,.4);line-height:1.6}
-.tese-status{display:inline-flex;align-items:center;gap:.3rem;font-size:.67rem;padding:.2rem .6rem;border-radius:10px;margin-top:.7rem;font-weight:500}
-.status-ativo{background:rgba(78,168,160,.15);color:#4EA8A0}
-.status-urgente{background:rgba(220,100,60,.15);color:#E07850}
-.status-novo{background:rgba(201,168,76,.15);color:var(--gold)}
-
-/* ARTIGOS */
-.sec-artigos{background:var(--white)}
-.artigos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-@media(max-width:900px){.artigos-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:500px){.artigos-grid{grid-template-columns:1fr}}
-.art-card{border:1px solid #DDE5ED;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:block;transition:all .25s}
-.art-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.09)}
-.art-img{height:120px;display:flex;align-items:center;justify-content:center;font-size:2.2rem}
-.art-body{padding:1.3rem}
-.art-cat{font-size:.67rem;letter-spacing:.11em;text-transform:uppercase;color:var(--sea);font-weight:500;margin-bottom:.4rem}
-.art-title{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--dark);line-height:1.35;margin-bottom:.4rem}
-.art-ex{font-size:.81rem;color:var(--muted);line-height:1.6;margin-bottom:.8rem}
-.art-meta{display:flex;justify-content:space-between;padding-top:.8rem;border-top:1px solid #F0F4F8;font-size:.72rem;color:var(--muted)}
-.art-read{color:var(--sea);font-weight:500}
-
-/* DIFERENCIAL */
-.sec-diferencial{background:var(--light)}
-.dif-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-@media(max-width:860px){.dif-grid{grid-template-columns:1fr}}
-.dif-lista{display:flex;flex-direction:column;gap:1.2rem}
-.dif-item{display:flex;gap:1rem;align-items:flex-start}
-.dif-icon{width:40px;height:40px;border-radius:10px;background:rgba(90,142,200,.1);border:1px solid rgba(90,142,200,.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;margin-top:.15rem}
-.dif-text h4{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:.25rem}
-.dif-text p{font-size:.85rem;color:var(--muted2);line-height:1.65}
-.dif-box{background:linear-gradient(145deg,#0B2035,#071828);border-radius:16px;padding:2.5rem;color:var(--white)}
-.dif-box-eyebrow{font-size:.67rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sea);font-weight:500;margin-bottom:1rem}
-.dif-box h3{font-family:var(--serif);font-size:1.7rem;font-weight:300;color:var(--white);margin-bottom:1rem;line-height:1.25}
-.dif-box h3 em{font-style:italic;color:var(--sea)}
-.dif-box p{font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:1.5rem}
-.dif-contatos{display:flex;flex-direction:column;gap:.7rem}
-.dif-contato{display:flex;align-items:center;gap:.6rem;font-size:.84rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
-.dif-contato:hover{color:var(--sea)}
-.dif-contato strong{color:rgba(255,255,255,.7)}
-
-/* CTA FINAL */
-.sec-cta{background:linear-gradient(160deg,#040D14,#0B2035,#040D14);position:relative;overflow:hidden;padding:8rem 2rem}
-.sec-cta::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(123,170,232,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(123,170,232,.04) 1px,transparent 1px);background-size:56px 56px}
-.cta-inner{max-width:800px;margin:0 auto;text-align:center;position:relative;z-index:1}
-.cta-eyebrow{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sea);font-weight:500;margin-bottom:1.2rem;display:flex;align-items:center;justify-content:center;gap:.6rem}
-.cta-eyebrow::before,.cta-eyebrow::after{content:'';flex:1;max-width:60px;height:1px;background:var(--sea);opacity:.4}
-.cta-title{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:300;color:var(--white);line-height:1.15;margin-bottom:1.2rem}
-.cta-title em{font-style:italic;color:var(--sea)}
-.cta-desc{font-size:.97rem;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:2.5rem;max-width:580px;margin-left:auto;margin-right:auto}
-.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn-cta-p{background:var(--sea3);color:var(--white);padding:1rem 2.4rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:.95rem;transition:all .25s;display:inline-flex;align-items:center;gap:.5rem}
-.btn-cta-p:hover{background:var(--sea2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(90,142,200,.35)}
-.btn-cta-s{border:1px solid rgba(123,170,232,.3);color:rgba(255,255,255,.65);padding:1rem 2rem;border-radius:8px;text-decoration:none;font-size:.9rem;transition:all .25s;display:inline-flex;align-items:center;gap:.5rem}
-.btn-cta-s:hover{border-color:var(--sea);color:var(--sea)}
-.cta-nota{font-size:.78rem;color:rgba(255,255,255,.25);margin-top:1.5rem}
-
-/* FOOTER */
-footer{background:#040D14;padding:2.5rem 2rem;border-top:1px solid rgba(123,170,232,.08)}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.2rem}
-.footer-brand{font-family:var(--serif);font-size:1rem;color:rgba(255,255,255,.45)}
-.footer-brand span{color:var(--sea)}
-.footer-links{display:flex;gap:1.5rem}
-.footer-links a{font-size:.78rem;color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s}
-.footer-links a:hover{color:var(--sea)}
-.footer-copy{font-size:.73rem;color:rgba(255,255,255,.2)}
-
-/* SCROLL INDICATOR */
-.scroll-ind{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.35rem;color:rgba(255,255,255,.25);font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;z-index:3}
-.scroll-ind-line{width:1px;height:36px;background:linear-gradient(to bottom,transparent,rgba(123,170,232,.4))}
-
-/* CASO ILUSTRATIVO */
-.sec-caso{background:var(--white);padding:6rem 2rem;border-top:1px solid #E0E8EF;border-bottom:1px solid #E0E8EF}
-.caso-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;margin-top:2.5rem}
-@media(max-width:860px){.caso-grid{grid-template-columns:1fr}}
-.caso-card{background:var(--light);border-radius:14px;padding:2rem;border-left:4px solid var(--sea2)}
-.caso-label{font-size:.67rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sea);font-weight:600;margin-bottom:.5rem}
-.caso-title{font-family:var(--serif);font-size:1.25rem;font-weight:400;color:var(--dark);margin-bottom:.8rem;line-height:1.3}
-.caso-desc{font-size:.88rem;color:#3A4A58;line-height:1.75}
-.caso-desc p{margin-bottom:.7rem}
-.caso-desc strong{color:var(--dark)}
-.caso-resultado{background:var(--dark);border-radius:14px;padding:1.8rem;display:flex;flex-direction:column;gap:1rem}
-.caso-resultado-label{font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sea);font-weight:600}
-.caso-item{display:flex;align-items:flex-start;gap:.7rem;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.07)}
-.caso-item:last-child{border:none;padding-bottom:0}
-.caso-item-icon{font-size:1rem;flex-shrink:0;margin-top:.1rem}
-.caso-item-text{font-size:.86rem;color:rgba(255,255,255,.6);line-height:1.55}
-.caso-item-text strong{color:rgba(255,255,255,.88);display:block;margin-bottom:.1rem}
+.hub-hero{padding:58px 0 62px}
+.hub-hero h1{font-size:2.3rem}
+.wrapw{max-width:1080px;margin:0 auto;padding:0 22px}
+.faixa{background:var(--navy-2);color:var(--cream);padding:26px 0}
+.faixa .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+.faixa b{display:block;font-family:var(--serif);font-size:1.5rem;color:var(--gold)}
+.faixa span{font-size:.76rem;color:#A9B4BE;letter-spacing:.04em}
+.sec{padding:52px 0}
+.sec h2{margin-top:0}
+.lead{color:var(--muted);font-size:1.02rem;max-width:720px}
+.servicos{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
+.serv{background:#fff;border:1px solid var(--line);border-top:3px solid var(--sat);padding:20px}
+.serv .n{font-family:var(--serif);font-size:.8rem;color:var(--sat);font-weight:700;letter-spacing:.08em}
+.serv h3{margin:6px 0 8px;font-size:1.05rem}
+.serv p{margin:0;font-size:.89rem;color:var(--muted)}
+.radar{background:var(--navy);color:var(--cream);padding:52px 0}
+.radar h2{color:var(--cream)}
+.radar .lead{color:#C3CBD3}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.rcard{background:rgba(247,246,242,.05);border:1px solid rgba(247,246,242,.16);border-left:3px solid var(--gold);padding:18px}
+.rcard strong{display:block;font-family:var(--serif);font-size:1rem;margin-bottom:8px}
+.rcard p{margin:0;font-size:.86rem;color:#C3CBD3}
+.artigos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.art{display:block;background:#fff;border:1px solid var(--line);padding:20px;color:var(--txt)}
+.art:hover{border-color:var(--sat);text-decoration:none}
+.art span{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sat);font-weight:700}
+.art h3{margin:8px 0 8px;font-size:1rem;line-height:1.35}
+.art p{margin:0;font-size:.85rem;color:var(--muted)}
+.contato{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.ccard{background:#fff;border:1px solid var(--line);padding:18px;text-align:center;font-size:.9rem}
+.ccard b{display:block;font-family:var(--serif);margin-bottom:4px}
+@media(max-width:860px){.servicos,.rgrid,.artigos,.contato{grid-template-columns:1fr}.faixa .grid{grid-template-columns:repeat(2,1fr)}}
 </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "LegalService", "@id": "https://joaovictorataide.com.br/#organizacao", "name": "João Victor Ataíde Advocacia", "url": "https://joaovictorataide.com.br/", "areaServed": "BR", "address": {"@type": "PostalAddress", "streetAddress": "Av. das Américas 4.200, sala 305", "addressLocality": "Rio de Janeiro", "addressRegion": "RJ", "addressCountry": "BR"}, "telephone": "+55-21-99655-0865", "email": "joaovictor@joaovictorataide.com.br"}, {"@type": "Person", "@id": "https://joaovictorataide.com.br/#joaovictorataide", "name": "João Victor Ataíde", "jobTitle": "Advogado tributário, aduaneiro e marítimo", "worksFor": {"@id": "https://joaovictorataide.com.br/#organizacao"}, "sameAs": ["https://www.linkedin.com/in/joaovictorataide/"]}, {"@type": "WebPage", "@id": "https://joaovictorataide.com.br/maritimidade/#webpage", "url": "https://joaovictorataide.com.br/maritimidade/", "name": "Tributário Marítimo e Cabotagem | João Victor Ataíde", "description": "Atuação em tributação marítima, portuária e offshore: afretamento, Repetro, cabotagem, AFRMM, REB e contencioso fiscal do setor.", "inLanguage": "pt-BR", "about": {"@id": "https://joaovictorataide.com.br/#organizacao"}, "author": {"@id": "https://joaovictorataide.com.br/#joaovictorataide"}}, {"@type": "BreadcrumbList", "@id": "https://joaovictorataide.com.br/maritimidade/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://joaovictorataide.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Tributário Marítimo", "item": "https://joaovictorataide.com.br/maritimidade/"}]}, {"@type": "ItemList", "@id": "https://joaovictorataide.com.br/maritimidade/#artigos", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://joaovictorataide.com.br/blog/afretamento-bipartido-irrf-percentuais-lei-13586.html", "name": "Contrato bipartido de afretamento: percentuais de IRRF zero"}, {"@type": "ListItem", "position": 2, "url": "https://joaovictorataide.com.br/blog/irrf-afretamento-tratado-dupla-tributacao.html", "name": "IRRF sobre afretamento ao exterior"}, {"@type": "ListItem", "position": 3, "url": "https://joaovictorataide.com.br/blog/repetro-reporto-renaval-ibs-cbs-lc-214.html", "name": "Repetro, Reporto, Renaval e Reidi na LC 214/2025"}, {"@type": "ListItem", "position": 4, "url": "https://joaovictorataide.com.br/blog/icms-importacao-embarcacao-afretamento-leasing-tema-297.html", "name": "ICMS na importação de embarcação: o Tema 297 do STF"}, {"@type": "ListItem", "position": 5, "url": "https://joaovictorataide.com.br/blog/iss-servicos-portuarios-praticagem-local-incidencia.html", "name": "ISS em serviços portuários, praticagem e rebocagem"}, {"@type": "ListItem", "position": 6, "url": "https://joaovictorataide.com.br/blog/capatazia-thc-valor-aduaneiro-tema-1014-stj.html", "name": "Capatazia e THC no valor aduaneiro"}, {"@type": "ListItem", "position": 7, "url": "https://joaovictorataide.com.br/blog/afrmm-tum-br-do-mar-cabotagem-custo-logistico.html", "name": "AFRMM, TUM e BR do Mar"}, {"@type": "ListItem", "position": 8, "url": "https://joaovictorataide.com.br/blog/reb-registro-especial-brasileiro-beneficios.html", "name": "REB: benefícios fiscais para embarcações"}, {"@type": "ListItem", "position": 9, "url": "https://joaovictorataide.com.br/blog/bunker-tributacao-cide-icms-reforma-tributaria.html", "name": "Tributação do bunker em navios"}, {"@type": "ListItem", "position": 10, "url": "https://joaovictorataide.com.br/blog/lei-15394-2026-descomissionamento-reciclagem-embarcacoes.html", "name": "Lei 15.394/2026 e o descomissionamento de embarcações"}, {"@type": "ListItem", "position": 11, "url": "https://joaovictorataide.com.br/blog/convencoes-hong-kong-basileia-descomissionamento-naval.html", "name": "Convenções de Hong Kong e Basileia"}, {"@type": "ListItem", "position": 12, "url": "https://joaovictorataide.com.br/blog/lei-estadual-rj-10028-2023-reciclagem-embarcacoes.html", "name": "Lei RJ 10.028/2023: reciclagem naval no Rio"}]}, {"@type": "FAQPage", "@id": "https://joaovictorataide.com.br/maritimidade/#faq", "mainEntity": [{"@type": "Question", "name": "Como é tributada a remessa ao exterior para pagamento de afretamento?", "acceptedAnswer": {"@type": "Answer", "text": "O art. 1º, I, da Lei 9.481/97 reduz a zero a alíquota do imposto de renda na fonte sobre o afretamento, fretamento, aluguel ou arrendamento de embarcações marítimas. Havendo contrato simultâneo de prestação de serviços com pessoa jurídica vinculada, a alíquota zero fica limitada aos percentuais do § 9º do mesmo artigo, e o excedente é tributado a 15% ou 25%."}}, {"@type": "Question", "name": "Os regimes especiais do setor de petróleo continuam valendo com o IBS e a CBS?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O art. 93 da LC 214/2025 prevê suspensão do IBS e da CBS em operações vinculadas à cadeia de petróleo e gás, com aplicação das suspensões limitada a 31 de dezembro de 2040 pelo § 8º."}}, {"@type": "Question", "name": "Qual a alíquota do AFRMM na cabotagem?", "acceptedAnswer": {"@type": "Answer", "text": "8%, conforme o art. 6º da Lei 10.893/2004 na redação dada pela Lei 14.301/2022, mesma alíquota aplicável à navegação de longo curso."}}, {"@type": "Question", "name": "O escritório atende empresas fora do Rio de Janeiro?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. A atuação é nacional, com atendimento presencial na Barra da Tijuca e remoto para operações em outros estados e no exterior."}}, {"@type": "Question", "name": "Quais documentos são necessários para uma primeira análise de operação marítima?", "acceptedAnswer": {"@type": "Answer", "text": "Em regra, os contratos de afretamento e de prestação de serviços, comprovantes de remessa e contratos de câmbio, documentos de habilitação em regimes especiais e, quando houver, autos de infração ou intimações fiscais em curso."}}]}]}
+</script>
 </head>
 <body>
+<header class="top"><div class="wrapw" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+<a class="brand" href="https://joaovictorataide.com.br/">João Victor Ataíde<span>TRIBUTÁRIO · ADUANEIRO · MARÍTIMO</span></a>
+<a class="wa" href="https://wa.me/5521996550865">WhatsApp</a>
+</div></header>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a href="https://joaovictorataide.com.br" class="logo">
-      JVA <span class="logo-accent">· Marítimo</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#teses">Teses Ativas</a></li>
-      <li><a href="#artigos">Artigos</a></li>
-      <li><a href="https://joaovictorataide.com.br/blog/">Blog</a></li>
-      <li><a href="#contato" class="nav-cta">Falar com o advogado</a></li>
-    </ul>
-  </div>
-</nav>
+<section class="hero hub-hero"><div class="wrapw">
+<span class="kicker">Atuação setorial</span>
+<h1>Tributário Marítimo e Cabotagem</h1>
+<p>Armadores, operadores de cabotagem, afretadores, estaleiros e empresas de apoio offshore lidam com um regime tributário que não se resolve com direito tributário genérico. Afretamento, regimes aduaneiros especiais, AFRMM e a transição para o IBS e a CBS operam em camadas que se cruzam no mesmo contrato.</p>
+<div class="meta">Rio de Janeiro · Atuação nacional · Barra da Tijuca</div>
+</div></section>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="hero-glow1"></div>
-  <div class="hero-glow2"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-eyebrow">
-        <span class="hero-eyebrow-line"></span>
-        <span>Direito Tributário Marítimo · Rio de Janeiro</span>
-      </div>
-      <h1>
-        O tributo que<br><strong>o setor marítimo</strong><br>
-        <em>não precisa pagar.</em>
-      </h1>
-      <p class="hero-desc">
-        IRRF sobre afretamento, REB, descomissionamento, FPSO, apoio offshore — <strong>o setor tem especificidades tributárias que a maioria dos advogados generalistas não alcança.</strong> Atuamos exclusivamente nessa intersecção.
-      </p>
-      <div class="hero-badges">
-        <span class="badge">⚓ Cabotagem</span>
-        <span class="badge">🛢️ FPSO &amp; Offshore</span>
-        <span class="badge">🚢 Armadores</span>
-        <span class="badge">⚙️ Apoio Marítimo</span>
-        <span class="badge">🏗️ Estaleiros</span>
-        <span class="badge">🌐 Afretamento Internacional</span>
-        <span class="badge">🎯 FPSO Expo · Brazil Export · SOBENA · Intermodal · Naval Shore</span>
-      </div>
-      <div class="hero-actions">
-        <a href="https://wa.me/5521996550865" target="_blank" class="btn-primary">💬 Falar no WhatsApp</a>
-        <a href="#servicos" class="btn-secondary">Ver os serviços ↓</a>
-      </div>
-    </div>
-    <div>
-      <div class="hero-stats">
-        <div class="stats-header">
-          <div class="stats-dot"></div>
-          <span>Por que especialização importa neste setor</span>
-        </div>
-        <div class="stats-grid">
-          <div class="stat">
-            <div class="stat-n">25%</div>
-            <div class="stat-l">IRRF máximo sobre remessas de afretamento — reduzível com tratados</div>
-          </div>
-          <div class="stat">
-            <div class="stat-n">~20%</div>
-            <div class="stat-l">Economia potencial em IPI + II na aquisição de embarcação com REB</div>
-          </div>
-          <div class="stat">
-            <div class="stat-n">2027</div>
-            <div class="stat-l">Split payment IBS/CBS: impacto direto no fluxo de operadores</div>
-          </div>
-          <div class="stat">
-            <div class="stat-n">R$90B</div>
-            <div class="stat-l">Estimativa de ativos navais a descomissionar no Brasil até 2035</div>
-          </div>
-        </div>
-        <div class="stats-footer">Barra da Tijuca · Rio de Janeiro · OAB/RJ</div>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-ind">
-    <div class="scroll-ind-line"></div>
-    <span>explorar</span>
-  </div>
-</section>
+<section class="faixa"><div class="wrapw"><div class="grid">
+<div><b>Lei 9.481/97</b><span>Afretamento e IRRF</span></div>
+<div><b>LC 214/2025</b><span>Regimes especiais</span></div>
+<div><b>Lei 14.301/2022</b><span>BR do Mar</span></div>
+<div><b>Lei 10.893/2004</b><span>AFRMM e TUM</span></div>
+</div></div></section>
 
-<!-- QUEM ATENDEMOS -->
-<section class="sec-publicos" id="publico">
-  <div class="section-inner">
-    <div class="section-eyebrow">Com quem trabalhamos</div>
-    <h2 class="section-title">Especialização que <em>o setor reconhece</em></h2>
-    <p class="section-desc">Cada segmento do setor marítimo tem sua própria estrutura de custos, contratos e exposição tributária. O atendimento genérico perde as nuances que geram economia real.</p>
-    <div class="publicos-grid">
-      <div class="pub-card">
-        <span class="pub-icon">🚢</span>
-        <div class="pub-title">Armadores e EBN</div>
-        <div class="pub-desc">Empresas Brasileiras de Navegação que operam em cabotagem, longo curso ou apoio portuário. Foco em REB, IRRF sobre afretamento e estrutura societária eficiente.</div>
-      </div>
-      <div class="pub-card">
-        <span class="pub-icon">🛢️</span>
-        <div class="pub-title">FPSO &amp; Offshore</div>
-        <div class="pub-desc">Operadores de FPSOs, plataformas, embarcações de apoio e drilling rigs. Estruturação tributária de contratos de afretamento com Petrobras e operadoras internacionais.</div>
-      </div>
-      <div class="pub-card">
-        <span class="pub-icon">⚙️</span>
-        <div class="pub-title">Apoio Marítimo e PSV</div>
-        <div class="pub-desc">Empresas de apoio marítimo com PSVs, AHTSs e embarcações de suporte. Tributação de contratos de serviço e afretamento, REPETRO e regime aduaneiro especial.</div>
-      </div>
-      <div class="pub-card">
-        <span class="pub-icon">🏗️</span>
-        <div class="pub-title">Estaleiros e Reciclagem</div>
-        <div class="pub-desc">Estaleiros, empresas de descomissionamento e reciclagem naval. Lei 15.394/2026, Convenção de Hong Kong, benefícios de PIS/Cofins e regularização ambiental-tributária.</div>
-      </div>
-      <div class="pub-card">
-        <span class="pub-icon">⚙️</span>
-        <div class="pub-title">Motores e Propulsão Náutica</div>
-        <div class="pub-desc">Importadoras, distribuidoras e fabricantes de motores náuticos (Yamaha, Mercury, Volvo Penta, MAN, Cummins e outros). Classificação NCM, Ex-Tarifário, REPETRO e planejamento tributário na cadeia de importação e distribuição.</div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="sec"><div class="wrapw">
+<h2>Com quem trabalhamos</h2>
+<p class="lead">Empresas brasileiras de navegação, armadores nacionais e estrangeiros com operação no Brasil, afretadores, operadores portuários e de terminais, estaleiros e empresas de reparo naval, prestadoras de apoio marítimo e logístico à indústria de petróleo e gás, e tradings com cadeia de transporte aquaviário relevante.</p>
+</div></section>
 
-<!-- SERVIÇOS -->
-<section class="sec-servicos" id="servicos">
-  <div class="section-inner">
-    <div class="section-eyebrow">O que fazemos</div>
-    <h2 class="section-title">Serviços tributários <em>especializados para o setor</em></h2>
-    <p class="section-desc">Cada serviço abaixo foi desenhado a partir das demandas reais de clientes do setor marítimo — não de uma lista genérica de advocacia tributária.</p>
-    <div class="servicos-grid">
+<section class="sec" style="padding-top:0"><div class="wrapw">
+<h2>O que fazemos</h2>
+<p class="lead">Dez frentes de atuação no setor, do desenho contratual ao contencioso.</p>
+<div class="servicos">
+<div class="serv"><div class="n">01</div><h3>Afretamento e remessas ao exterior</h3><p>Estruturação e revisão de contratos de afretamento, aluguel e arrendamento de embarcações, com análise dos percentuais do art. 1º da Lei 9.481/97 e da exposição a IRRF, CIDE e contribuições sobre importação de serviços.</p></div>
+<div class="serv"><div class="n">02</div><h3>Regimes aduaneiros especiais do setor</h3><p>Enquadramento e manutenção em Repetro, Reporto, Renaval e Reidi na disciplina dos arts. 84 a 93 e 105 da LC 214/2025, com controle de destinação e conversão em alíquota zero.</p></div>
+<div class="serv"><div class="n">03</div><h3>Cabotagem e BR do Mar</h3><p>Habilitação no programa, condições de afretamento de embarcação estrangeira e revisão do custo tributário do frete aquaviário sob a Lei 14.301/2022.</p></div>
+<div class="serv"><div class="n">04</div><h3>AFRMM, TUM e Sistema Mercante</h3><p>Auditoria de base de cálculo e alíquota, verificação de isenções e dispensas e pedidos de restituição de recolhimentos indevidos dentro do prazo legal.</p></div>
+<div class="serv"><div class="n">05</div><h3>REB e Marinha Mercante</h3><p>Análise de registro no Registro Especial Brasileiro e dos benefícios aplicáveis à aquisição e à operação de embarcações.</p></div>
+<div class="serv"><div class="n">06</div><h3>Bunker, CIDE e combustíveis marítimos</h3><p>Tratamento tributário do abastecimento de embarcações e impacto da transição para IBS e CBS.</p></div>
+<div class="serv"><div class="n">07</div><h3>Descomissionamento e reciclagem naval</h3><p>Regime aplicável ao desmonte de embarcações e unidades offshore, incluindo o marco da Lei 15.394/2026 e as convenções internacionais aplicáveis.</p></div>
+<div class="serv"><div class="n">08</div><h3>Contencioso administrativo e judicial</h3><p>Defesa em autos de infração de IRRF sobre remessas, CIDE, contribuições sobre importação e exigências aduaneiras portuárias, na esfera administrativa e judicial.</p></div>
+<div class="serv"><div class="n">09</div><h3>Estruturação societária de armadores e operadores</h3><p>Desenho de veículos societários para navegação, apoio marítimo e offshore, considerando vedações de acesso a regimes e efeitos sucessórios.</p></div>
+<div class="serv"><div class="n">10</div><h3>Transição para IBS e CBS no setor marítimo</h3><p>Reprojeção de crédito, preço e caixa ao longo do calendário de 2026 a 2033, inclusive frente ao split payment a partir de 2027.</p></div>
+</div>
+</div></section>
 
-      <div class="serv-card serv-destaque">
-        <div class="serv-num">01</div>
-        <div class="serv-icon">⚓</div>
-        <div class="serv-title">IRRF sobre Afretamento ao Exterior</div>
-        <div class="serv-desc">Análise e contestação do IRRF de 15% ou 25% incidente sobre remessas de afretamento a casco nu, por tempo (time charter) e por viagem (voyage charter) a armadores estrangeiros. Aplicação dos tratados de dupla tributação com Noruega, Alemanha, Japão, China, Dinamarca e outros países para redução ou eliminação do imposto. Pedido de restituição de IRRF pago indevidamente nos últimos 5 anos.</div>
-        <div class="serv-tags">
-          <span class="serv-tag">IRRF</span>
-          <span class="serv-tag">Afretamento</span>
-          <span class="serv-tag">Tratados</span>
-          <span class="serv-tag">Restituição</span>
-        </div>
-      </div>
+<section class="radar"><div class="wrapw">
+<h2>Radar do setor</h2>
+<p class="lead">Três pontos que estão mudando a análise de risco de quem opera no mar neste momento.</p>
+<div class="rgrid">
+<div class="rcard"><strong>Percentuais de segregação sob escrutínio</strong><p>O foco da fiscalização migrou do percentual para a substância da bipartição entre afretamento e serviço. Estruturas dentro do limite legal seguem sendo questionadas quanto à autonomia da prestação.</p></div>
+<div class="rcard"><strong>Horizonte de 2040 no Repetro</strong><p>O § 8º do art. 93 da LC 214/2025 limita as suspensões a 31 de dezembro de 2040, prazo que entra na modelagem de projetos de ciclo longo e já é objeto de discussão legislativa.</p></div>
+<div class="rcard"><strong>Split payment e cabotagem</strong><p>A retenção do IBS e da CBS na liquidação financeira a partir de 2027 altera o capital de giro de operadores que recebem de embarcadores e repassam tributo na cadeia.</p></div>
+</div>
+</div></section>
 
-      <div class="serv-card">
-        <div class="serv-num">02</div>
-        <div class="serv-icon">🏴</div>
-        <div class="serv-title">REB — Registro Especial Brasileiro</div>
-        <div class="serv-desc">Assessoria completa para obtenção e manutenção do Registro Especial Brasileiro junto à ANTAQ. Aproveitamento das isenções de IPI e II na aquisição de embarcações novas ou importadas. Análise da elegibilidade da frota existente e planejamento do requerimento. Simulação de economia tributária na aquisição de novas unidades.</div>
-        <div class="serv-tags">
-          <span class="serv-tag">REB</span>
-          <span class="serv-tag">ANTAQ</span>
-          <span class="serv-tag">IPI</span>
-          <span class="serv-tag">Importação</span>
-        </div>
-      </div>
+<section class="sec"><div class="wrapw">
+<h2>Análises técnicas</h2>
+<p class="lead">Conteúdo produzido sobre os temas do silo marítimo, com base legal identificada e atualização conforme a transição da reforma tributária.</p>
+<div class="artigos">
+<a class="art" href="https://joaovictorataide.com.br/blog/afretamento-bipartido-irrf-percentuais-lei-13586.html"><span>Afretamento</span><h3>Contrato bipartido de afretamento: percentuais de IRRF zero</h3><p>Os limites de 70%, 65% e 50%, a regra anterior de 85/80/65 e os critérios de vínculo que sustentam ou derrubam a estrutura.</p></a>
+<a class="art" href="https://joaovictorataide.com.br/blog/irrf-afretamento-tratado-dupla-tributacao.html"><span>Afretamento</span><h3>IRRF sobre afretamento ao exterior</h3><p>Até 25% de retenção na remessa e como os tratados para evitar a dupla tributação alteram a conta.</p></a>
+<a class="art" href="https://joaovictorataide.com.br/blog/repetro-reporto-renaval-ibs-cbs-lc-214.html"><span>Regimes especiais</span><h3>Repetro, Reporto, Renaval e Reidi na LC 214/2025</h3><p>Suspensão, conversão em alíquota zero, prazo de 2040 e o calendário de transição até 2033.</p></a>
+<a class="art" href="https://joaovictorataide.com.br/blog/icms-importacao-embarcacao-afretamento-leasing-tema-297.html"><span>ICMS</span><h3>ICMS na importação de embarcação: o Tema 297 do STF</h3><p>Afretamento a casco nu, leasing e o limite da cobrança estadual sobre a entrada do bem.</p></a>
+<a class="art" href="https://joaovictorataide.com.br/blog/iss-servicos-portuarios-praticagem-local-incidencia.html"><span>Portuário</span><h3>ISS em serviços portuários, praticagem e rebocagem</h3><p>O subitem 20.01, o município competente e o salto de carga na substituição por IBS e CBS.</p></a>
+<a class="art" href="https://joaovictorataide.com.br/blog/capatazia-thc-valor-aduaneiro-tema-1014-stj.html"><span>Aduaneiro</span><h3>Capatazia e THC no valor aduaneiro</h3><p>O Tema 1.014 do STJ, a legalidade da IN SRF 327/2003 e o que ainda comporta discussão.</p></a>
+<a class="art" href="https://joaovictorataide.com.br/blog/afrmm-tum-br-do-mar-cabotagem-custo-logistico.html"><span>Cabotagem</span><h3>AFRMM, TUM e BR do Mar</h3><p>Alíquotas em vigor, base de cálculo, dispensa da TUM e recolhimentos indevidos recuperáveis.</p></a>
+<a class="art" href="https://joaovictorataide.com.br/blog/reb-registro-especial-brasileiro-beneficios.html"><span>Marinha Mercante</span><h3>REB: benefícios fiscais para embarcações</h3><p>Isenção de IPI e II para armadores registrados e o que muda com o novo sistema.</p></a>
+<a class="art" href="https://joaovictorataide.com.br/blog/bunker-tributacao-cide-icms-reforma-tributaria.html"><span>Combustíveis</span><h3>Tributação do bunker em navios</h3><p>CIDE-Combustíveis, ICMS e o impacto do IBS e da CBS no abastecimento de embarcações.</p></a>
+<a class="art" href="https://joaovictorataide.com.br/blog/lei-15394-2026-descomissionamento-reciclagem-embarcacoes.html"><span>Descomissionamento</span><h3>Lei 15.394/2026 e o descomissionamento de embarcações</h3><p>Benefícios de PIS e Cofins aplicáveis à reciclagem naval no novo marco legal.</p></a>
+<a class="art" href="https://joaovictorataide.com.br/blog/convencoes-hong-kong-basileia-descomissionamento-naval.html"><span>Descomissionamento</span><h3>Convenções de Hong Kong e Basileia</h3><p>Como os instrumentos internacionais regulam a reciclagem de navios no Brasil.</p></a>
+<a class="art" href="https://joaovictorataide.com.br/blog/lei-estadual-rj-10028-2023-reciclagem-embarcacoes.html"><span>Rio de Janeiro</span><h3>Lei RJ 10.028/2023: reciclagem naval no Rio</h3><p>O que foi aprovado, o que foi vetado e o efeito para estaleiros fluminenses.</p></a>
+</div>
+</div></section>
 
-      <div class="serv-card">
-        <div class="serv-num">03</div>
-        <div class="serv-icon">🔄</div>
-        <div class="serv-title">REPETRO e Regime Aduaneiro Especial</div>
-        <div class="serv-desc">Estruturação e regularização do REPETRO-SPED para embarcações e equipamentos utilizados na exploração e produção de petróleo e gás. Admissão temporária de embarcações de apoio, equipamentos de perfuração e estruturas offshore. Conversão de admissão temporária em importação definitiva. Autuações da Receita Federal sobre REPETRO.</div>
-        <div class="serv-tags">
-          <span class="serv-tag">REPETRO</span>
-          <span class="serv-tag">E&amp;P</span>
-          <span class="serv-tag">Admissão Temporária</span>
-          <span class="serv-tag">Oil &amp; Gas</span>
-        </div>
-      </div>
+<section class="sec" style="padding-top:0"><div class="wrapw">
+<div class="faq" style="border-top:none">
+<h2>Perguntas frequentes</h2>
+<div><h3>Como é tributada a remessa ao exterior para pagamento de afretamento?</h3><p>O art. 1º, I, da Lei 9.481/97 reduz a zero a alíquota do imposto de renda na fonte sobre o afretamento, fretamento, aluguel ou arrendamento de embarcações marítimas. Havendo contrato simultâneo de prestação de serviços com pessoa jurídica vinculada, a alíquota zero fica limitada aos percentuais do § 9º do mesmo artigo, e o excedente é tributado a 15% ou 25%.</p></div>
+<div><h3>Os regimes especiais do setor de petróleo continuam valendo com o IBS e a CBS?</h3><p>Sim. O art. 93 da LC 214/2025 prevê suspensão do IBS e da CBS em operações vinculadas à cadeia de petróleo e gás, com aplicação das suspensões limitada a 31 de dezembro de 2040 pelo § 8º.</p></div>
+<div><h3>Qual a alíquota do AFRMM na cabotagem?</h3><p>8%, conforme o art. 6º da Lei 10.893/2004 na redação dada pela Lei 14.301/2022, mesma alíquota aplicável à navegação de longo curso.</p></div>
+<div><h3>O escritório atende empresas fora do Rio de Janeiro?</h3><p>Sim. A atuação é nacional, com atendimento presencial na Barra da Tijuca e remoto para operações em outros estados e no exterior.</p></div>
+<div><h3>Quais documentos são necessários para uma primeira análise de operação marítima?</h3><p>Em regra, os contratos de afretamento e de prestação de serviços, comprovantes de remessa e contratos de câmbio, documentos de habilitação em regimes especiais e, quando houver, autos de infração ou intimações fiscais em curso.</p></div>
+</div>
+</div></section>
 
-      <div class="serv-card">
-        <div class="serv-num">04</div>
-        <div class="serv-icon">🏗️</div>
-        <div class="serv-title">Descomissionamento e Reciclagem Naval</div>
-        <div class="serv-desc">Assessoria tributária e jurídica para o processo de descomissionamento de plataformas, FPSOs e embarcações. Aproveitamento dos benefícios de PIS/Cofins da Lei 15.394/2026. Conformidade com a Convenção de Hong Kong e as normas da Convenção de Basileia. Estruturação dos contratos de alienação, desmonte e reciclagem para eficiência fiscal.</div>
-        <div class="serv-tags">
-          <span class="serv-tag">Lei 15.394/2026</span>
-          <span class="serv-tag">FPSO</span>
-          <span class="serv-tag">PIS/Cofins</span>
-          <span class="serv-tag">Hong Kong</span>
-        </div>
-      </div>
+<section class="sec" style="padding-top:0"><div class="wrapw">
+<h2>Pontos de contato</h2>
+<div class="contato">
+<div class="ccard"><b>WhatsApp</b><a href="https://wa.me/5521996550865">(21) 99655-0865</a></div>
+<div class="ccard"><b>E-mail</b><a href="mailto:joaovictor@joaovictorataide.com.br">joaovictor@joaovictorataide.com.br</a></div>
+<div class="ccard"><b>Escritório</b>Av. das Américas 4.200, sala 305 — Barra da Tijuca, RJ</div>
+</div>
+<div class="cta">
+<h2>Leve o caso para análise técnica</h2>
+<p>Diagnóstico inicial da operação marítima, com leitura dos contratos, das remessas e do enquadramento em regimes especiais.</p>
+<a class="btn" href="https://wa.me/5521996550865">Falar sobre o caso</a>
+</div>
+</div></section>
 
-      <div class="serv-card">
-        <div class="serv-num">05</div>
-        <div class="serv-icon">🌊</div>
-        <div class="serv-title">Reforma Tributária para Operadores Marítimos</div>
-        <div class="serv-desc">Diagnóstico do impacto do IBS e da CBS na operação de cabotagem e apoio marítimo. Análise do split payment (retenção automática do tributo no pagamento) sobre o fluxo de caixa de armadores que recebem de Petrobras e operadoras. Creditamento de IBS/CBS na aquisição de embarcações e equipamentos. Adaptação às obrigações acessórias da LC 214/2025 para o setor.</div>
-        <div class="serv-tags">
-          <span class="serv-tag">IBS/CBS</span>
-          <span class="serv-tag">Split Payment</span>
-          <span class="serv-tag">LC 214/2025</span>
-          <span class="serv-tag">Cabotagem</span>
-        </div>
-      </div>
-
-      <div class="serv-card">
-        <div class="serv-num">06</div>
-        <div class="serv-icon">🏛️</div>
-        <div class="serv-title">Holding para Armadores e Sócios do Setor</div>
-        <div class="serv-desc">Estruturação de holding patrimonial e operacional para sócios de empresas de navegação. Proteção das cotas e embarcações contra riscos societários e credores operacionais. Planejamento sucessório para famílias com patrimônio no setor naval. Integração com planejamento internacional quando há participações em armadoras estrangeiras.</div>
-        <div class="serv-tags">
-          <span class="serv-tag">Holding</span>
-          <span class="serv-tag">Sucessão</span>
-          <span class="serv-tag">Proteção Patrimonial</span>
-          <span class="serv-tag">Internacional</span>
-        </div>
-      </div>
-
-      <div class="serv-card">
-        <div class="serv-num">07</div>
-        <div class="serv-icon">🌐</div>
-        <div class="serv-title">Tributação Internacional e Offshores do Setor</div>
-        <div class="serv-desc">Estruturação e regularização de holdings offshore utilizadas por armadores e operadores para deter embarcações e receber afretamentos. Análise de compliance pós-Lei 14.754/2023 (tributação de offshores controladas). Declaração de bens e direitos no exterior (CBE — Banco Central). Planejamento de estruturas no Panamá, Ilhas Marshall e outros registros abertos tradicionais do setor.</div>
-        <div class="serv-tags">
-          <span class="serv-tag">Offshore</span>
-          <span class="serv-tag">Lei 14.754</span>
-          <span class="serv-tag">Bandeira</span>
-          <span class="serv-tag">Panamá</span>
-        </div>
-      </div>
-
-      <div class="serv-card">
-        <div class="serv-num">08</div>
-        <div class="serv-icon">⚖️</div>
-        <div class="serv-title">Contencioso Tributário Marítimo</div>
-        <div class="serv-desc">Defesa administrativa e judicial em autuações da Receita Federal e Receita Estadual com foco em operações marítimas: IRRF sobre afretamento, ICMS sobre prestação de serviços de transporte aquaviário, ISS sobre serviços de apoio marítimo. Impugnação de autos de infração do REPETRO. Recursos ao CARF com especialização em temas setoriais.</div>
-        <div class="serv-tags">
-          <span class="serv-tag">CARF</span>
-          <span class="serv-tag">Autuação</span>
-          <span class="serv-tag">ICMS</span>
-          <span class="serv-tag">ISS</span>
-        </div>
-      </div>
-
-      <div class="serv-card">
-        <div class="serv-num">09</div>
-        <div class="serv-icon">📋</div>
-        <div class="serv-title">Due Diligence Tributária Naval</div>
-        <div class="serv-desc">Análise completa do passivo tributário em operações de M&A, compra de embarcações usadas ou aquisição de empresas do setor. Mapeamento de riscos de IRRF histórico, obrigações de REPETRO não cumpridas e contingências de ICMS e ISS. Relatório estruturado para investidores, fundos de PE e financiadores de projetos navais.</div>
-        <div class="serv-tags">
-          <span class="serv-tag">M&amp;A</span>
-          <span class="serv-tag">Due Diligence</span>
-          <span class="serv-tag">Passivo</span>
-          <span class="serv-tag">Investidores</span>
-        </div>
-      </div>
-
-      <div class="serv-card">
-        <div class="serv-num">10</div>
-        <div class="serv-icon">⚙️</div>
-        <div class="serv-title">Classificação Fiscal e NCM de Motores Náuticos</div>
-        <div class="serv-desc">Motores de popa, motores de centro, turbinas marítimas e sistemas de propulsão possuem classificações fiscais específicas que determinam as alíquotas de II, IPI e PIS/Cofins-Importação. Uma classificação errada de NCM pode gerar autuação com multa de 75% sobre o tributo — ou fazer a empresa pagar imposto a maior por anos sem perceber. Elaboramos pareceres de classificação fiscal, contestamos autos de infração por reclassificação e estruturamos o enquadramento correto desde o primeiro embarque.</div>
-        <div class="serv-tags">
-          <span class="serv-tag">NCM</span>
-          <span class="serv-tag">Classificação Fiscal</span>
-          <span class="serv-tag">Motores Náuticos</span>
-          <span class="serv-tag">II / IPI</span>
-        </div>
-      </div>
-
-      <div class="serv-card">
-        <div class="serv-num">11</div>
-        <div class="serv-icon">🔩</div>
-        <div class="serv-title">Ex-Tarifário e Redução de II para Motores e Componentes</div>
-        <div class="serv-desc">O Ex-Tarifário é o mecanismo que reduz a alíquota do Imposto de Importação para bens sem similar nacional — incluindo motores náuticos de alta potência, sistemas de propulsão diesel-elétrica, transmissões e componentes especializados sem fabricação equivalente no Brasil. Identificamos os produtos elegíveis, elaboramos os pedidos junto à SECEX e ao MDIC e acompanhamos o processo até a publicação da portaria. Para motores acima de determinada potência e componentes de precisão, a economia pode superar 14% do valor CIF por importação.</div>
-        <div class="serv-tags">
-          <span class="serv-tag">Ex-Tarifário</span>
-          <span class="serv-tag">SECEX / MDIC</span>
-          <span class="serv-tag">Redução de II</span>
-          <span class="serv-tag">Importação</span>
-        </div>
-      </div>
-
-      <div class="serv-card">
-        <div class="serv-num">12</div>
-        <div class="serv-icon">📦</div>
-        <div class="serv-title">Planejamento Tributário na Cadeia de Importação e Distribuição</div>
-        <div class="serv-desc">Para importadoras e distribuidoras de motores náuticos, a carga tributária na importação — II, IPI, PIS/Cofins-Importação, ICMS-Importação e AFRMM quando aplicável — pode representar 60 a 80% do custo total do produto sobre o valor CIF. Estruturamos o fluxo de importação para aproveitar regimes especiais (drawback, RECOF, admissão temporária via REPETRO para motores destinados a E&P), otimizamos o aproveitamento de créditos de PIS/Cofins e IPI na revenda e analisamos a melhor estrutura de distribuição estadual para minimizar o ICMS-ST nas cadeias de peças e acessórios náuticos.</div>
-        <div class="serv-tags">
-          <span class="serv-tag">Drawback</span>
-          <span class="serv-tag">RECOF</span>
-          <span class="serv-tag">PIS/Cofins</span>
-          <span class="serv-tag">ICMS-ST</span>
-          <span class="serv-tag">Importação</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- TESES E REFORMAS -->
-<section class="sec-dark" id="teses">
-  <div class="section-inner">
-    <div class="section-eyebrow" style="color:var(--sea)">Oportunidades ativas</div>
-    <h2 class="section-title section-title-white">Teses e mudanças legislativas <em>que impactam o setor agora</em></h2>
-    <p class="section-desc" style="color:rgba(255,255,255,.45);margin-bottom:2.5rem">Acompanhamos em tempo real as discussões no STF, STJ, CARF e no Congresso que afetam diretamente a tributação de operadores marítimos.</p>
-    <div class="teses-grid">
-
-      <div class="tese-card">
-        <div class="tese-cat">IRRF · Afretamento</div>
-        <div class="tese-title">Tratados de dupla tributação sobre afretamento time charter e bareboat</div>
-        <div class="tese-desc">Discussão no CARF e nas instâncias judiciais sobre a aplicação dos tratados para eliminar o IRRF de 25% nas remessas ao exterior.</div>
-        <div class="tese-status status-ativo">● Ativo — ajuize agora</div>
-      </div>
-
-      <div class="tese-card">
-        <div class="tese-cat">REPETRO · Aduaneiro</div>
-        <div class="tese-title">REPETRO-SPED: prazo de admissão temporária e penalidades por extrapolação</div>
-        <div class="tese-desc">Autuações crescentes da RFB por extrapolação de prazo de AT de embarcações de apoio. Tese de isenção de multa por fortuito operacional.</div>
-        <div class="tese-status status-urgente">⚠ Urgente — prazos curtos</div>
-      </div>
-
-      <div class="tese-card">
-        <div class="tese-cat">ISS · Cabotagem</div>
-        <div class="tese-title">ISS sobre serviços de apoio marítimo prestados em alto-mar e ZEE</div>
-        <div class="tese-desc">Municípios costeiros têm autuado empresas de PSV e AHTS por ISS sobre serviços prestados fora do território municipal. Tese de não incidência territorial.</div>
-        <div class="tese-status status-ativo">● Ativo — jurisprudência favorável</div>
-      </div>
-
-      <div class="tese-card">
-        <div class="tese-cat">IBS/CBS · Reforma</div>
-        <div class="tese-title">Split payment sobre pagamentos da Petrobras a operadores de afretamento</div>
-        <div class="tese-desc">A partir de 2027, pagamentos da Petrobras e operadoras a prestadores de serviço marítimo sofrerão retenção automática. Impacto severo no capital de giro de PSV operators.</div>
-        <div class="tese-status status-novo">★ Novo — planeje 2027 agora</div>
-      </div>
-
-      <div class="tese-card">
-        <div class="tese-cat">PIS/Cofins · Descomissionamento</div>
-        <div class="tese-title">Benefícios da Lei 15.394/2026 para reciclagem de FPSOs e plataformas</div>
-        <div class="tese-desc">Nova lei cria incentivos de PIS/Cofins ainda subaproveitados pelo setor. Janela regulatória aberta para estruturação dos primeiros projetos elegíveis.</div>
-        <div class="tese-status status-novo">★ Novo — janela aberta</div>
-      </div>
-
-      <div class="tese-card">
-        <div class="tese-cat">ICMS · Transporte</div>
-        <div class="tese-title">ICMS sobre prestação de serviço de transporte aquaviário intermunicipal e interestadual</div>
-        <div class="tese-desc">Estados têm autuado operadores de cabotagem por ICMS sobre serviços de transporte. Extinção gradual do ICMS na reforma cria tese de suspensão de obrigações em discussão.</div>
-        <div class="tese-status status-ativo">● Ativo — monitorando STJ/CARF</div>
-      </div>
-
-      <div class="tese-card">
-        <div class="tese-cat">NCM · Motores Náuticos</div>
-        <div class="tese-title">Reclassificação de NCM em motores de propulsão marítima — autuações crescentes da RFB em importadoras</div>
-        <div class="tese-desc">A RFB tem reclassificado motores importados com NCM náutico para NCMs industriais de maior alíquota de II e IPI. Importadoras de Mercury, Yamaha, Volvo Penta e MAN estão sendo autuadas. Tese de manutenção da classificação original com base em laudo técnico.</div>
-        <div class="tese-status status-urgente">⚠ Urgente — verificar classificações ativas</div>
-      </div>
-
-      <div class="tese-card">
-        <div class="tese-cat">Ex-Tarifário · Motores</div>
-        <div class="tese-title">Ex-Tarifário para motores de alta potência e sistemas de propulsão elétrica naval sem similar nacional</div>
-        <div class="tese-desc">Motores diesel marítimos acima de 1.000 HP e sistemas de propulsão elétrica/híbrida para embarcações podem ter Ex-Tarifário deferido com redução do II de 14% para 0%. Janela de pedidos aberta em 2026.</div>
-        <div class="tese-status status-novo">★ Oportunidade — janela aberta em 2026</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ARTIGOS -->
-<section class="sec-artigos" id="artigos">
-  <div class="section-inner">
-    <div class="section-eyebrow">Conteúdo técnico</div>
-    <h2 class="section-title">Análises publicadas <em>para o setor marítimo</em></h2>
-    <p class="section-desc">Artigos escritos especificamente para advogados, CFOs e gestores de operações marítimas — sem simplificação excessiva.</p>
-    <div class="artigos-grid">
-
-      <a href="/blog/irrf-afretamento-tratado-dupla-tributacao.html" class="art-card">
-        <div class="art-img" style="background:linear-gradient(135deg,#071828,#0D2A3A)">🚢</div>
-        <div class="art-body">
-          <div class="art-cat">IRRF · Afretamento</div>
-          <div class="art-title">Armador paga até 25% de imposto para remeter dinheiro ao exterior — mas pode não precisar</div>
-          <div class="art-ex">Como funciona o IRRF sobre afretamento e como os tratados internacionais podem zerar o imposto.</div>
-          <div class="art-meta"><span>Maio 2026</span><span class="art-read">7 min →</span></div>
-        </div>
-      </a>
-
-      <a href="/blog/irrf-afretamento-tratado-dupla-tributacao.html" class="art-card">
-        <div class="art-img" style="background:linear-gradient(135deg,#071828,#0D2A3A)">⚓</div>
-        <div class="art-body">
-          <div class="art-cat">IRRF · Análise Técnica · CARF</div>
-          <div class="art-title">IRRF sobre afretamento: tratados de dupla tributação e jurisprudência do CARF</div>
-          <div class="art-ex">Análise técnica das alíquotas, tratados com Noruega, Alemanha, Japão e China e decisões 2022–2024.</div>
-          <div class="art-meta"><span>Maio 2026</span><span class="art-read">11 min →</span></div>
-        </div>
-      </a>
-
-      <a href="/blog/reb-registro-especial-brasileiro-beneficios.html" class="art-card">
-        <div class="art-img" style="background:linear-gradient(135deg,#071828,#0D2A3A)">🏴</div>
-        <div class="art-body">
-          <div class="art-cat">REB · Benefícios Fiscais</div>
-          <div class="art-title">REB: o registro que reduz os impostos da sua embarcação — e que muitos armadores não aproveitam</div>
-          <div class="art-ex">Isenção de IPI e II na aquisição, impacto com IBS/CBS e simulação de economia real.</div>
-          <div class="art-meta"><span>Maio 2026</span><span class="art-read">9 min →</span></div>
-        </div>
-      </a>
-
-      <a href="/blog/lei-15394-2026-descomissionamento-reciclagem-embarcacoes.html" class="art-card">
-        <div class="art-img" style="background:linear-gradient(135deg,#071828,#0A2040)">🏗️</div>
-        <div class="art-body">
-          <div class="art-cat">Descomissionamento · Reciclagem</div>
-          <div class="art-title">Lei 15.394/2026: oportunidades tributárias no descomissionamento que o setor ainda não viu</div>
-          <div class="art-ex">R$ 90 bilhões em plataformas a desativar. Os benefícios de PIS/Cofins que poucos conhecem.</div>
-          <div class="art-meta"><span>Maio 2026</span><span class="art-read">9 min →</span></div>
-        </div>
-      </a>
-
-      <a href="/blog/convencoes-hong-kong-basileia-descomissionamento-naval.html" class="art-card">
-        <div class="art-img" style="background:linear-gradient(135deg,#071828,#0A2040)">🌏</div>
-        <div class="art-body">
-          <div class="art-cat">Internacional · Reciclagem Naval</div>
-          <div class="art-title">Convenção de Hong Kong e Basileia: o que muda para o descomissionamento naval no Brasil</div>
-          <div class="art-ex">Duas convenções com lógicas distintas que se aplicam simultaneamente — ignorar uma é risco real.</div>
-          <div class="art-meta"><span>Maio 2026</span><span class="art-read">10 min →</span></div>
-        </div>
-      </a>
-
-      <a href="/blog/lei-estadual-rj-10028-2023-reciclagem-embarcacoes.html" class="art-card">
-        <div class="art-img" style="background:linear-gradient(135deg,#071828,#0A2040)">⚙️</div>
-        <div class="art-body">
-          <div class="art-cat">Lei Estadual RJ · Naval</div>
-          <div class="art-title">Lei Estadual RJ 10.028/2023: o que foi aprovado, o que foi vetado e o que muda para estaleiros</div>
-          <div class="art-ex">A primeira lei estadual de reciclagem naval brasileira. O ICMS especial foi vetado — mas o que sobrou tem valor.</div>
-          <div class="art-meta"><span>Maio 2026</span><span class="art-read">8 min →</span></div>
-        </div>
-      </a>
-
-    </div>
-    <div style="text-align:center;margin-top:2.5rem">
-      <a href="/blog/" class="btn-secondary" style="display:inline-flex;align-items:center;gap:.5rem;color:var(--sea3);border:1px solid rgba(90,142,200,.3);padding:.75rem 1.6rem;border-radius:8px;text-decoration:none;font-size:.88rem;transition:all .25s">Ver todos os artigos →</a>
-    </div>
-  </div>
-</section>
-
-<!-- CASO ILUSTRATIVO -->
-<section class="sec-caso">
-  <div class="section-inner">
-    <div class="section-eyebrow">Caso ilustrativo</div>
-    <h2 class="section-title">Como o problema acontece — e como <em>se resolve</em></h2>
-    <p class="section-desc">Um cenário real, com dados anonimizados, que ilustra o tipo de situação que atendemos para empresas do setor de propulsão e motores náuticos.</p>
-
-    <div class="caso-grid">
-
-      <div class="caso-card">
-        <div class="caso-label">O problema</div>
-        <div class="caso-title">Fornecedora global de sistemas de propulsão e motores para embarcações de grande porte, com operações no Brasil</div>
-        <div class="caso-desc">
-          <p>Uma empresa multinacional do segmento de engenharia marítima — com produtos que incluem motores de médio e grande porte, sistemas de propulsão e equipamentos de geração de energia para navios — realizava importações regulares de unidades e componentes para o mercado brasileiro há mais de uma década.</p>
-          <p>Os produtos eram importados com <strong>NCMs historicamente utilizados pelo setor</strong> para classificar motores de uso marítimo. Em determinado momento, uma fiscalização da Receita Federal reclassificou os mesmos produtos para NCMs de uso industrial geral — com alíquota de IPI significativamente superior — e lavrou auto de infração abrangendo os últimos cinco anos de operação.</p>
-          <p>O valor do auto somava <strong>tributo reclassificado + multa de 75% + SELIC</strong> sobre o período, com impacto que comprometia a viabilidade das operações no Brasil. A empresa utilizava o mesmo enquadramento desde o início das importações, com anuência tácita da própria RFB em despachos anteriores.</p>
-          <p>Paralelamente, a empresa nunca havia solicitado <strong>Ex-Tarifário</strong> para nenhum de seus produtos — desconhecia que determinadas linhas de alta potência poderiam se qualificar, por ausência de similar nacional, e operar com alíquota de II zerada.</p>
-        </div>
-      </div>
-
-      <div class="caso-resultado">
-        <div class="caso-resultado-label">Como a questão seria estruturada</div>
-
-        <div class="caso-item">
-          <div class="caso-item-icon">📐</div>
-          <div class="caso-item-text">
-            <strong>Parecer técnico de classificação fiscal</strong>
-            Elaboração de laudo detalhado com base nas Notas Explicativas do Sistema Harmonizado (NESH) e nas regras gerais de classificação, demonstrando que as características construtivas e a destinação específica dos produtos os enquadram nas NCMs náuticas e não nas industriais genéricas.
-          </div>
-        </div>
-
-        <div class="caso-item">
-          <div class="caso-item-icon">⚖️</div>
-          <div class="caso-item-text">
-            <strong>Impugnação administrativa do auto de infração</strong>
-            Contestação junto à DRJ com fundamento na boa-fé objetiva do contribuinte, nos despachos anteriores sem ressalva da própria RFB e na vinculação da autoridade fiscal às suas próprias manifestações — doutrina dos atos próprios e segurança jurídica.
-          </div>
-        </div>
-
-        <div class="caso-item">
-          <div class="caso-item-icon">📋</div>
-          <div class="caso-item-text">
-            <strong>Pedido de Ex-Tarifário para linhas elegíveis</strong>
-            Identificação dos produtos com potência e especificação técnica sem equivalente fabricado no Brasil; elaboração e protocolo dos pedidos junto à SECEX/MDIC para redução da alíquota de II de 14% para 0% nas importações futuras.
-          </div>
-        </div>
-
-        <div class="caso-item">
-          <div class="caso-item-icon">📦</div>
-          <div class="caso-item-text">
-            <strong>Reestruturação do fluxo de importação</strong>
-            Revisão do enquadramento de todos os produtos da linha, documentação preventiva de cada NCM e estruturação do processo de desembaraço para blindar classificações futuras contra reclassificação.
-          </div>
-        </div>
-
-        <div class="caso-item">
-          <div class="caso-item-icon">💡</div>
-          <div class="caso-item-text">
-            <strong>Resultado esperado</strong>
-            Afastamento ou redução significativa da autuação; redução permanente do custo de importação nas linhas com Ex-Tarifário; segurança jurídica para as operações futuras.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- DIFERENCIAIS -->
-<section class="sec-diferencial" id="diferencial">
-  <div class="section-inner">
-    <div class="dif-grid">
-      <div>
-        <div class="section-eyebrow">Por que nós</div>
-        <h2 class="section-title">O que diferencia um advogado <em>que conhece o mar</em></h2>
-        <p class="section-desc" style="margin-bottom:2.5rem">Tributário marítimo é um nicho dentro de um nicho. Exige entender a operação para entender o tributo.</p>
-        <div class="dif-lista">
-          <div class="dif-item">
-            <div class="dif-icon">⚓</div>
-            <div class="dif-text">
-              <h4>Conhecemos a operação, não apenas a lei</h4>
-              <p>Entendemos a diferença entre time charter, bareboat e voyage charter — e isso muda tudo na análise tributária do contrato de afretamento.</p>
-            </div>
-          </div>
-          <div class="dif-item">
-            <div class="dif-icon">🌐</div>
-            <div class="dif-text">
-              <h4>Tributação internacional integrada</h4>
-              <p>O setor marítimo é inerentemente internacional. Offshores, registros abertos, FPSO com afretamento de armadora norueguesa — atuamos em toda essa cadeia.</p>
-            </div>
-          </div>
-          <div class="dif-item">
-            <div class="dif-icon">📊</div>
-            <div class="dif-text">
-              <h4>Presença nos eventos do setor</h4>
-              <p>Participamos do FPSO Expo, Brazil Export, SOBENA, Intermodal e Naval Shore. Conhecemos as empresas, os desafios e os contratos típicos da indústria — de dentro dos eventos, não da leitura de notícias.</p>
-            </div>
-          </div>
-          <div class="dif-item">
-            <div class="dif-icon">⚖️</div>
-            <div class="dif-text">
-              <h4>Conhecimento técnico do contencioso setorial</h4>
-              <p>Acompanhamos e analisamos as principais disputas de IRRF sobre afretamento, REPETRO e ICMS sobre transporte aquaviário nas instâncias administrativas e judiciais. Esse acompanhamento sistemático informa a estratégia preventiva para os clientes do setor.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="contato">
-        <div class="dif-box">
-          <div class="dif-box-eyebrow">Fale com o advogado</div>
-          <h3>Para quem opera <em>além fronteiras</em> e não quer surpresas no desembaraço.</h3>
-          <p>Diagnóstico inicial de 30 minutos para operadores de cabotagem, empresas de apoio marítimo, armadores e gestores de projetos offshore. Presencial na Barra da Tijuca ou por videochamada.</p>
-          <div class="dif-contatos">
-            <a href="https://wa.me/5521996550865" target="_blank" class="dif-contato">
-              <span>💬</span>
-              <span><strong>WhatsApp:</strong> (21) 99655-0865</span>
-            </a>
-            <a href="mailto:joaovictor@joaovictorataide.com.br" class="dif-contato">
-              <span>✉️</span>
-              <span><strong>E-mail:</strong> joaovictor@joaovictorataide.com.br</span>
-            </a>
-            <a href="https://maps.google.com/?q=Av.+das+Américas+4200+Barra+da+Tijuca+Rio+de+Janeiro" target="_blank" class="dif-contato">
-              <span>📍</span>
-              <span><strong>Endereço:</strong> Av. das Américas 4.200, sala 305 — Barra da Tijuca, RJ</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="sec-cta">
-  <div class="cta-inner">
-    <div class="cta-eyebrow">Próximo passo</div>
-    <h2 class="cta-title">Seu próximo contrato merece<br>uma análise tributária <em>à altura da operação.</em></h2>
-    <p class="cta-desc">Se você esteve no FPSO Expo, Brazil Export, SOBENA, Intermodal ou Naval Shore — ou chegou aqui por indicação — a conversa começa aqui. Diagnóstico inicial, sem compromisso.</p>
-    <div class="cta-actions">
-      <a href="https://wa.me/5521996550865" target="_blank" class="btn-cta-p">💬 Falar no WhatsApp</a>
-      <a href="mailto:joaovictor@joaovictorataide.com.br" class="btn-cta-s">✉️ Enviar e-mail</a>
-    </div>
-    <p class="cta-nota">João Victor Ataíde · Advogado OAB/RJ · Barra da Tijuca, Rio de Janeiro</p>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">João Victor <span>Ataíde</span> · Tributário Marítimo</div>
-    <div class="footer-links">
-      <a href="https://joaovictorataide.com.br">Site principal</a>
-      <a href="/blog/">Blog</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#artigos">Artigos</a>
-      <a href="#contato">Contato</a>
-    </div>
-    <div class="footer-copy">© 2026 João Victor Ataíde · OAB/RJ</div>
-  </div>
-</footer>
-
+<footer><div class="wrapw">
+<strong>João Victor Ataíde</strong> · Advogado · OAB/RJ<br>
+Av. das Américas 4.200, sala 305 — Barra da Tijuca, Rio de Janeiro<br>
+<a href="https://joaovictorataide.com.br/">Site principal</a> · <a href="https://joaovictorataide.com.br/blog/">Blog</a> · <a href="mailto:joaovictor@joaovictorataide.com.br">E-mail</a>
+<p class="disc">Conteúdo informativo e técnico. Não constitui parecer jurídico nem consultoria tributária individualizada, e não veicula promessa de resultado. Publicidade em conformidade com o Provimento OAB nº 205/2021.</p>
+</div></footer>
 </body>
 </html>
-
