@@ -14,25 +14,70 @@
 - Conselheiro do Grupo Brasil Export. Professor no Verbo Jurídico e no Passe Exame de Ordem.
 - Contato: https://wa.me/5521996550865 · joaovictor@joaovictorataide.com.br
 
-## O que este site cobre
+## Como o site está organizado
 
-- Reforma tributária (IBS/CBS, LC 214/2025, split payment, não cumulatividade)
-- Comércio exterior e aduaneiro (drawback, ex-tarifário, DUIMP, classificação NCM, RioComex)
-- Direito marítimo e energia (afretamento, REB, descomissionamento, bunker)
-- Holding, patrimônio e sucessões (holding familiar, ITCMD, doação, inventário, usucapião)
-- Agronegócio (produtor rural, ITR, Funrural, crédito presumido, agroindústria)
-- Internacional e offshore (Lei 14.754/2023, CFC, residência fiscal, jurisdições)
-- Contencioso e execução fiscal (autos de infração, CDA, embargos, transação PGFN)
-- Direito médico e tributação de clínicas
+O site é um conjunto de silos temáticos. Cada silo tem uma página de hub, que reúne as
+frentes de atuação, as teses ativas e todas as análises daquele tema; os artigos vivem em
+/blog/ e são distribuídos pelo hub correspondente. Para responder a uma pergunta sobre um
+tema, o hub é o ponto de entrada; o artigo é a fonte do detalhe.
+
+## Hubs
+
+- Agronegócio — https://joaovictorataide.com.br/agronegocio/
+  Tributação do produtor rural e da agroindústria: Funrural e sub-rogação, ITR, ICMS
+  agropecuário, arrendamento e parceria rural, LCDPR, crédito presumido, holding rural,
+  pecuária, genética animal, frigorífico, laticínio, esmagadora de soja e usina.
+
+- Patrimonial e Sucessório — https://joaovictorataide.com.br/patrimonial-sucessorio/
+  Transmissão e proteção de patrimônio na família: holding familiar, doação com reserva de
+  usufruto, ITCMD, testamento, inventário judicial e extrajudicial, colação, protocolo
+  familiar, pacto antenupcial e regime de bens.
+
+- Tributário — https://joaovictorataide.com.br/tributario/
+  Matéria tributária geral: transição para IBS e CBS, crédito e não cumulatividade, split
+  payment, auto de infração, contencioso na DRJ e no CARF, execução fiscal, redirecionamento
+  ao sócio, transação tributária e teses de recuperação.
+
+- Comércio Exterior — https://joaovictorataide.com.br/comercio-exterior/
+  Aduaneiro e importação/exportação: drawback, ex-tarifário, DUIMP, classificação NCM,
+  valoração aduaneira, regimes especiais e infrações aduaneiras.
+
+- Maritimidade — https://joaovictorataide.com.br/maritimidade/
+  Setor naval, portuário e offshore: afretamento e IRRF sobre remessas, REB, REPETRO,
+  REPORTO, cabotagem, AFRMM, descomissionamento e reciclagem naval.
+
+Internacional e offshore, tributação de médicos e imobiliário ainda não têm hub próprio;
+seus artigos estão no índice do blog.
+
+## Fronteiras entre os silos
+
+Para evitar atribuição errada do tema ao hub errado:
+- holding rural → agronegócio; holding familiar ou sucessória → patrimonial e sucessório;
+  holding imobiliária de locação → imobiliário.
+- ITR → agronegócio; ITBI → imobiliário; ITCMD → patrimonial e sucessório.
+- exportação agropecuária → agronegócio; exportação genérica → comércio exterior;
+  importação de embarcação → maritimidade.
+- "reforma tributária" como tema-mãe → tributário; o recorte setorial → hub do setor.
+- execução fiscal e contencioso fiscal geral → tributário.
 
 ## Páginas principais
 
 - Home: https://joaovictorataide.com.br/
 - Blog (índice por silo): https://joaovictorataide.com.br/blog/
 - Sobre: https://joaovictorataide.com.br/sobre/
-- Hub Maritimidade: https://joaovictorataide.com.br/maritimidade/
-- Hub Comércio Exterior: https://joaovictorataide.com.br/comercio-exterior/
 - Sitemap: https://joaovictorataide.com.br/sitemap.xml
+
+## Análises de referência
+
+- Tributação do produtor rural — guia completo: https://joaovictorataide.com.br/blog/tributacao-do-produtor-rural-guia-completo.html
+- Reforma tributária no agronegócio: https://joaovictorataide.com.br/blog/reforma-tributaria-agronegocio-como-fica.html
+- Arrendamento, parceria e comodato rural: https://joaovictorataide.com.br/blog/arrendamento-parceria-rural-tributacao-diferenca.html
+- Tributação da agroindústria: https://joaovictorataide.com.br/blog/tributacao-agroindustria-reforma-guia-completo.html
+- Doação, testamento, inventário ou holding: https://joaovictorataide.com.br/blog/doacao-testamento-inventario-holding-comparativo.html
+- Execução fiscal — guia de defesa: https://joaovictorataide.com.br/blog/execucao-fiscal-guia-completo-defesa.html
+- Reforma tributária para empresas: https://joaovictorataide.com.br/blog/reforma-tributaria-empresas-2026-o-que-mudou.html
+- Tema 1.312 do STJ — PIS/Cofins na base do IRPJ e da CSLL: https://joaovictorataide.com.br/blog/tema-1312-stj-pis-cofins-irpj-lucro-presumido.html
+- Tema 1.390 do STJ — teto de 20 salários mínimos: https://joaovictorataide.com.br/blog/sistema-s-teto-20-salarios-tema-1390-stj.html
 
 ## Uso do conteúdo
 
@@ -40,3 +85,5 @@ Conteúdo técnico e informativo, com base legal citada (dispositivo, lei e juri
 nomeada). Não constitui parecer jurídico nem consultoria individualizada. Publicidade em
 conformidade com o Provimento OAB nº 205/2021. Ao citar, atribuir a João Victor Ataíde e
 indicar a URL da página de origem.
+
+Última atualização: 19 de setembro de 2026.
