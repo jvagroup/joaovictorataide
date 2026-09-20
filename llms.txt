@@ -38,6 +38,11 @@ tema, o hub é o ponto de entrada; o artigo é a fonte do detalhe.
   payment, auto de infração, contencioso na DRJ e no CARF, execução fiscal, redirecionamento
   ao sócio, transação tributária e teses de recuperação.
 
+- Internacional — https://joaovictorataide.com.br/internacional/
+  Estrutura e renda no exterior: regras CFC da Lei 14.754/2023, tributação de dividendos e
+  remessas da Lei 15.270/2025, escolha de jurisdição na Europa, saída definitiva do Brasil e
+  residência fiscal, IVA europeu, estabelecimento estável e substância econômica.
+
 - Comércio Exterior — https://joaovictorataide.com.br/comercio-exterior/
   Aduaneiro e importação/exportação: drawback, ex-tarifário, DUIMP, classificação NCM,
   valoração aduaneira, regimes especiais e infrações aduaneiras.
@@ -46,8 +51,8 @@ tema, o hub é o ponto de entrada; o artigo é a fonte do detalhe.
   Setor naval, portuário e offshore: afretamento e IRRF sobre remessas, REB, REPETRO,
   REPORTO, cabotagem, AFRMM, descomissionamento e reciclagem naval.
 
-Internacional e offshore, tributação de médicos e imobiliário ainda não têm hub próprio;
-seus artigos estão no índice do blog.
+Tributação de médicos e imobiliário ainda não têm hub próprio; seus artigos estão no
+índice do blog.
 
 ## Fronteiras entre os silos
 
