@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como o ITR é calculado: grau de utilização, área tributável e alíquota | João Victor Ataíde</title>
+<meta name="description" content="A conta do ITR passo a passo: VTN tributável, o que sai da área, como o grau de utilização define a alíquota de 0,03% a 20% e por que a pastagem sem rebanho suficiente muda a faixa.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="João Victor Ataíde">
+<link rel="canonical" href="https://joaovictorataide.com.br/blog/itr-calculo-grau-utilizacao-aliquota-area-tributavel.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="João Victor Ataíde Advocacia">
+<meta property="og:title" content="Como o ITR é calculado: grau de utilização, área tributável e alíquota">
+<meta property="og:description" content="A conta do ITR passo a passo: VTN tributável, o que sai da área, como o grau de utilização define a alíquota de 0,03% a 20% e por que a pastagem sem rebanho suficiente muda a faixa.">
+<meta property="og:url" content="https://joaovictorataide.com.br/blog/itr-calculo-grau-utilizacao-aliquota-area-tributavel.html">
+<meta property="og:image" content="https://joaovictorataide.com.br/og-jva.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="João Victor Ataíde — advogado tributarista, Rio de Janeiro">
+<meta property="article:published_time" content="2026-09-23">
+<meta property="article:section" content="Agronegócio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Como o ITR é calculado: grau de utilização, área tributável e alíquota">
+<meta name="twitter:description" content="A conta do ITR passo a passo: VTN tributável, o que sai da área, como o grau de utilização define a alíquota de 0,03% a 20% e por que a pastagem sem rebanho suficiente muda a faixa.">
+<meta name="twitter:image" content="https://joaovictorataide.com.br/og-jva.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F1923; --navy-2:#16232F; --cream:#F7F6F2; --gold:#C9A84C;
+  --sat:#3E7C52; /* verde agro — cor travada do silo */
+  --txt:#1A222B; --muted:#5B6873; --line:#E3E0D8;
+  --serif:'Spectral',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);color:var(--txt);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--sat);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:780px;margin:0 auto;padding:0 22px}
+header.top{background:var(--navy);padding:16px 0;position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{color:var(--cream);font-family:var(--serif);font-weight:700;font-size:1.02rem;letter-spacing:.01em}
+.brand span{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;color:var(--gold);font-weight:600;margin-top:2px}
+.top a.wa{font-size:.78rem;color:var(--cream);border:1px solid rgba(247,246,242,.3);padding:7px 13px;border-radius:2px;white-space:nowrap}
+.hero{background:var(--navy);color:var(--cream);padding:46px 0 54px;border-bottom:4px solid var(--sat)}
+.kicker{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sat);font-weight:700;background:var(--cream);display:inline-block;padding:5px 11px;border-radius:2px}
+.hero h1{font-family:var(--serif);font-size:2.05rem;line-height:1.22;margin:18px 0 14px;font-weight:700}
+.hero p{color:#C3CBD3;font-size:1.02rem}
+.meta{margin-top:20px;font-size:.78rem;color:#93A0AC;letter-spacing:.02em}
+main{padding:38px 0 10px}
+.sumario{background:#fff;border:1px solid var(--line);border-left:3px solid var(--sat);padding:20px 22px;margin-bottom:34px}
+.sumario strong{font-family:var(--serif);font-size:1rem;display:block;margin-bottom:10px}
+.sumario ol{margin-left:18px;font-size:.9rem;color:var(--muted)}
+.sumario li{margin:5px 0}
+h2{font-family:var(--serif);font-size:1.5rem;line-height:1.3;margin:40px 0 14px;font-weight:700}
+h3{font-family:var(--serif);font-size:1.15rem;margin:26px 0 10px;font-weight:600}
+p{margin:14px 0}
+ul,ol{margin:14px 0 14px 22px}
+li{margin:7px 0}
+.destaque{background:var(--navy-2);color:var(--cream);padding:22px 24px;margin:28px 0;border-left:4px solid var(--gold)}
+.destaque p{margin:0;font-size:.97rem}
+.nota{background:#fff;border:1px solid var(--line);padding:18px 20px;margin:24px 0;font-size:.93rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.88rem;background:#fff}
+th,td{border:1px solid var(--line);padding:11px 12px;text-align:left;vertical-align:top}
+th{background:var(--navy);color:var(--cream);font-weight:600;font-size:.8rem;letter-spacing:.03em}
+td strong{color:var(--sat)}
+.lei{font-family:var(--serif);font-style:italic;color:var(--muted);border-left:2px solid var(--line);padding-left:16px;margin:20px 0;font-size:.95rem}
+.faq{margin-top:44px;border-top:1px solid var(--line);padding-top:10px}
+.faq h3{font-size:1.05rem;margin-bottom:6px}
+.faq div{border-bottom:1px solid var(--line);padding:18px 0}
+.relacionados{margin:44px 0 0;background:#fff;border:1px solid var(--line);padding:24px}
+.relacionados strong{font-family:var(--serif);font-size:1.1rem;display:block;margin-bottom:12px}
+.relacionados a{display:block;padding:9px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.relacionados a:last-child{border-bottom:none}
+.cta{background:var(--navy);color:var(--cream);padding:34px 26px;margin:46px 0 0;text-align:center}
+.cta h2{color:var(--cream);margin-top:0;font-size:1.4rem}
+.cta p{color:#C3CBD3;font-size:.95rem}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:600;padding:13px 26px;border-radius:2px;margin-top:14px;font-size:.92rem}
+footer{background:var(--navy-2);color:#93A0AC;padding:30px 0;margin-top:52px;font-size:.8rem}
+footer a{color:#C3CBD3}
+.disc{margin-top:14px;font-size:.74rem;line-height:1.6;color:#7C8994}
+@media(max-width:600px){.hero h1{font-size:1.62rem}h2{font-size:1.28rem}.wrap{padding:0 18px}}
+
+.num{font-family:var(--serif);font-size:1.02rem;background:#fff;border:1px solid var(--line);padding:16px 20px;margin:20px 0}
+.num strong{color:var(--sat)}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "LegalService", "@id": "https://joaovictorataide.com.br/#organizacao", "name": "João Victor Ataíde Advocacia", "url": "https://joaovictorataide.com.br/", "areaServed": "BR", "telephone": "+55-21-99655-0865", "address": {"@type": "PostalAddress", "streetAddress": "Av. das Américas 4.200, sala 305", "addressLocality": "Rio de Janeiro", "addressRegion": "RJ", "postalCode": "22640-102", "addressCountry": "BR"}, "sameAs": ["https://www.linkedin.com/in/joaovictorataide", "https://www.instagram.com/ojoaovictorataide", "https://www.youtube.com/channel/UCi674JuQ3Ix04JfoAYcZgGg"]}, {"@type": "Person", "@id": "https://joaovictorataide.com.br/#joaovictorataide", "name": "João Victor Ataíde", "jobTitle": "Advogado tributarista", "worksFor": {"@id": "https://joaovictorataide.com.br/#organizacao"}, "sameAs": ["https://www.linkedin.com/in/joaovictorataide", "https://www.instagram.com/ojoaovictorataide", "https://www.youtube.com/channel/UCi674JuQ3Ix04JfoAYcZgGg"]}, {"@type": "Article", "@id": "https://joaovictorataide.com.br/blog/itr-calculo-grau-utilizacao-aliquota-area-tributavel.html#article", "headline": "Como o ITR é calculado: grau de utilização, área tributável e a tabela de alíquotas", "description": "A conta do ITR passo a passo: VTN tributável, o que sai da área, como o grau de utilização define a alíquota de 0,03% a 20% e por que a pastagem sem rebanho suficiente muda a faixa.", "inLanguage": "pt-BR", "articleSection": "Agronegócio", "datePublished": "2026-09-23", "dateModified": "2026-09-23", "wordCount": 1604, "author": {"@id": "https://joaovictorataide.com.br/#joaovictorataide"}, "publisher": {"@id": "https://joaovictorataide.com.br/#organizacao"}, "mainEntityOfPage": "https://joaovictorataide.com.br/blog/itr-calculo-grau-utilizacao-aliquota-area-tributavel.html"}, {"@type": "BreadcrumbList", "@id": "https://joaovictorataide.com.br/blog/itr-calculo-grau-utilizacao-aliquota-area-tributavel.html#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://joaovictorataide.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://joaovictorataide.com.br/blog/"}, {"@type": "ListItem", "position": 3, "name": "Agronegócio", "item": "https://joaovictorataide.com.br/agronegocio/"}, {"@type": "ListItem", "position": 4, "name": "Como o ITR é calculado", "item": "https://joaovictorataide.com.br/blog/itr-calculo-grau-utilizacao-aliquota-area-tributavel.html"}]}, {"@type": "FAQPage", "@id": "https://joaovictorataide.com.br/blog/itr-calculo-grau-utilizacao-aliquota-area-tributavel.html#faq", "mainEntity": [{"@type": "Question", "name": "Como é calculado o ITR?", "acceptedAnswer": {"@type": "Answer", "text": "O ITR é o Valor da Terra Nua tributável multiplicado por uma alíquota da tabela do art. 11 da Lei 9.393/1996. O VTN tributável é proporcional à área que sobra após as exclusões ambientais. A alíquota, de 0,03% a 20%, depende do tamanho do imóvel e do grau de utilização da área aproveitável."}}, {"@type": "Question", "name": "O que é grau de utilização no ITR?", "acceptedAnswer": {"@type": "Answer", "text": "É a relação percentual entre a área efetivamente utilizada e a área aproveitável do imóvel, prevista no art. 10, § 1º, VI, da Lei 9.393/1996. A área aproveitável exclui as áreas ambientais e as ocupadas por benfeitorias. Quanto maior o grau de utilização, menor a alíquota."}}, {"@type": "Question", "name": "Toda a área de pasto conta como utilizada no ITR?", "acceptedAnswer": {"@type": "Answer", "text": "Não. A pastagem conta até o limite justificado pelo rebanho, conforme o índice de lotação da zona de pecuária. Se o rebanho médio justifica área menor do que a declarada, a diferença é glosada, o grau de utilização cai e a alíquota pode subir de faixa."}}, {"@type": "Question", "name": "A reserva legal reduz o ITR?", "acceptedAnswer": {"@type": "Answer", "text": "Sim, sai da área tributável e da área aproveitável. A Receita exige o Ato Declaratório Ambiental, mas a Súmula CARF 122 aceita a averbação da reserva legal na matrícula, anterior ao fato gerador, como suficiente. O recibo do CAR deve constar da declaração."}}, {"@type": "Question", "name": "Qual é a alíquota máxima do ITR?", "acceptedAnswer": {"@type": "Answer", "text": "A alíquota máxima é de 20%, aplicada a imóveis com mais de 5.000 hectares e grau de utilização de até 30%. A mínima é de 0,03%, para imóveis de até 50 hectares com grau de utilização acima de 80%. Em qualquer caso, o imposto não é inferior a R$ 10,00."}}]}]}
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="https://joaovictorataide.com.br/">João Victor Ataíde<span>TRIBUTÁRIO · ADUANEIRO · PATRIMONIAL</span></a>
+<a class="wa" href="https://wa.me/5521996550865?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20sobre%20o%20c%C3%A1lculo%20do%20ITR%20%28grau%20de%20utiliza%C3%A7%C3%A3o%20e%20al%C3%ADquota%29%20e%20gostaria%20de%20analisar%20a%20situa%C3%A7%C3%A3o%20do%20meu%20im%C3%B3vel%20rural.">WhatsApp</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+<span class="kicker">Agronegócio · ITR</span>
+<h1>Como o ITR é calculado: grau de utilização, área tributável e a tabela de alíquotas</h1>
+<p>O ITR não tem uma alíquota. Tem trinta. Quem define em qual delas o imóvel cai é o grau de utilização declarado — e é exatamente ali que a Receita costuma refazer a conta.</p>
+<div class="meta">Atualizado em 23 de setembro de 2026 · Leitura de 8 minutos · Lei 9.393/1996, arts. 1º, 2º, 8º, 10 e 11 · CF, art. 153, § 4º · Lei 6.938/1981, art. 17-O · Súmulas CARF 41 e 122</div>
+</div></section>
+
+<main><div class="wrap">
+
+<div class="sumario"><strong>O que este artigo resolve</strong>
+<ol>
+<li>A fórmula do ITR em uma linha</li>
+<li>O que sai da área tributável — e a exigência que derruba a exclusão</li>
+<li>Grau de utilização: como se mede e onde a pastagem engana</li>
+<li>A tabela de alíquotas do art. 11</li>
+<li>Exemplo numérico: a mesma fazenda em duas faixas</li>
+<li>Pequena gleba, município conveniado e o que muda na fiscalização</li>
+</ol></div>
+
+
+<p><strong>Resposta direta:</strong> o ITR é o Valor da Terra Nua tributável multiplicado por uma alíquota que varia de 0,03% a 20%. O VTN tributável é o valor da terra nua em 1º de janeiro, proporcional à área que não foi excluída por razão ambiental. A alíquota sai de uma tabela que cruza o tamanho do imóvel com o grau de utilização — quanto da área aproveitável foi efetivamente usada. Erro no grau de utilização muda a faixa, e a faixa pode multiplicar o imposto.</p>
+
+<h2>1. A fórmula em uma linha</h2>
+<p>O fato gerador do ITR é a propriedade, o domínio útil ou a posse de imóvel rural em 1º de janeiro de cada ano (Lei 9.393/1996, art. 1º). O Valor da Terra Nua é o do imóvel naquela data, excluídos construções, benfeitorias, culturas, pastagens cultivadas e florestas plantadas (art. 8º, § 2º, e art. 10, § 1º, I). A conta se monta em três passos:</p>
+<div class="num"><strong>VTN tributável</strong> = VTN total × (área tributável ÷ área total)<br><strong>Alíquota</strong> = tabela do art. 11, cruzando área total com grau de utilização<br><strong>ITR devido</strong> = VTN tributável × alíquota (nunca inferior a R$ 10,00)</div>
+<p>O VTN é autodeclarado na DITR. A Receita compara o valor com o Sistema de Preços de Terras (SIPT) e pode arbitrá-lo (art. 14). A defesa contra o VTN arbitrado é tema próprio, tratado em <a href="https://joaovictorataide.com.br/blog/itr-contestacao-produtor-rural-2026.html">ITR 2026: VTN, contestação e regularização</a>. Aqui o foco é o que vem depois: a área e a alíquota.</p>
+
+<h2>2. O que sai da área tributável</h2>
+<p>O art. 10, § 1º, II, da Lei 9.393/1996 exclui da área tributável, entre outras, as áreas de preservação permanente e de reserva legal, as de reserva particular do patrimônio natural, as de interesse ecológico declaradas por ato do poder público, as sob servidão ambiental, as cobertas por floresta nativa em estágio médio ou avançado de regeneração e as alagadas para reservatório de usina hidrelétrica autorizada.</p>
+<p>A exclusão reduz duas vezes: diminui o VTN tributável e sai também do denominador do grau de utilização, como se verá adiante. Por isso é o ponto de maior impacto da declaração.</p>
+<div class="destaque"><p><strong>A armadilha é formal, não material.</strong> A Receita condiciona a exclusão à apresentação do Ato Declaratório Ambiental (ADA) ao Ibama, com base no art. 17-O da Lei 6.938/1981, na redação da Lei 10.165/2000. O CARF limitou a exigência no tempo — a Súmula CARF 41 afasta o lançamento por falta de ADA para fatos geradores até o exercício de 2000 — e mitigou-a para a reserva legal: pela Súmula CARF 122, a averbação da reserva legal na matrícula antes do fato gerador supre a falta do ADA. Para APP sem ADA, a discussão continua caso a caso. A fazenda que tem a área, mas não tem o papel, costuma perder a exclusão no primeiro lançamento.</p></div>
+<p>Desde o Código Florestal de 2012, a reserva legal registrada no CAR dispensa a averbação na matrícula (Lei 12.651/2012, art. 18, § 4º), e a própria DITR pede o número do recibo do CAR. O cruzamento entre o CAR, o ADA e o que se declara na DITR é o primeiro filtro da malha do ITR.</p>
+
+<h2>3. Grau de utilização: como se mede</h2>
+<p>O grau de utilização (GU) é a relação percentual entre a área efetivamente utilizada e a área aproveitável (art. 10, § 1º, VI).</p>
+<ul>
+<li><strong>Área aproveitável:</strong> a área total menos as áreas excluídas por razão ambiental e menos as ocupadas por benfeitorias úteis e necessárias (sede, galpões, estradas internas, açudes)</li>
+<li><strong>Área efetivamente utilizada:</strong> a plantada com produtos vegetais, a servida de pastagem nos limites do índice de lotação, a de exploração extrativa, a de exploração granjeira ou aquícola e a de projeto técnico de recuperação ou descanso, nas condições da lei (art. 10, § 1º, V)</li>
+</ul>
+<h3>Onde a pastagem engana</h3>
+<p>A pastagem não conta pela área cercada. Conta pela área que o rebanho declarado justifica. A lei manda observar índices de lotação por zona de pecuária (art. 10, § 1º, V, "b"): a área de pastagem aceita é o rebanho médio do ano dividido pelo índice da região. Quem declara 350 hectares de pasto com rebanho que só justifica 200 tem 150 hectares glosados — e o GU cai.</p>
+<p>O rebanho, por sua vez, precisa de lastro: fichas de vacinação, GTAs, notas de compra e venda e o registro no órgão de defesa sanitária estadual. É o documento que a fiscalização pede primeiro.</p>
+
+<h2>4. A tabela de alíquotas do art. 11</h2>
+<p>A alíquota combina área total do imóvel com o GU. A progressividade é deliberada: o art. 153, § 4º, I, da Constituição determina que o ITR desestimule a propriedade improdutiva.</p>
+<table>
+<thead><tr><th>Área total</th><th>GU acima de 80%</th><th>65% a 80%</th><th>50% a 65%</th><th>30% a 50%</th><th>Até 30%</th></tr></thead>
+<tbody>
+<tr><td>Até 50 ha</td><td>0,03%</td><td>0,20%</td><td>0,40%</td><td>0,70%</td><td>1,00%</td></tr>
+<tr><td>50 a 200 ha</td><td>0,07%</td><td>0,40%</td><td>0,80%</td><td>1,40%</td><td>2,00%</td></tr>
+<tr><td>200 a 500 ha</td><td>0,10%</td><td>0,60%</td><td>1,30%</td><td>2,30%</td><td>3,30%</td></tr>
+<tr><td>500 a 1.000 ha</td><td>0,15%</td><td>0,85%</td><td>1,90%</td><td>3,30%</td><td>4,70%</td></tr>
+<tr><td>1.000 a 5.000 ha</td><td>0,30%</td><td>1,60%</td><td>3,40%</td><td>6,00%</td><td>8,60%</td></tr>
+<tr><td>Acima de 5.000 ha</td><td>0,45%</td><td>3,00%</td><td>6,40%</td><td>12,00%</td><td>20,00%</td></tr>
+</tbody>
+</table>
+<p>Repare no salto entre a primeira e a segunda coluna. Numa fazenda de 1.000 a 5.000 hectares, sair de GU acima de 80% para a faixa de 65% a 80% multiplica a alíquota por mais de cinco.</p>
+
+<h2>5. Exemplo: a mesma fazenda em duas faixas</h2>
+<p>Cenário ilustrativo, com números hipotéticos, para mostrar o mecanismo:</p>
+<ul>
+<li>Área total de 1.200 ha, com 240 ha de APP e reserva legal regularmente comprovadas e 40 ha de benfeitorias</li>
+<li>VTN declarado de R$ 12.000 por hectare, VTN total de R$ 14,4 milhões</li>
+<li>Área tributável: 960 ha. VTN tributável: R$ 14,4 milhões × 960/1.200 = <strong>R$ 11,52 milhões</strong></li>
+<li>Área aproveitável: 1.200 − 240 − 40 = <strong>920 ha</strong></li>
+<li>Declarado como utilizado: 500 ha de lavoura e 350 ha de pastagem</li>
+</ul>
+<table>
+<thead><tr><th>Cenário</th><th>Área utilizada</th><th>GU</th><th>Alíquota</th><th>ITR</th></tr></thead>
+<tbody>
+<tr><td>Como declarado</td><td>850 ha</td><td>92,4%</td><td>0,30%</td><td>R$ 34.560</td></tr>
+<tr><td>Pastagem glosada pelo índice de lotação (rebanho justifica 200 ha)</td><td>700 ha</td><td>76,1%</td><td>1,60%</td><td>R$ 184.320</td></tr>
+</tbody>
+</table>
+<p>O VTN não mudou. A área não mudou. Mudou a prova do rebanho — e o imposto foi multiplicado por mais de cinco, antes de multa de ofício e juros. E se, no mesmo lançamento, a reserva legal for glosada por falta de ADA, a área tributável sobe e a aproveitável também, o que puxa o GU ainda mais para baixo.</p>
+
+<h2>6. Quem não paga, e quem fiscaliza</h2>
+<h3>Pequena gleba</h3>
+<p>É imune a pequena gleba explorada pelo proprietário que não possua outro imóvel (CF, art. 153, § 4º, II). A Lei 9.393/1996, art. 2º, parágrafo único, define os limites: 100 ha na Amazônia Ocidental e no Pantanal mato-grossense e sul-mato-grossense; 50 ha no Polígono das Secas e na Amazônia Oriental; 30 ha nos demais municípios. A imunidade cai se o proprietário tiver outro imóvel, inclusive urbano, ou se arrendar a terra — ponto tratado em <a href="https://joaovictorataide.com.br/blog/arrendamento-parceria-comodato-rural-lcdpr.html">arrendamento, parceria e comodato rural</a>.</p>
+<h3>Município conveniado</h3>
+<p>O art. 153, § 4º, III, da Constituição permite que o município opte por fiscalizar e cobrar o ITR, ficando com a totalidade do arrecadado (Lei 11.250/2005). Nos municípios conveniados, a pauta de VTN informada ao SIPT e a fiscalização vêm da prefeitura — que tem interesse direto na arrecadação. Em regiões de terra valorizada, isso tem significado revisão mais frequente do VTN declarado.</p>
+
+<h2>7. Roteiro antes de declarar</h2>
+<ol>
+<li>Conferir se APP e reserva legal estão no CAR e se há ADA ou averbação que sustente a exclusão</li>
+<li>Separar a área de benfeitorias com base em planta ou georreferenciamento</li>
+<li>Calcular a pastagem aceita pelo rebanho médio e pelo índice de lotação da zona — não pela área cercada</li>
+<li>Reunir a prova do rebanho e da produção antes de declarar, não depois da intimação</li>
+<li>Simular o GU nas bordas das faixas: a diferença entre 79% e 81% é uma coluna inteira da tabela</li>
+<li>Declarar VTN com laudo quando o valor ficar abaixo da pauta do SIPT</li>
+</ol>
+<p>O prazo da declaração deste exercício e a nova forma de envio estão em <a href="https://joaovictorataide.com.br/blog/ditr-2026-prazo-30-setembro-minhas-declaracoes-itr.html">DITR 2026: prazo até 30 de setembro e o Minhas Declarações do ITR</a>.</p>
+
+
+<div class="relacionados"><strong>Leituras relacionadas no silo Agronegócio</strong>
+<a href="https://joaovictorataide.com.br/blog/itr-contestacao-produtor-rural-2026.html">ITR 2026: VTN, contestação e regularização</a>
+<a href="https://joaovictorataide.com.br/blog/ditr-2026-prazo-30-setembro-minhas-declaracoes-itr.html">DITR 2026: prazo até 30 de setembro e a nova forma de envio</a>
+<a href="https://joaovictorataide.com.br/blog/pecuaria-corte-tributacao-funrural-itr.html">Pecuária de corte: Funrural e ITR</a>
+<a href="https://joaovictorataide.com.br/blog/tributacao-do-produtor-rural-guia-completo.html">Tributação do produtor rural: guia completo</a>
+<a href="https://joaovictorataide.com.br/blog/holding-rural-transferir-fazenda-herdeiros.html">Holding rural: transferir a fazenda para os herdeiros</a>
+</div>
+
+<div class="faq">
+<h2>Perguntas frequentes</h2>
+<div><h3>Como é calculado o ITR?</h3><p>O ITR é o Valor da Terra Nua tributável multiplicado por uma alíquota da tabela do art. 11 da Lei 9.393/1996. O VTN tributável é proporcional à área que sobra após as exclusões ambientais. A alíquota, de 0,03% a 20%, depende do tamanho do imóvel e do grau de utilização da área aproveitável.</p></div>
+<div><h3>O que é grau de utilização no ITR?</h3><p>É a relação percentual entre a área efetivamente utilizada e a área aproveitável do imóvel, prevista no art. 10, § 1º, VI, da Lei 9.393/1996. A área aproveitável exclui as áreas ambientais e as ocupadas por benfeitorias. Quanto maior o grau de utilização, menor a alíquota.</p></div>
+<div><h3>Toda a área de pasto conta como utilizada no ITR?</h3><p>Não. A pastagem conta até o limite justificado pelo rebanho, conforme o índice de lotação da zona de pecuária. Se o rebanho médio justifica área menor do que a declarada, a diferença é glosada, o grau de utilização cai e a alíquota pode subir de faixa.</p></div>
+<div><h3>A reserva legal reduz o ITR?</h3><p>Sim, sai da área tributável e da área aproveitável. A Receita exige o Ato Declaratório Ambiental, mas a Súmula CARF 122 aceita a averbação da reserva legal na matrícula, anterior ao fato gerador, como suficiente. O recibo do CAR deve constar da declaração.</p></div>
+<div><h3>Qual é a alíquota máxima do ITR?</h3><p>A alíquota máxima é de 20%, aplicada a imóveis com mais de 5.000 hectares e grau de utilização de até 30%. A mínima é de 0,03%, para imóveis de até 50 hectares com grau de utilização acima de 80%. Em qualquer caso, o imposto não é inferior a R$ 10,00.</p></div>
+</div>
+
+<div class="cta">
+<h2>Quer saber em que faixa o seu imóvel realmente está?</h2>
+<p>Revisão técnica de DITR, grau de utilização, exclusões ambientais e defesa em lançamento de ITR. Base no Rio de Janeiro, atuação em todo o território nacional.</p>
+<a class="btn" href="https://wa.me/5521996550865?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20sobre%20o%20c%C3%A1lculo%20do%20ITR%20%28grau%20de%20utiliza%C3%A7%C3%A3o%20e%20al%C3%ADquota%29%20e%20gostaria%20de%20analisar%20a%20situa%C3%A7%C3%A3o%20do%20meu%20im%C3%B3vel%20rural.">Falar sobre o caso</a>
+</div>
+
+</div></main>
+
+<footer><div class="wrap">
+<strong>João Victor Ataíde</strong> · Advogado tributarista · OAB/RJ<br>
+Av. das Américas 4.200, sala 305 — Barra da Tijuca, Rio de Janeiro/RJ · CEP 22640-102<br>
+<a href="https://joaovictorataide.com.br/blog/">Blog</a> · <a href="https://joaovictorataide.com.br/agronegocio/">Agronegócio</a> · <a href="https://joaovictorataide.com.br/tributario/">Tributário</a> · <a href="mailto:joaovictor@joaovictorataide.com.br">E-mail</a>
+<p class="disc">Conteúdo informativo e técnico. Não constitui parecer jurídico nem consultoria tributária individualizada, e não veicula promessa de resultado. Publicidade em conformidade com o Provimento OAB nº 205/2021.</p>
+</div></footer>
+</body>
+</html>
