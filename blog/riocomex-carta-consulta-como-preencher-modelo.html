@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carta-Consulta do RioComex: como preencher as duas partes do modelo | João Victor Ataíde</title>
+<meta name="description" content="A Carta-Consulta do RioComex (Rio Comex) tem uma parte em PDF pesquisável, timbrada e rubricada, e outra em XLS, com três anos de resultados, cinco de projeção e as empresas do grupo. O que vai em cada campo, a GFIP que o modelo pede e por que as projeções viram meta.">
+<meta name="author" content="João Victor Ataíde">
+<link rel="canonical" href="https://joaovictorataide.com.br/blog/riocomex-carta-consulta-como-preencher-modelo.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Carta-Consulta do RioComex: como preencher as duas partes do modelo">
+<meta property="og:description" content="A Carta-Consulta do RioComex (Rio Comex) tem uma parte em PDF pesquisável, timbrada e rubricada, e outra em XLS, com três anos de resultados, cinco de projeção e as empresas do grupo. O que vai em cada campo, a GFIP que o modelo pede e por que as projeções viram meta.">
+<meta property="og:url" content="https://joaovictorataide.com.br/blog/riocomex-carta-consulta-como-preencher-modelo.html">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://joaovictorataide.com.br/og-jva.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F1923;--teal:#4EA8A0;--gold:#C9A84C;--cream:#F7F6F2;--sat:#5A6672;
+--ink:#1a242e;--muted:#5c6b75;--line:#e3e0d8}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0 auto;background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,sans-serif;
+line-height:1.7;max-width:760px;padding:0 20px;font-size:1rem}
+h1,h2,h3{font-family:'Spectral',Georgia,serif;color:var(--navy)}
+a{color:var(--sat)}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+header .logo{font-weight:600;color:var(--navy);text-decoration:none}
+header .wa{background:var(--teal);color:#fff;text-decoration:none;padding:8px 14px;border-radius:6px;font-weight:600;font-size:.9rem;min-height:44px;display:inline-flex;align-items:center}
+.crumb{font-size:.8rem;color:var(--muted);margin-top:14px}
+.crumb a{color:var(--muted)}
+.kicker{color:var(--sat);text-transform:uppercase;font-size:.78rem;font-weight:700;letter-spacing:.06em;margin-top:18px;display:block}
+h1{font-size:1.85rem;line-height:1.3;margin:8px 0 12px}
+.lead{font-size:1.08rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:16px 0 24px}
+.sumario{background:#fff;border:1px solid var(--line);border-left:3px solid var(--sat);border-radius:6px;padding:16px 20px}
+.sumario ol{margin:8px 0 0;padding-left:20px}
+h2{font-size:1.3rem;margin-top:2em;line-height:1.35}
+h3{font-size:1.08rem}
+.callout{background:#fff;border-left:3px solid var(--teal);padding:14px 18px;margin:20px 0;font-size:.95rem}
+.warn{background:#fff;border-left:3px solid var(--gold);padding:14px 18px;margin:20px 0;font-size:.95rem}
+.table-wrap{overflow-x:auto;margin:16px 0}
+.legal-table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:520px}
+.legal-table th,.legal-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.legal-table th{background:#fff;color:var(--navy)}
+.micro{font-size:.92rem;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);padding:10px 0;margin:22px 0}
+.related{background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px 20px;margin:24px 0}
+.related a{display:block;padding:6px 0}
+h3.faq-q{font-size:1.02rem;margin-top:1.4em}
+.cta{background:var(--sat);color:#fff;border-radius:8px;padding:22px;margin:30px 0;text-align:center}
+.cta p{margin:0 0 6px}
+.cta a{background:var(--navy);color:#fff;padding:12px 26px;border-radius:6px;text-decoration:none;display:inline-block;margin-top:10px;font-weight:700;min-height:44px}
+.sources{font-size:.88rem;background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 20px}
+.sources ul{padding-left:18px;margin:8px 0 0}
+.author-box{display:flex;gap:14px;align-items:flex-start;border-top:1px solid var(--line);margin-top:28px;padding-top:18px;font-size:.9rem}
+.author-box svg{flex:0 0 46px}
+footer{border-top:1px solid var(--line);padding:20px 0 90px;font-size:.85rem;color:var(--muted);margin-top:24px}
+.mbar{display:none}
+@media (max-width:620px){h1{font-size:1.55rem}.mbar{display:flex;position:fixed;left:0;right:0;bottom:0;background:#C9A84C;justify-content:center;padding:10px;z-index:9}
+.mbar a{color:var(--navy);font-weight:700;text-decoration:none;min-height:44px;display:flex;align-items:center}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://joaovictorataide.com.br/blog/riocomex-carta-consulta-como-preencher-modelo.html#article", "headline": "Carta-Consulta do RioComex: como preencher as duas partes do modelo", "description": "A Carta-Consulta do RioComex (Rio Comex) tem uma parte em PDF pesquisável, timbrada e rubricada, e outra em XLS, com três anos de resultados, cinco de projeção e as empresas do grupo. O que vai em cada campo, a GFIP que o modelo pede e por que as projeções viram meta.", "author": {"@type": "Person", "@id": "https://joaovictorataide.com.br/#joaovictorataide", "name": "João Victor Ataíde", "url": "https://joaovictorataide.com.br/"}, "publisher": {"@type": "LegalService", "@id": "https://joaovictorataide.com.br/#organizacao", "name": "João Victor Ataíde Advocacia"}, "datePublished": "2026-10-09", "dateModified": "2026-10-09", "mainEntityOfPage": "https://joaovictorataide.com.br/blog/riocomex-carta-consulta-como-preencher-modelo.html", "articleSection": "Comércio Exterior", "inLanguage": "pt-BR", "keywords": "Carta-Consulta RioComex, Rio Comex carta consulta modelo, como preencher carta consulta CODIN, Decreto 50.494 Anexo I, projeção cinco anos RioComex", "isPartOf": {"@id": "https://joaovictorataide.com.br/comercio-exterior/#hub"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://joaovictorataide.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Comércio Exterior", "item": "https://joaovictorataide.com.br/comercio-exterior/"}, {"@type": "ListItem", "position": 3, "name": "Carta-Consulta do RioComex", "item": "https://joaovictorataide.com.br/blog/riocomex-carta-consulta-como-preencher-modelo.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Em que formato a Carta-Consulta do RioComex deve ser apresentada?", "acceptedAnswer": {"@type": "Answer", "text": "Em duas partes: a Parte I em papel timbrado, salva em PDF pesquisável e com todas as folhas rubricadas pelo representante legal; a Parte II em planilha XLS, com os resultados dos últimos três anos e a projeção dos próximos cinco. As duas vão no protocolo do SEI-RJ à SUPBF."}}, {"@type": "Question", "name": "As projeções da Carta-Consulta são obrigatórias?", "acceptedAnswer": {"@type": "Answer", "text": "Sim, e viram metas. O decreto prevê que faturamento, ICMS recolhido e empregos projetados para cinco anos passam a ser metas do estabelecimento enquadrado, acompanhadas pela CODIN. Para empresa sem histórico, a projeção também fixa provisoriamente o recolhimento mínimo mensal."}}, {"@type": "Question", "name": "Minha empresa não gera mais GFIP. O que apresento?", "acceptedAnswer": {"@type": "Answer", "text": "Os documentos equivalentes da competência pedida, como relatórios do eSocial, a DCTFWeb e a guia do FGTS Digital, com justificativa na própria Carta-Consulta. O modelo manda justificar qualquer campo que não se aplique, em vez de deixá-lo em branco."}}, {"@type": "Question", "name": "Preciso informar as outras empresas dos sócios?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. A Parte I pede as empresas do grupo, e a verificação de regularidade alcança qualquer empresa de que sócios ou administradores participem (art. 6º, §1º, do Decreto nº 50.494/2026). O Termo de Acordo também obriga a informar empresas relacionadas, e a omissão sujeita a empresa a apuração."}}]}]}</script>
+</head>
+<body>
+<header><a class="logo" href="/">João Victor Ataíde</a><a class="wa" href="https://wa.me/5521996550865?text=Ol%C3%A1%2C%20vim%20pelo%20artigo%20sobre%20a%20Carta-Consulta%20do%20RioComex%20e%20quero%20ajuda%20para%20preencher%20e%20revisar%20a%20minha.">WhatsApp</a></header>
+<nav class="crumb"><a href="/">Início</a> › <a href="/comercio-exterior/">Comércio Exterior</a> › Carta-Consulta do RioComex</nav>
+<span class="kicker">Comércio Exterior · RioComex · Regimes Estaduais</span>
+<h1>Carta-Consulta do RioComex: como preencher as duas partes do modelo</h1>
+<p class="lead">A Carta-Consulta é o item XIV dos documentos do art. 5º do Decreto nº 50.494/2026, e é o único que a empresa escreve, em vez de só juntar. Nela entram o histórico, o grupo econômico, três anos de resultados e cinco de projeção. A Companhia de Desenvolvimento Industrial do Estado do Rio de Janeiro (CODIN) transforma essas projeções em metas acompanhadas durante toda a fruição do RioComex (ou Rio Comex). É também onde está o erro mais visível do modelo oficial.</p>
+<p class="meta">Outubro de 2026 · Leitura de 8 minutos · Decreto (RJ) nº 50.494/2026, arts. 4º, 5º, 6º, §1º, e 10; Anexo I (modelo e esclarecimentos) e Anexo II, cláusula sétima · DOERJ de 28/09/2026</p>
+<div class="sumario"><strong>Sumário</strong><ol><li><a href="#s1">Carta-Consulta do RioComex: o que é e quem lê</a></li><li><a href="#s2">Formato: Parte I em PDF, Parte II em XLS</a></li><li><a href="#s3">Cadastro, sócios e grupo econômico: os campos que a SUPBF cruza</a></li><li><a href="#s4">Histórico e resultados dos últimos três anos</a></li><li><a href="#s5">A GFIP que o modelo pede e o eSocial que existe</a></li><li><a href="#s6">A projeção de cinco anos vira meta</a></li><li><a href="#s7">O erro do modelo: Radar "limitado"</a></li><li><a href="#s8">Checklist de revisão antes do protocolo</a></li></ol></div>
+<h2 id="s1">1. Carta-Consulta do RioComex: o que é e quem lê</h2>
+<p>O protocolo do RioComex vai ao Sistema Eletrônico de Informações do Estado (SEI-RJ), endereçado à Superintendência de Benefícios Fiscais Tributários de ICMS (SUPBF). A SUPBF confere a regularidade e habilita. Depois, a CODIN tem 20 dias úteis para emitir manifestação técnica sobre a condição de elegibilidade e relatório sobre a Carta-Consulta (art. 10), e leva o pleito à Comissão Permanente de Políticas para o Desenvolvimento Econômico (CPPDE).</p>
+<p>A habilitação olha certidões; o enquadramento olha a Carta-Consulta. Um pedido com certidões perfeitas e Carta-Consulta genérica é habilitado, começa a fruir e pode ser indeferido meses depois, com a nulidade retroativa descrita em <a href="/blog/riocomex-riscos-nulidade-meta-minima-teses.html">riscos e teses do RioComex</a>.</p>
+<h2 id="s2">2. Formato: Parte I em PDF, Parte II em XLS</h2>
+<p>O modelo do Anexo I tem duas partes, protocoladas juntas:</p>
+<div class="table-wrap"><table class="legal-table">
+<tr><th>Parte</th><th>Formato exigido</th><th>Conteúdo</th></tr>
+<tr><td>Parte I</td><td>Modelo em Word, impresso em papel timbrado da empresa, salvo em <b>PDF pesquisável</b> e com <b>todas as folhas rubricadas</b> pelo representante legal</td><td>Cadastro, composição societária, empresas do grupo, histórico e declarações</td></tr>
+<tr><td>Parte II</td><td>Planilha em <b>XLS</b></td><td>Demonstrativo de resultados dos últimos três anos e previsão para os próximos cinco</td></tr>
+</table></div>
+<p>"PDF pesquisável" significa texto selecionável, não imagem escaneada. Documento digitalizado sem reconhecimento de caracteres é o tipo de falha formal que gera intimação na SUPBF (art. 8º) e consome os dez dias úteis de prazo sem nenhuma questão de mérito. A planilha vai em XLS, não em PDF, porque a CODIN trabalha os números.</p>
+<div class="callout">Todos os campos devem ser preenchidos; o que não se aplicar deve ser justificado, não deixado em branco. Campo vazio é lido como informação faltante.</div>
+<h2 id="s3">3. Cadastro, sócios e grupo econômico: os campos que a SUPBF cruza</h2>
+<p>A Parte I pede razão social, Cadastro Nacional da Pessoa Jurídica (CNPJ), inscrição estadual, endereços da sede e de correspondência, site e contatos; a composição societária, com nome, cargo e percentual de capital de cada sócio; e as <b>outras empresas do grupo</b>, com razão social, atividade, setor e localização.</p>
+<p>Esse quadro não é decorativo. A verificação de regularidade fiscal e cadastral alcança qualquer empresa de que os sócios ou administradores participem (art. 6º, §1º), e o Termo de Acordo obriga a empresa a informar empresas com o mesmo nome ou endereço, vizinhas com relação comercial relevante e ligadas por procuração, sócios ocultos ou parentes (Anexo II, cláusula sétima, §1º). Omissão ou informação errada sujeita a empresa a apuração (§2º).</p>
+<div class="warn">A lista de empresas do grupo na Carta-Consulta deve ser exatamente a que a empresa está disposta a ver auditada. Uma empresa irmã com débito na Dívida Ativa estadual trava a habilitação; uma empresa irmã omitida e descoberta depois é pior, porque contamina a boa-fé do pedido inteiro.</div>
+<h2 id="s4">4. Histórico e resultados dos últimos três anos</h2>
+<p>A Parte II começa pelo passado: o "demonstrativo de resultados dos últimos três anos" pede, ano a ano, <b>faturamento bruto, ICMS recolhido e número de empregos</b>. Os empregos são informados conforme a Guia de Recolhimento do FGTS e de Informações à Previdência Social (GFIP/SEFIP) do ano informado, segundo a nota do próprio modelo.</p>
+<p>Os números precisam bater com o que a Secretaria de Fazenda já tem. O ICMS recolhido informado na Carta-Consulta será comparado com a base que a SUPBF usa para calcular o recolhimento mínimo mensal: a média do ICMS próprio, da substituição tributária e da importação dos 12 meses anteriores (art. 5º, XII; lei, art. 8º, II). Divergência entre a planilha e a escrita fiscal é a primeira pergunta da análise.</p>
+<h2 id="s5">5. A GFIP que o modelo pede e o eSocial que existe</h2>
+<p>A documentação para enquadramento do Anexo I pede GFIP <b>do ano anterior e do mês anterior</b> ao protocolo. O formulário foi escrito com a lógica antiga: para a maior parte das empresas, a GFIP foi substituída pela Declaração de Débitos e Créditos Tributários Federais Previdenciários e de Outras Entidades e Fundos (DCTFWeb), alimentada pelo eSocial, e o FGTS passou a ser recolhido pelo FGTS Digital desde março de 2024.</p>
+<p>Quem não gera mais GFIP para as competências pedidas não deve deixar o item vazio. O caminho é apresentar os documentos equivalentes da competência (relatórios do eSocial com o quadro de empregados, DCTFWeb e guia do FGTS Digital) e justificar a substituição na própria Carta-Consulta, como o modelo manda fazer com qualquer campo que não se aplique. Os empregos do mês anterior ao protocolo também são relevantes se a condição escolhida for a geração de emprego, cujo marco é o quadro do mês de assinatura do Termo (Anexo I, item I).</p>
+<h2 id="s6">6. A projeção de cinco anos vira meta</h2>
+<p>A "previsão de resultados para os próximos cinco anos" repete as colunas (faturamento bruto, ICMS recolhido e empregos). O decreto é explícito: as projeções informadas viram metas do estabelecimento enquadrado pelos cinco anos, sujeitas a acompanhamento. Para empresa nova ou sem histórico de 12 meses, a projeção também fixa provisoriamente o recolhimento mínimo mensal até o Termo de Acordo.</p>
+<p>O incentivo psicológico é projetar alto, para parecer um projeto relevante. A consequência jurídica vai na direção contrária: cada linha da planilha é uma obrigação que a CODIN monitora e cujo descumprimento leva ao desenquadramento. A projeção certa é a que a empresa sustenta num ano ruim, com memória de cálculo guardada para explicar a premissa se for questionada.</p>
+<div class="table-wrap"><table class="legal-table">
+<tr><th>Coluna</th><th>Conecta com</th><th>Cuidado</th></tr>
+<tr><td>Faturamento bruto</td><td>Viabilidade econômica do projeto</td><td>Coerência com a capacidade financeira demonstrada na habilitação do Siscomex</td></tr>
+<tr><td>ICMS recolhido</td><td>Recolhimento mínimo mensal</td><td>Já considera o benefício: a projeção deve refletir a carga com RioComex, não sem ele</td></tr>
+<tr><td>Empregos</td><td>Condição de geração de emprego (+1,5% ao ano)</td><td>Se essa for a condição escolhida, a projeção precisa ser ao menos igual à meta legal</td></tr>
+</table></div>
+<h2 id="s7">7. O erro do modelo: Radar "limitado"</h2>
+<p>O item 1 da documentação para enquadramento pede comprovação de inscrição no Sistema Integrado de Comércio Exterior (Siscomex) "na modalidade limitada (RADAR)". O art. 2º da lei e o art. 5º, VI, do decreto exigem a modalidade <b>ilimitada</b>. A prova a juntar é a da modalidade ilimitada, com nota explicativa na Parte I apontando a divergência. O detalhe, e o caminho para quem ainda está na Limitada, está em <a href="/blog/riocomex-radar-ilimitado-habilitacao-siscomex.html">Radar ilimitado no RioComex</a>.</p>
+<h2 id="s8">8. Checklist de revisão antes do protocolo</h2>
+<ul>
+<li>Parte I em papel timbrado, PDF pesquisável (texto selecionável) e todas as folhas rubricadas.</li>
+<li>Parte II em XLS, com os mesmos números da escrita fiscal e da base do recolhimento mínimo.</li>
+<li>Nenhum campo em branco: o que não se aplicar vai justificado.</li>
+<li>Lista de empresas do grupo completa e conferida contra a regularidade de cada uma.</li>
+<li>GFIP ou, se não houver mais, eSocial, DCTFWeb e FGTS Digital da competência, com justificativa.</li>
+<li>Projeção de cinco anos conservadora, com memória de cálculo arquivada.</li>
+<li>Condição de elegibilidade declarada coerente com a projeção. Ver <a href="/blog/riocomex-condicoes-elegibilidade-carta-consulta.html">as seis condições de elegibilidade</a>.</li>
+<li>Comprovação do Radar ilimitado, com nota sobre o texto do anexo.</li>
+</ul>
+<div class="related"><strong>Leituras relacionadas</strong><a href="/comercio-exterior/">Hub de Comércio Exterior</a><a href="/blog/riocomex-como-aderir-decreto-50494-documentos-prazos.html">Como aderir ao RioComex</a><a href="/blog/riocomex-condicoes-elegibilidade-carta-consulta.html">As seis condições de elegibilidade</a><a href="/blog/riocomex-radar-ilimitado-habilitacao-siscomex.html">Radar ilimitado no RioComex</a><a href="/blog/riocomex-empresa-nova-sem-historico-projecao.html">Empresa nova no RioComex</a><a href="/blog/riocomex-riscos-nulidade-meta-minima-teses.html">Riscos e teses do RioComex</a></div>
+<h2>Perguntas frequentes</h2>
+<h3 class='faq-q'>Em que formato a Carta-Consulta do RioComex deve ser apresentada?</h3><p>Em duas partes: a Parte I em papel timbrado, salva em PDF pesquisável e com todas as folhas rubricadas pelo representante legal; a Parte II em planilha XLS, com os resultados dos últimos três anos e a projeção dos próximos cinco. As duas vão no protocolo do SEI-RJ à SUPBF.</p><h3 class='faq-q'>As projeções da Carta-Consulta são obrigatórias?</h3><p>Sim, e viram metas. O decreto prevê que faturamento, ICMS recolhido e empregos projetados para cinco anos passam a ser metas do estabelecimento enquadrado, acompanhadas pela CODIN. Para empresa sem histórico, a projeção também fixa provisoriamente o recolhimento mínimo mensal.</p><h3 class='faq-q'>Minha empresa não gera mais GFIP. O que apresento?</h3><p>Os documentos equivalentes da competência pedida, como relatórios do eSocial, a DCTFWeb e a guia do FGTS Digital, com justificativa na própria Carta-Consulta. O modelo manda justificar qualquer campo que não se aplique, em vez de deixá-lo em branco.</p><h3 class='faq-q'>Preciso informar as outras empresas dos sócios?</h3><p>Sim. A Parte I pede as empresas do grupo, e a verificação de regularidade alcança qualquer empresa de que sócios ou administradores participem (art. 6º, §1º, do Decreto nº 50.494/2026). O Termo de Acordo também obriga a informar empresas relacionadas, e a omissão sujeita a empresa a apuração.</p>
+<div class="sources"><strong>Fontes e base legal</strong><ul><li>Decreto (RJ) nº 50.494/2026 — arts. 4º, 5º (XII a XIV), 6º, §1º, 8º e 10; Anexo I (modelo de Carta-Consulta, esclarecimentos e documentação para enquadramento); Anexo II, cláusula sétima — Diário Oficial do Estado do Rio de Janeiro (DOERJ) de 28/09/2026</li><li>Lei (RJ) nº 11.192/2026 — arts. 2º, 3º e 8º, II</li></ul></div>
+<div class="cta">
+<p>Quer revisar a Carta-Consulta antes de transformar projeções em metas por cinco anos?</p>
+<a href="https://wa.me/5521996550865?text=Ol%C3%A1%2C%20vim%20pelo%20artigo%20sobre%20a%20Carta-Consulta%20do%20RioComex%20e%20quero%20ajuda%20para%20preencher%20e%20revisar%20a%20minha.">Falar sobre o caso</a>
+</div>
+<div class="author-box"><svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><polygon points="23,2 42,12.5 42,33.5 23,44 4,33.5 4,12.5" fill="none" stroke="#C9A84C" stroke-width="2"/><text x="23" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#0F1923">JVA</text></svg><div><strong>João Victor Ataíde</strong> · Advogado tributarista, sediado no Rio de Janeiro, com atuação em todo o território nacional e no exterior. Atua desde 2009. Especialista em Comércio Exterior (ESA/RJ) e em Tributação Internacional (Vale/UERJ). Conselheiro do Grupo Brasil Export.</div></div>
+<footer>
+<strong>João Victor Ataíde</strong> · Advogado · OAB/RJ<br>
+Av. das Américas 4.200, sala 305 — Barra da Tijuca, Rio de Janeiro/RJ<br>
+<a href="/blog/">Blog</a> · <a href="/comercio-exterior/">Comércio Exterior</a> · <a href="/maritimidade/">Maritimidade</a> · <a href="/tributario/">Tributário</a> · <a href="mailto:joaovictor@joaovictorataide.com.br">E-mail</a>
+<p>Conteúdo informativo e técnico, atualizado em outubro de 2026 com base na Lei (RJ) nº 11.192/2026 e no Decreto (RJ) nº 50.494/2026. Não constitui parecer jurídico nem consultoria tributária individualizada, e não veicula promessa de resultado. Publicidade em conformidade com o Provimento OAB nº 205/2021.</p>
+</footer>
+<div class="mbar"><a href="https://wa.me/5521996550865?text=Ol%C3%A1%2C%20vim%20pelo%20artigo%20sobre%20a%20Carta-Consulta%20do%20RioComex%20e%20quero%20ajuda%20para%20preencher%20e%20revisar%20a%20minha.">Falar no WhatsApp sobre o RioComex</a></div>
+</body>
+</html>
