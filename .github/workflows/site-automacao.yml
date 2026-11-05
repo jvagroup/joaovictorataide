@@ -1,0 +1,74 @@
+name: Automação do site
+
+# A cada publicação na main:
+#  1. sincroniza o ItemList do schema de /blog/index.html com os cards;
+#  2. depois do deploy do GitHub Pages, envia ao IndexNow as páginas alteradas.
+# Para reenviar o sitemap inteiro: rodar manualmente (Actions → Automação do site →
+# Run workflow, marcando "todas") ou incluir [indexnow-todas] na mensagem do commit.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      todas:
+        description: "Enviar todas as URLs do sitemap ao IndexNow"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-automacao
+  cancel-in-progress: false
+
+jobs:
+  schema-blog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sincronizar ItemList do índice do blog
+        run: python scripts/sync_blog_itemlist.py
+      - name: Publicar ajuste, se houver
+        run: |
+          if ! git diff --quiet -- blog/index.html; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add blog/index.html
+            git commit -m "chore(blog): sincroniza ItemList do índice com os cards"
+            git push
+          else
+            echo "Nada a ajustar."
+          fi
+
+  indexnow:
+    runs-on: ubuntu-latest
+    needs: schema-blog
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Aguardar o deploy do GitHub Pages
+        run: sleep 150
+      - name: Enviar ao IndexNow
+        env:
+          ANTES: ${{ github.event.before }}
+          DEPOIS: ${{ github.sha }}
+          MSG: ${{ github.event.head_commit.message }}
+          TODAS: ${{ github.event.inputs.todas }}
+        run: |
+          if [ "$TODAS" = "true" ] || echo "$MSG" | grep -q '\[indexnow-todas\]' \
+             || [ -z "$ANTES" ] || [ "$ANTES" = "0000000000000000000000000000000000000000" ]; then
+            python scripts/indexnow.py --todas
+          else
+            git diff --name-only --diff-filter=AM "$ANTES" "$DEPOIS" -- '*.html' > alterados.txt
+            echo "Arquivos alterados:"; cat alterados.txt
+            python scripts/indexnow.py $(cat alterados.txt)
+          fi
