@@ -35,6 +35,22 @@ def url_de(caminho: str) -> str | None:
     return f"https://{HOST}/{rel}"
 
 
+def diagnostico_chave() -> None:
+    """403 = o IndexNow não validou a chave. Testa se o arquivo abre para um robô."""
+    for ua in ("Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)", "python-urllib"):
+        try:
+            r = urllib.request.urlopen(urllib.request.Request(
+                f"https://{HOST}/{CHAVE}.txt", headers={"User-Agent": ua}), timeout=30)
+            corpo = r.read(200).decode("utf-8", "ignore").strip()
+            print(f"  chave via '{ua[:20]}': HTTP {r.status} | servidor={r.headers.get('server')} | "
+                  f"cf-ray={r.headers.get('cf-ray')} | conteúdo confere={corpo == CHAVE}")
+        except urllib.error.HTTPError as e:
+            print(f"  chave via '{ua[:20]}': HTTP {e.code} | servidor={e.headers.get('server')} | "
+                  f"cf-ray={e.headers.get('cf-ray')}")
+        except Exception as e:  # noqa: BLE001
+            print(f"  chave via '{ua[:20]}': erro {e}")
+
+
 def main(args: list[str]) -> int:
     if not (RAIZ / f"{CHAVE}.txt").exists():
         print("Arquivo da chave não encontrado na raiz; nada enviado.")
@@ -53,12 +69,17 @@ def main(args: list[str]) -> int:
                         "urlList": urls[:10000]}).encode()
     req = urllib.request.Request(ENDPOINT, data=corpo, method="POST",
                                  headers={"Content-Type": "application/json; charset=utf-8"})
+    corpo_resp = ""
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
             status = r.status
+            corpo_resp = r.read(500).decode("utf-8", "ignore")
     except urllib.error.HTTPError as e:
         status = e.code
-    print(f"IndexNow: HTTP {status} para {len(urls)} URL(s)")
+        corpo_resp = e.read(500).decode("utf-8", "ignore")
+    print(f"IndexNow: HTTP {status} para {len(urls)} URL(s) {corpo_resp.strip()}")
+    if status == 403:
+        diagnostico_chave()
     for u in urls[:50]:
         print("  ", u)
     # 200 = aceito; 202 = aceito, chave em validação. Demais códigos falham o job.
